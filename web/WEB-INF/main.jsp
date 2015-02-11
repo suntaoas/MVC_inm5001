@@ -71,19 +71,20 @@
                                 <%
                                     }
                                 %>
-                            <li class=""><a href="404_error.html" title="My Account">My Account</a></li>
-                            <li class="my-wishlist"><a href="404_error.html" title="My Wishlist">My Wishlist</a></li>
-                            <li class="checkout"><a href="404_error.html" title="Checkout">Checkout</a></li>
+                            <li class=""><a href="404_error.html" title="Mon Profil">Mon Profil</a></li>
+                            <li class=""><a href="404_error.html" title="Mes Commandes">Mes Commandes</a></li>
+                            <li class="my-wishlist"><a href="404_error.html" title="Mon Panier">Mon Panier</a></li>
                             <li class="log-in"><a href="/MVC_inm5001/GoLogin" title="Deconnection">Deconnection</a></li>
 
                         </ul>
                         <section class="header-bottom">
                             <div class="cart-block">
                                 <ul>
-                                    <li>(2)</li>
-                                    <li><a href="cart.html" title="Cart"><img title="Item" alt="Item" src="images/item_icon.png" /></a></li>
-                                    <li>Item</li>
+                                    <!--<li>(2)</li>-->
+                                    <li><a href="cart.html" title="Item"><img title="Item" alt="Item" src="images/item_icon.png" /></a></li>
+                                    <li>Mon panier</li>
                                 </ul>
+                                <!--
                                 <div id="minicart" class="remain_cart" style="display: none;">
                                     <p class="empty">You have 2 items in your shopping cart.</p>
                                     <ol>
@@ -122,9 +123,10 @@
                                         </li>
                                     </ol>
                                 </div>
+                                -->
                             </div>
                             <div class="search-block">
-                                <input type="text" value="Search" />
+                                <input type="text" value="Nom de produit seulment" />
                                 <input type="submit" value="Search" title="Search" />
                             </div>
                         </section>
@@ -134,31 +136,31 @@
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
-                            <li class="active"><a href="index-2.html" title="Home">Home</a></li>
-                            <li class=""><a href="category.html" title="Shop by">Shop by</a>
+                            <li class="active"><a href="index-2.html" title="Home">Liquidation</a></li>
+                            <li class=""><a href="category.html" title="Shop by">Tous Les Produits</a>
                                 <ul>
-                                    <li><a href="category.html">Woman Collection</a></li>
-                                    <li><a href="category.html">Men Collection</a></li>
-                                    <li><a href="category.html">Accessories</a></li>
-                                    <li><a href="category.html">Mobile</a>
+                                    <li><a href="category.html">Legumes</a>
                                         <ul>
-                                            <li><a href="category.html">Second level</a></li>
-                                            <li><a href="category.html">Second level</a></li>
-                                            <li><a href="category.html">Second level</a></li>
-                                            <li><a href="category.html">Second level</a></li>
-                                            <li><a href="category.html">Second level</a></li>
-                                            <li><a href="category.html">Second level</a></li>
+                                            <li><a href="category.html">Tomate</a></li>
+                                            <li><a href="category.html">Pomme De Terre</a></li>
+                                            <li><a href="category.html">Poivron</a></li>
+                                            <li><a href="category.html">Brocoli</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="category.html">Shoes</a></li>
-                                    <li><a href="category.html">Others</a></li>
+                                    <li><a href="category.html">Fruits</a>
+                                        <ul>
+                                            <li><a href="category.html">Pomme</a></li>
+                                            <li><a href="category.html">Melon D'eau</a></li>
+                                            <li><a href="category.html">Banana</a></li>
+                                            <li><a href="category.html">Orange</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="category.html">Autre Produits</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="blog.html" title="Blog">Blog</a></li>
-                            <li class=""><a href="faq.html" title="Faq">Faq</a></li>
-                            <li class=""><a href="about_us.html" title="About us">About us</a></li>
-                            <li class=""><a href="404_error.html" title="Pages">Pages</a></li>
-                            <li class=""><a href="contact_us.html" title="Footwear">Contact us</a></li>
+                            <li class=""><a href="blog.html" title="Cherche advanced">Cherche advanced</a></li>
+                            <li class=""><a href="about_us.html" title="Quant A Nous">Quant A Nous</a></li>
+                            <li class=""><a href="contact_us.html" title="Contact Nous">Contact Nous</a></li>
                         </ul>
                     </nav>
 
@@ -208,15 +210,15 @@
                 <div class="banner-block container">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li><img title="Banner" alt="Banner" src="images/banner1.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/banner2.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/banner3.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/banner4.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="banner1.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="banner2.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="banner3.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="banner4.jpg" /></li>
                         </ul>
                     </div>
                     <ul class="banner-add">
-                        <li class="add1"><a href="#" title=""><img title="add1" alt="add1" src="images/static1.jpg" /></a></li>
-                        <li class="add2"><a href="#" title=""><img title="add2" alt="add2" src="images/static2.jpg" /></a></li>
+                        <li class="add1"><a href="#" title=""><img title="add1" alt="add1" src="static1.jpg" /></a></li>
+                        <li class="add2"><a href="#" title=""><img title="add2" alt="add2" src="static2.jpg" /></a></li>
                     </ul>
                 </div>
             </section>
@@ -258,7 +260,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -268,7 +270,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -278,7 +280,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -288,7 +290,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -298,7 +300,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -308,7 +310,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -318,7 +320,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             <li>
@@ -328,7 +330,7 @@
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$600.00</div>
+                                    <div class="pro-price">$1.99</div>
                                 </div>
                             </li>
                             -->
@@ -344,9 +346,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> 
                                     <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> 
                                     <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
@@ -359,9 +361,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -372,9 +374,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -385,9 +387,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -400,9 +402,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -413,9 +415,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -426,9 +428,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -439,9 +441,9 @@
                                     <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
                                 </div>
                                 <div class="pro-content">
-                                    <p>White Round Neck T-Shirt</p>
+                                    <p>produit</p>
                                 </div>
-                                <div class="pro-price">$600.00</div>
+                                <div class="pro-price">$1.99</div>
                                 <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
                                 <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
                                     <div class="clearfix"></div>
@@ -495,7 +497,7 @@
                         <div id="tabDetail" class="tabDetail">
                             <div class="first-review">Be the first to review this product</div>
                             <div class="price-box">
-                                <span class="price">$600.00</span>			</div>
+                                <span class="price">$1.99</span>			</div>
                             <div class="availability">In stock</div>
                             <div class="color-size-block">
                                 <div class="label-row">
