@@ -3,22 +3,22 @@ package domain;
 
 public class Produits {
 
-    private String noProduit;
-    private String descriptionProduit;
-    private String categorieProduit;
+    private int noProduit;
+    private String description;
     private float prix;
     private int quantite;
-    private String photoProduit;
-    private String flagSupprime;
-    private String flagDisponibilite;
+    private String categorie;
+    private String photo;
+    private String statut;
+    
     private int shoppingNum = 1;//les quantites dans le cart
 
-    public String getNoProduit() {
+    public int getNoProduit() {
         return noProduit;
     }
 
-    public String getDescriptionProduit() {
-        return descriptionProduit;
+    public String getDescription() {
+        return description;
     }
 
     public float getPrix() {
@@ -29,52 +29,44 @@ public class Produits {
         return quantite;
     }
 
-    public String getPhotoProduit() {
-        return photoProduit;
+    public String getPhoto() {
+        return photo;
     }
 
-    public String getFlagSupprime() {
-        return flagSupprime;
+    public String getStatut() {
+        return statut;
     }
 
-    public String getFlagDisponibilite() {
-        return flagDisponibilite;
-    }
-
-    public void setNoProduit(String noProduit) {
+    public void setNoProduit(int noProduit) {
         this.noProduit = noProduit;
     }
 
-    public void setDescriptionProduit(String descriptionProduit) {
-        this.descriptionProduit = descriptionProduit;
+    public void setDescription(String descriptionProduit) {
+        this.description = descriptionProduit;
     }
 
-    public String getCategorieProduit() {
-        return categorieProduit;
+    public String getCategorie() {
+        return categorie;
     }
 
     public void setQuantite(int quantite) {
         this.quantite = quantite;
     }
 
-    public void setPhotoProduit(String photoProduit) {
-        this.photoProduit = photoProduit;
+    public void setPhoto(String photoProduit) {
+        this.photo = photoProduit;
     }
 
-    public void setFlagSupprime(String flagSupprime) {
-        this.flagSupprime = flagSupprime;
-    }
-
-    public void setFlagDisponibilite(String flagDisponibilite) {
-        this.flagDisponibilite = flagDisponibilite;
+    public void setStatut(String flagSupprime) {
+        this.statut = flagSupprime;
     }
 
     public int getShoppingNum() {
         return shoppingNum;
     }
 
-    public void setCategorieProduit(String categorieProduit) {
-        this.categorieProduit = categorieProduit;
+    public void setCategorie(String categorieProduit) {
+        this.categorie = categorieProduit;
     }
 
     public void setPrix(float prix) {

@@ -42,7 +42,7 @@ public class TraiterLogin extends HttpServlet {
         }
 
         //creer un objet CLients
-        Clients loginuser = new Clients(id, p);
+        Clients loginuser = new Clients(Integer.parseInt(id), p);
         //verifier usage legal
         ClientsService userservice = new ClientsService();
         if (userservice.verifierClient(loginuser)) {

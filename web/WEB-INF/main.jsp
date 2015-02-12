@@ -60,14 +60,14 @@
                     <div class="head-right">
                         <ul class="top-nav">
                             <%
-                                if ("1".equals(client.getFlagClient())) {
+                                if ("1".equals(client.getUsager())) {
                             %>
-                            <li> <a class="mainCurrency" href="#">BIENVNU ADMINISTRATREUR: <%=client.getPrenomClient()%></a></li>
+                            <li> <a class="mainCurrency" href="#">BIENVNU ADMINISTRATREUR: <%=client.getPrenom()%></a></li>
                             <li class=""><a href="/MVC_inm5001/GoMenuGestion" title="Gestion">Gestion</a></li>
                                 <%
                                 } else {
                                 %>
-                            <li> <a class="mainCurrency" href="#">BIENVNU CLIENT: <%=client.getPrenomClient()%></a></li>
+                            <li> <a class="mainCurrency" href="#">BIENVNU CLIENT: <%=client.getPrenom()%></a></li>
                                 <%
                                     }
                                 %>
@@ -237,14 +237,14 @@
                                 ArrayList al = (ArrayList) request.getAttribute("produits");
                                 for (int i = 0; i < al.size(); i++) {
                                     Produits produit = (Produits) al.get(i);
-                                    System.out.println(produit.getPhotoProduit());
+                                    System.out.println(produit.getPhoto());
                                     System.out.println(produit.getPrix());
-                                    System.out.println(produit.getDescriptionProduit());
+                                    System.out.println(produit.getDescription());
                             %>
                             <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="<%=String.valueOf(produit.getPhotoProduit())%>" /></div>
+                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="<%=String.valueOf(produit.getPhoto())%>" /></div>
                                 <div class="pro-hover-block">
-                                    <h4 class="pro-name"><%=produit.getDescriptionProduit()%></h4>
+                                    <h4 class="pro-name"><%=produit.getDescription()%></h4>
                                     <div class="link-block"> 
                                         <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
                                         <a href="view.html" class="quickproLink" title="Link">Product link</a></div>

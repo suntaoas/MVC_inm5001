@@ -3,40 +3,40 @@ package domain;
 
 public class Clients {
 
-    private String noClient;
-    private String nomClient;
-    private String prenomClient;
+    private int noClient;
+    private String nom;
+    private String prenom;
     private String password;
     private int age;
     private String sexe;
     private String adresse;
     private String telephone;
     private String courriel;
-    private String flagClient;
-    private String flagSupprime;
+    private String statut;
+    private String usager;
 
-    public Clients(String noClient, String password) {
+    public Clients(int noClient, String password) {
         this.noClient = noClient;
         this.password = password;
     }
 
-    public Clients(String noClient) {
+    public Clients(int noClient) {
         this.noClient = noClient;
     }
 
     public Clients() {
     }
 
-    public String getNoClient() {
+    public int getNoClient() {
         return noClient;
     }
 
-    public String getNomClient() {
-        return nomClient;
+    public String getNom() {
+        return nom;
     }
 
-    public String getPrenomClient() {
-        return prenomClient;
+    public String getPrenom() {
+        return prenom;
     }
 
     public String getPassword() {
@@ -63,24 +63,24 @@ public class Clients {
         return courriel;
     }
 
-    public String getFlagClient() {
-        return flagClient;
+    public String getStatut() {
+        return statut;
     }
 
-    public String getFlagSupprime() {
-        return flagSupprime;
+    public String getUsager() {
+        return usager;
     }
 
-    public void setNoClient(String noClient) {
+    public void setNoClient(int noClient) {
         this.noClient = noClient;
     }
 
-    public void setNomClient(String nomClient) {
-        this.nomClient = nomClient;
+    public void setNom(String nomClient) {
+        this.nom = nomClient;
     }
 
-    public void setPrenomClient(String prenomClient) {
-        this.prenomClient = prenomClient;
+    public void setPrenom(String prenomClient) {
+        this.prenom = prenomClient;
     }
 
     public void setPassword(String password) {
@@ -107,12 +107,12 @@ public class Clients {
         this.courriel = courriel;
     }
 
-    public void setFlagClient(String flagClient) {
-        this.flagClient = flagClient;
+    public void setStatut(String flagClient) {
+        this.statut = flagClient;
     }
 
-    public void setFlagSupprime(String flagSupprime) {
-        this.flagSupprime = flagSupprime;
+    public void setUsager(String flagSupprime) {
+        this.usager = flagSupprime;
     }
 
 }

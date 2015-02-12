@@ -26,7 +26,7 @@ public class CommandesService {
             ct.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             ps = ct.prepareStatement(sql);
-            ps.setString(1, user.getNoClient());
+            ps.setInt(1, user.getNoClient());
             ps.setFloat(2, myCart.getTotalPrice());
             ps.executeUpdate();
             //如何得到刚刚插入的订单记录的订单号	
@@ -46,7 +46,7 @@ public class CommandesService {
                 sql = "insert into orderitem values(orderitem_seq.nextval,?,?,?)";
                 ps = ct.prepareStatement(sql);
                 ps.setInt(1, orderId);
-                ps.setString(2, produit.getNoProduit());
+                ps.setInt(2, produit.getNoProduit());
                 ps.setInt(3, produit.getShoppingNum());
                 ps.executeUpdate();
             }
