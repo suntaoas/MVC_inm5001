@@ -1,3 +1,7 @@
+/*
+*cette classe fait connection de BD pour les produits
+*/
+
 package service;
 
 import java.util.ArrayList;
@@ -24,7 +28,7 @@ public class ProduitsService {
 	
 	
 	//obtenir touts les produuits
-	public ArrayList getToutsProduits(){
+	public ArrayList getTousProduits(){
 		
 		String sql="select * from Produits where 1=? and flagSupprime='1'";
 		String[] paras={"1"};

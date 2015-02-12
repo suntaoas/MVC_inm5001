@@ -70,7 +70,7 @@
                                     <li><a href="category.html">Ajouter client</a></li>
                                     <li><a href="category.html">Modifier client</a></li>
                                     <li><a href="category.html">Supprimer client</a></li>
-                                    <li><a href="category.html">Consulter client</a></li>
+                                    <li><a href="/MVC_inm5001/ClientConsulter">Consulter client</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="category.html" title="Gestion Produits">Gestion Produits</a>

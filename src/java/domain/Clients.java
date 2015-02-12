@@ -24,6 +24,9 @@ public class Clients {
         this.noClient = noClient;
     }
 
+    public Clients() {
+    }
+
     public String getNoClient() {
         return noClient;
     }

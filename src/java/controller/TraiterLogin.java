@@ -32,7 +32,7 @@ public class TraiterLogin extends HttpServlet {
         if (request.getSession().getAttribute("loginUser") != null) {
             //preparer des donnees dans le page main.jsp
             ProduitsService produitservice = new ProduitsService();
-            ArrayList al = produitservice.getToutsProduits();
+            ArrayList al = produitservice.getTousProduits();
 
             //把要显示的数据放在request，原因是request的生命周期最短
             request.setAttribute("produits", al);
@@ -41,11 +41,11 @@ public class TraiterLogin extends HttpServlet {
             return;
         }
 
-        //creer un objet users
+        //creer un objet CLients
         Clients loginuser = new Clients(id, p);
         //verifier usage legal
         ClientsService userservice = new ClientsService();
-        if (userservice.checkUser(loginuser)) {
+        if (userservice.verifierClient(loginuser)) {
             //si legal , donc entrer main.jsp
             System.out.println("login sucess !");
 
@@ -56,7 +56,7 @@ public class TraiterLogin extends HttpServlet {
             request.getSession().setAttribute("myCart", myCart);
 
             ProduitsService produitsservice = new ProduitsService();
-            ArrayList al = produitsservice.getToutsProduits();
+            ArrayList al = produitsservice.getTousProduits();
 
             request.setAttribute("produits", al);
 
@@ -71,6 +71,7 @@ public class TraiterLogin extends HttpServlet {
 
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
