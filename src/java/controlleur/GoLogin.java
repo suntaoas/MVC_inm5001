@@ -1,4 +1,9 @@
-package controller;
+/*
+ *    C'est la classe de controlleur du servlet pour tourner la page web "account_login.jsp"
+ *   "main.jsp->deconnection" ----->  "GoLogin.java"  -----> "account_login.jsp"
+ */
+
+package controlleur;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -11,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import service.MyCart;
 
 
-public class GoMyOrderServlet extends HttpServlet {
+public class GoLogin extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -19,15 +24,8 @@ public class GoMyOrderServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		//该Servlet用于处理用户查看订单的请求
-		//得到购物车
-		MyCart myCart=(MyCart)request.getSession().getAttribute("myCart");
-		ArrayList al=myCart.showMyCart();
-		float totalPrice=myCart.getTotalPrice();
-		request.setAttribute("orderinfo", al);
-		request.setAttribute("totalPrice", totalPrice);
-		//跳到显示我的订单的页面
-		request.getRequestDispatcher("/WEB-INF/showMyOrder.jsp").forward(request, response);
+		
+		request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
 		
 	}
 

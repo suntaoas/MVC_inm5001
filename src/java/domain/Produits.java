@@ -1,5 +1,8 @@
+/*
+ *   c'est la classe Produits pour le tableau Produits dans BD
+ */
+
 package domain;
-//c'est un beans avec objet Produits
 
 public class Produits {
 

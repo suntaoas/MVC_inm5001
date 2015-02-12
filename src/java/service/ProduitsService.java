@@ -1,6 +1,6 @@
 /*
-*cette classe fait connection de BD pour les produits
-*/
+ *  cette classe fait des oprations SQL de BD pour obtenir des informations des produits
+ */
 
 package service;
 

@@ -1,7 +1,5 @@
 <%-- 
-    Document   : gestionClient_consulter
-    Created on : Feb 11, 2015, 5:22:45 PM
-    Author     : suntao
+    C'est la page de la gestion de client pour consulter 
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

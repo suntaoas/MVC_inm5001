@@ -1,5 +1,8 @@
+/*
+ *  c'est la classe Clients pour le tableau Clients dans BD
+ */
+
 package domain;
-//c'est un beans avec objet Clients
 
 public class Clients {
 

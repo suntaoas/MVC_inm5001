@@ -1,3 +1,7 @@
+<%-- 
+    C'est la page de menu de gestion pour administrateur 
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!doctype html>

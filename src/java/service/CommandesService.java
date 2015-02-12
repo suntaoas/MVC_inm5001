@@ -1,3 +1,7 @@
+/*
+ *  cette classe fait des oprations SQL de BD pour obtenir des informations des commandes
+ */
+
 package service;
 
 import java.sql.*;

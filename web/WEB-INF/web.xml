@@ -5,43 +5,43 @@
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>GoHallUI</servlet-name>
-        <servlet-class>controller.TraiterLogin</servlet-class>
+        <servlet-class>controlleur.TraiterLogin</servlet-class>
     </servlet>
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>ShoppingCLServlet</servlet-name>
-        <servlet-class>controller.ShoppingCLServlet</servlet-class>
+        <servlet-class>controlleur.ShoppingCLServlet</servlet-class>
     </servlet>
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>GoMyOrderServlet</servlet-name>
-        <servlet-class>controller.GoMyOrderServlet</servlet-class>
+        <servlet-class>controlleur.GoMyOrderServlet</servlet-class>
     </servlet>
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>SubmitOrderServlet</servlet-name>
-        <servlet-class>controller.SubmitOrderServlet</servlet-class>
+        <servlet-class>controlleur.SubmitOrderServlet</servlet-class>
     </servlet>
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>GoShowMycart</servlet-name>
-        <servlet-class>controller.GoShowMycart</servlet-class>
+        <servlet-class>controlleur.GoShowMycart</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>GoLogin</servlet-name>
-        <servlet-class>controller.GoLogin</servlet-class>
+        <servlet-class>controlleur.GoLogin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>GoMenuGestion</servlet-name>
-        <servlet-class>controller.GoMenuGestion</servlet-class>
+        <servlet-class>controlleur.GoMenuGestion</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClientConsulter</servlet-name>
-        <servlet-class>controller.ClientConsulter</servlet-class>
+        <servlet-class>controlleur.ClientConsulter</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>

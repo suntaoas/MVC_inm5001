@@ -1,3 +1,7 @@
+<%-- 
+    C'est la page principale du site web 
+--%>
+
 <%@ page language="java" import="java.util.*,domain.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!doctype html>

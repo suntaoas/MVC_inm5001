@@ -1,3 +1,6 @@
+<%--
+    C'est la page de login 
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!doctype html>

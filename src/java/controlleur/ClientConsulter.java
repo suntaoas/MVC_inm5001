@@ -1,15 +1,24 @@
-package controller;
+/*
+ *   C'est la classe de controlleur du servlet pour consulter des clients
+ *   "menu_gestion.jsp->gestion clients->consulter" ----->  "ClientConsulter.java"  -----> "gestionClient_consulter.jsp"
+ */
+package controlleur;
 
+import domain.Clients;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.ClientsService;
+import service.MyCart;
+import service.ProduitsService;
 
-public class GoMenuGestion extends HttpServlet {
+public class ClientConsulter extends HttpServlet {
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -17,14 +26,19 @@ public class GoMenuGestion extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
-        request.getRequestDispatcher("/WEB-INF/menu_gestion.jsp").forward(request, response);
+        ClientsService produitsservice = new ClientsService();
+        ArrayList al = produitsservice.getTousClients();
 
+        request.setAttribute("produits", al);
+
+        request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
+        return;
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         this.doGet(request, response);
     }
-
 }

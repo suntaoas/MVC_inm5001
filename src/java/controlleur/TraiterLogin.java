@@ -1,4 +1,9 @@
-package controller;
+/*
+ *   C'est la classe de controlleur du servlet pour valider le client
+ *   "account_login.jsp" ----->  "TraiterLogin.java"  -----> "main.jsp"
+ */
+
+package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;

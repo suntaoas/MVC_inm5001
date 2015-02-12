@@ -1,3 +1,7 @@
+/*
+ * c'est mon cart
+ */
+
 package service;
 
 import java.util.ArrayList;
@@ -6,11 +10,7 @@ import java.util.Iterator;
 
 import domain.Produits;
 
-/**
- * 
- * c'est mon cart
- *
- */
+
 public class MyCart {
 	HashMap<String, Produits> hm=new HashMap<String, Produits>();
 	
