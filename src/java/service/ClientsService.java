@@ -12,7 +12,7 @@ public class ClientsService {
 
     //le fonction pour verifier usage legal.
     public boolean verifierClient(Clients client) {
-        System.out.println("connection de BD");
+        System.out.println("entrer la methode : verifierClient");
         //verifier le donnee sur le BD
         String sql = "select * from clients where noClient=? and password=? and statut=1";
         String paras[] = {client.getNoClient() + "", client.getPassword()};
