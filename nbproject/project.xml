@@ -20,9 +20,15 @@
             </test-roots>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>Admin</word>
+            <word>Adresse</word>
             <word>BIENVNUE</word>
+            <word>Courriel</word>
             <word>MotDePasse</word>
             <word>noClient</word>
+            <word>Nom</word>
+            <word>Prenom</word>
+            <word>Sexe</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

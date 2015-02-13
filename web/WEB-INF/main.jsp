@@ -201,7 +201,6 @@
                                 <li class=""><a href="about_us.html" title="About us">About us</a></li>
                                 <li class=""><a href="404_error.html" title="Pages">Pages</a></li>
                                 <li class=""><a href="contact_us.html" title="Footwear">Contact us</a></li>
-                                <span class="clearfix"></span>
                             </ul>
 
                         </div>      

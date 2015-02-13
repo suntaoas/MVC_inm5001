@@ -16,7 +16,7 @@ import service.ClientsService;
 import service.MyCart;
 import service.ProduitsService;
 
-public class ClientConsulter extends HttpServlet {
+public class ClientConsulterPourTout extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,12 +26,12 @@ public class ClientConsulter extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
-        ClientsService produitsservice = new ClientsService();
-        ArrayList al = produitsservice.getTousClients();
+        ClientsService clientsservice = new ClientsService();
+        ArrayList tousClients = clientsservice.getTousClients();
 
-        request.setAttribute("produits", al);
+        request.setAttribute("clients", tousClients);
 
-        request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/gestionClient_consulter.jsp").forward(request, response);
         return;
     }
 

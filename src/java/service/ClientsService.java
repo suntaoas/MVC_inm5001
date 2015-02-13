@@ -44,6 +44,45 @@ public class ClientsService {
 
     }
 
+    public Clients getClientById(String id) {
+        Clients client = new Clients();
+        String sql = "select * from Clients where noClient=? and statut='1'";
+        String paras[] = {id};
+        ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        if (al.size() == 1) {
+            Object obj[] = (Object[]) al.get(0);
+        }
+        return client;
+    }
+
+    public ArrayList<Clients> getClientParCertainsChamps(String[] champs, String[] paras) {
+        ArrayList<Clients> certainsClients = new ArrayList<Clients>();
+        String champsTemp = "";
+        for (int i = 0; i < champs.length; i++) {
+            champsTemp += champs[i] + "=? and ";
+        }
+        String sql = "select * from Clients where " + champsTemp + "statut='1'";
+        ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        for (int i = 0; i < al.size(); i++) {
+            Object obj[] = (Object[]) al.get(i);
+            Clients client = new Clients();
+            client.setNoClient(Integer.parseInt(obj[0].toString()));
+            client.setNom(obj[1].toString());
+            client.setPrenom(obj[2].toString());
+            client.setPassword(obj[3].toString());
+            client.setAge(Integer.parseInt(obj[4].toString()));
+            client.setSexe(obj[5].toString());
+            client.setAdresse(obj[6].toString());
+            client.setTelephone(obj[7].toString());
+            client.setCourriel(obj[8].toString());
+            client.setStatut(obj[9].toString());
+            client.setUsager(obj[10].toString());
+
+            certainsClients.add(client);
+        }
+        return certainsClients;
+    }
+
     public ArrayList<Clients> getTousClients() {
         ArrayList<Clients> TousClientTemp = new ArrayList<Clients>();
         String sql = "select * from Clients where 1=? and statut='1'";
@@ -69,4 +108,13 @@ public class ClientsService {
         }
         return TousClientTemp;
     }
+
+    public boolean ajouterClient(Clients clientNouveau) {
+        String sql = "insert into Clients(nom,prenom,password,age,sexe,adresse,telephone,courriel,statut,usager) values (?,?,?,?,?,?,?,?,?,?)";
+        String[] paras = {clientNouveau.getNom(), clientNouveau.getPrenom(), clientNouveau.getPassword(), clientNouveau.getAge() + "", clientNouveau.getSexe(), clientNouveau.getAdresse(), clientNouveau.getTelephone(), clientNouveau.getCourriel(), "1", clientNouveau.getUsager()};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
+    
+    
 }

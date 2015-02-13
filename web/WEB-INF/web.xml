@@ -40,8 +40,20 @@
         <servlet-class>controlleur.GoMenuGestion</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ClientConsulter</servlet-name>
-        <servlet-class>controlleur.ClientConsulter</servlet-class>
+        <servlet-name>ClientConsulterPourTout</servlet-name>
+        <servlet-class>controlleur.ClientConsulterPourTout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientAjouter</servlet-name>
+        <servlet-class>controlleur.ClientAjouter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GoClientAjouter</servlet-name>
+        <servlet-class>controlleur.GoClientAjouter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientConsulterPourCertains</servlet-name>
+        <servlet-class>controlleur.ClientConsulterPourCertains</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
@@ -72,8 +84,20 @@
         <url-pattern>/GoMenuGestion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ClientConsulter</servlet-name>
-        <url-pattern>/ClientConsulter</url-pattern>
+        <servlet-name>ClientConsulterPourTout</servlet-name>
+        <url-pattern>/ClientConsulterPourTout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientAjouter</servlet-name>
+        <url-pattern>/ClientAjouter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GoClientAjouter</servlet-name>
+        <url-pattern>/GoClientAjouter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientConsulterPourCertains</servlet-name>
+        <url-pattern>/ClientConsulterPourCertains</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

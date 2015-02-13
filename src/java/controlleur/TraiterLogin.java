@@ -39,7 +39,6 @@ public class TraiterLogin extends HttpServlet {
             ProduitsService produitservice = new ProduitsService();
             ArrayList al = produitservice.getTousProduits();
 
-            //把要显示的数据放在request，原因是request的生命周期最短
             request.setAttribute("produits", al);
 
             request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);

@@ -62,4 +62,26 @@ public class SqlHelper {
         }
         return null;
     }
+
+    public boolean executeUpdate(String sql, String[] parameters) {
+        boolean res = true;
+        try {
+            ct = DBUtil.getCon();
+            ps = ct.prepareStatement(sql);
+            if (parameters != null) {
+                for (int i = 0; i < parameters.length; i++) {
+                    System.out.print(parameters[i]);
+                    ps.setString(i + 1, parameters[i]);
+                }
+            }
+            ps.executeUpdate();
+            return res;
+        } catch (Exception e) {
+            System.out.print("erreur");
+        }finally {
+            DBUtil.close(rs, ps, ct);
+        }
+        return false;
+    }
+
 }

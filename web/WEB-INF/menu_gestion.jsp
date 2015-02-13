@@ -71,10 +71,11 @@
                         <ul id="nav">
                             <li class="active"><a href="index-2.html" title="Gestion Clients">Gestion Clients</a>
                                 <ul>
-                                    <li><a href="category.html">Ajouter client</a></li>
+                                    <li><a href="/MVC_inm5001/GoClientAjouter">Ajouter client</a></li>
                                     <li><a href="category.html">Modifier client</a></li>
                                     <li><a href="category.html">Supprimer client</a></li>
-                                    <li><a href="/MVC_inm5001/ClientConsulter">Consulter client</a></li>
+                                    <li><a href="/MVC_inm5001/ClientConsulterPourTout">Consulter Tous les clients</a></li>
+                                    <li><a href="/MVC_inm5001/ClientConsulterPourCertains">Consulter Certains clients</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="category.html" title="Gestion Produits">Gestion Produits</a>
