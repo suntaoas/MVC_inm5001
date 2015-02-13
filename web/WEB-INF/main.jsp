@@ -245,7 +245,7 @@
                                     System.out.println(produit.getDescription());
                             %>
                             <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="<%=String.valueOf(produit.getPhoto())%>" /></div>
+                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/<%=String.valueOf(produit.getPhoto())%>" /></div>
                                 <div class="pro-hover-block">
                                     <h4 class="pro-name"><%=produit.getDescription()%></h4>
                                     <div class="link-block"> 
