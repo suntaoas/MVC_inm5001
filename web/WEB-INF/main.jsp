@@ -67,7 +67,7 @@
                                 if ("1".equals(client.getUsager())) {
                             %>
                             <li> <a class="mainCurrency" href="#">BIENVNU ADMINISTRATREUR: <%=client.getPrenom()%></a></li>
-                            <li class=""><a href="/MVC_inm5001/GoMenuGestion" title="Gestion">Gestion</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Gestion">Gestion</a></li>
                                 <%
                                 } else {
                                 %>
@@ -78,7 +78,7 @@
                             <li class=""><a href="404_error.html" title="Mon Profil">Mon Profil</a></li>
                             <li class=""><a href="404_error.html" title="Mes Commandes">Mes Commandes</a></li>
                             <li class="my-wishlist"><a href="404_error.html" title="Mon Panier">Mon Panier</a></li>
-                            <li class="log-in"><a href="/MVC_inm5001/GoLogin" title="Deconnection">Deconnection</a></li>
+                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
 
                         </ul>
                         <section class="header-bottom">
