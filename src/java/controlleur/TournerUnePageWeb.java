@@ -1,6 +1,5 @@
 /*
- *   C'est la classe de controlleur du servlet pour tourner la page web "menu_gestion.jsp"
- *   "main.jsp->gestion" ----->  "GomenuGestion.java"  -----> "menu_gestion.jsp"
+ *   C'est la classe de controlleur du servlet pour tourner une page web 
  */
 package controlleur;
 

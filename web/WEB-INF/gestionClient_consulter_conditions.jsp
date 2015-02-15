@@ -112,7 +112,7 @@
                     <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
                     <td width="46%" height="52">
                         <div align="left">
-                            <input type="submit" name="Submit" value="INSCRIRE" >
+                            <input type="submit" name="Submit" value="CHERCHER" >
                             <input type="reset" name="Submit2" value="RECOMMENCER">
                         </div></td><td width="15%" height="52">&nbsp;</td>
                 </tr>
