@@ -54,7 +54,9 @@ public class ClientsService {
         }
         return client;
     }
-
+/*
+    pas fini
+    */
     public ArrayList<Clients> getClientParCertainsChamps(String[] champs, String[] paras) {
         ArrayList<Clients> certainsClients = new ArrayList<Clients>();
         String champsTemp = "";
