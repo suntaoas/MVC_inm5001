@@ -29,7 +29,7 @@
     <body BGCOLOR="green">
         <h2 align="center">INSCRIPTION PRODUIT</h2>
         <hr />
-        <form name="form" method="post" action="/MVC_inm5001/PrpduitAjouter">
+        <form name="form" method="post" action="/MVC_inm5001/ProduitAjouter">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 

@@ -32,7 +32,10 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerAjouterUnClient" :
                 request.getRequestDispatcher("/WEB-INF/gestionClient_ajouter.jsp").forward(request, response);
                 break;
-                
+             case "tournerAjouterUnProduit" :
+                request.getRequestDispatcher("/WEB-INF/gestionProduit_ajouter.jsp").forward(request, response);
+                break;
+   
         }
 
     }
