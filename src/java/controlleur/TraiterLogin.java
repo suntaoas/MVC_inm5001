@@ -27,10 +27,10 @@ public class TraiterLogin extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         //obtenir noClient et password 
-        String id = request.getParameter("noClient");
+        String courriel = request.getParameter("courriel");
         String p = request.getParameter("password");
 
-        System.out.println(id);
+        System.out.println(courriel);
         System.out.println(p);
 
         //D'abord déterminer si l'utilisateur est connecté ou l'utilisateur se est connecté session a expiré
@@ -46,7 +46,7 @@ public class TraiterLogin extends HttpServlet {
         }
 
         //creer un objet CLients
-        Clients loginuser = new Clients(Integer.parseInt(id), p);
+        Clients loginuser = new Clients(courriel, p);
         //verifier usage legal
         ClientsService userservice = new ClientsService();
         if (userservice.verifierClient(loginuser)) {

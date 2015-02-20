@@ -91,9 +91,9 @@
                                         <p>Si vous avez un compte avec nous, se il vous plaît vous connecter.</p>
                                         <ul class="form-list">
                                             <li>
-                                                <label class="required" for="noClient">NoClient:<em>*</em></label>
+                                                <label class="required" for="noClient">Courriel:<em>*</em></label>
                                                 <div class="input-box">
-                                                    <input type="text" title="NoClient" name="noClient" class="input-text required-entry validate-email" value="" />
+                                                    <input type="text" title="Courriel:" name="courriel" class="input-text required-entry validate-email" value="" />
                                                 </div>
                                                 <div class="clear"></div>
                                             </li>
@@ -105,7 +105,7 @@
                                                 <div class="clear"></div>
                                             </li>
                                             <li>
-                                                <input type="submit" value="envoyer"/>
+                                                <input type="submit" value="entrer"/>
                                                 <input type="reset" value="recommencer"/>
                                             </li>
                                         </ul>

@@ -18,8 +18,8 @@ public class Clients {
     private String statut;
     private String usager;
 
-    public Clients(int noClient, String password) {
-        this.noClient = noClient;
+    public Clients(String courriel, String password) {
+        this.courriel = courriel;
         this.password = password;
     }
 

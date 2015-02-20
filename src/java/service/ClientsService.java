@@ -14,8 +14,8 @@ public class ClientsService {
     public boolean verifierClient(Clients client) {
         System.out.println("entrer la methode : verifierClient");
         //verifier le donnee sur le BD
-        String sql = "select * from clients where noClient=? and password=? and statut=1";
-        String paras[] = {client.getNoClient() + "", client.getPassword()};
+        String sql = "select * from clients where courriel=? and password=? and statut=1";
+        String paras[] = {client.getCourriel() + "", client.getPassword()};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         if (al.size() == 0) {
             return false;
