@@ -29,13 +29,16 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerMenuGestion":
                 request.getRequestDispatcher("/WEB-INF/menu_gestion.jsp").forward(request, response);
                 break;
-            case "tournerAjouterUnClient" :
+            case "tournerAjouterUnClient":
                 request.getRequestDispatcher("/WEB-INF/gestionClient_ajouter.jsp").forward(request, response);
                 break;
-             case "tournerAjouterUnProduit" :
+            case "tournerConsulterCertainsClients":
+                request.getRequestDispatcher("/WEB-INF/gestionClient_consulter_conditions.jsp").forward(request, response);
+                break;
+            case "tournerAjouterUnProduit":
                 request.getRequestDispatcher("/WEB-INF/gestionProduit_ajouter.jsp").forward(request, response);
                 break;
-   
+
         }
 
     }

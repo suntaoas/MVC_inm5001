@@ -75,7 +75,7 @@
                                     <li><a href="category.html">Modifier client</a></li>
                                     <li><a href="category.html">Supprimer client</a></li>
                                     <li><a href="/MVC_inm5001/ClientConsulterPourTout">Consulter Tous les clients</a></li>
-                                    <li><a href="/MVC_inm5001/ClientConsulterPourCertains">Consulter Certains clients</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsClients">Consulter Certains clients</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="category.html" title="Gestion Produits">Gestion Produits</a>

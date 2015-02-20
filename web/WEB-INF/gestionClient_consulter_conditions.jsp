@@ -25,9 +25,9 @@
     </head>
 
     <body BGCOLOR="green">
-        <h2 align="center">INSCRIPTION D'USAGER</h2>
+        <h2 align="center">RECHERCHE DU CLIENT</h2>
         <hr />
-        <form name="form" method="post" action="/MVC_inm5001/ClientAjouter" onSubmit="return isValid();">
+        <form name="form" method="post" action="/MVC_inm5001/ClientConsulterPourCertains" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
@@ -66,10 +66,10 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">MotDePasse :</font></div>
+                        <div align="right"><font color="#CC9900">STATUT :</font></div>
                     </td>
                     <td width="46%" height="43"> 
-                        <input name="pass" type="password" id="pass">
+                        <input name="statut" type="text" id="statut">
                     </td>
                 </tr>
                 <tr> 
@@ -101,7 +101,7 @@
                         <div align="right"><font color="#CC9900">ADMIN/USAGE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
-                        <select name="flagUsage">
+                        <select name="usager">
                             <option value="0">USAGE</option>
                             <option value="1">ADMIN</option>              			   
                         </select>

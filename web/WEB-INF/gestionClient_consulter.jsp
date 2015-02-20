@@ -86,8 +86,8 @@
                                             <th>Nom</th>
                                             <th>Prenom</th>
                                             <th>MotDePasse</th>
-                                            <th>Sexe</th>
                                             <th>Age</th>
+                                            <th>Sexe</th>
                                             <th>Adresse</th>
                                             <th>Telephone</th>
                                             <th>Courriel</th>
