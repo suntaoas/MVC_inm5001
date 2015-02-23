@@ -10,6 +10,7 @@ public class Produits {
     private String description;
     private float prix;
     private int quantite;
+    private String uniteMesure;
     private String categorie;
     private String photo;
     private String statut;
@@ -31,6 +32,14 @@ public class Produits {
     public int getQuantite() {
         return quantite;
     }
+    
+    public String getUniteMesure() {
+        return uniteMesure;
+    }
+    
+    public String getCategorie() {
+        return categorie;
+    }
 
     public String getPhoto() {
         return photo;
@@ -46,10 +55,6 @@ public class Produits {
 
     public void setDescription(String descriptionProduit) {
         this.description = descriptionProduit;
-    }
-
-    public String getCategorie() {
-        return categorie;
     }
 
     public void setQuantite(int quantite) {
@@ -70,6 +75,10 @@ public class Produits {
 
     public void setCategorie(String categorieProduit) {
         this.categorie = categorieProduit;
+    }
+    
+    public void setUniteMesure(String unitemesure) {
+        this.uniteMesure = unitemesure;
     }
 
     public void setPrix(float prix) {

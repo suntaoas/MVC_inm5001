@@ -29,6 +29,7 @@ public class ProduitAjouter extends HttpServlet {
         produitNouveau.setDescription(request.getParameter("descripProduit").trim());
         produitNouveau.setPrix(Float.parseFloat(request.getParameter("prixProduit")));
         produitNouveau.setQuantite(Integer.parseInt(request.getParameter("quantite")));
+        produitNouveau.setUniteMesure(request.getParameter("unitemesure").trim());        
         produitNouveau.setCategorie(request.getParameter("categorie").trim());
         produitNouveau.setPhoto(request.getParameter("photo").trim());
         

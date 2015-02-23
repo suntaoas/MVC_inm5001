@@ -96,6 +96,7 @@
                                                 out.print("<td>" + produit.getDescription() + "</td>");
                                                 out.print("<td>" + produit.getPrix() + "</td>");
                                                 out.print("<td>" + produit.getQuantite() + "</td>");
+                                                out.print("<td>" + produit.getUniteMesure() + "</td>");
                                                 out.print("<td>" + produit.getCategorie() + "</td>");
                                                 out.print("<td>" + produit.getPhoto() + "</td>");
                                                 

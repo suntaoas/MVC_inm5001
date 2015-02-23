@@ -56,6 +56,18 @@
                     </td>
                 </tr>
                 <tr> 
+                    <td width="39%" height="43"> 
+                        <div align="right"><font color="#CC9900">UNITEMESURE:</font></div>
+                    </td>
+                    <td width="46%" height="43"> 
+                        <select name="unitemesure">
+                            <option value="LB">LIVRE</option>
+                            <option value="KG">KILOGRAMME</option>
+                            <option value="CHQ">CHAQUE</option>                            
+                        </select>
+                    </td>
+                </tr>
+                <tr> 
                     <td width="46%" height="43">
                         <div align="right"><font color="#CC9900">CATEGORIE :</font></div>
                     </td>
@@ -66,7 +78,7 @@
                         </select>
                     </td>
                 </tr>
-                
+
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#CC9900">PHOTO :</font></div>
@@ -75,7 +87,7 @@
                         <input name="photo" type="text" id="adresse">
                     </td>
                 </tr>
-                
+
                 <tr>
                     <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
                     <td width="46%" height="52">
@@ -88,4 +100,4 @@
         </form>
     </body>
 </html>
-    </head>
+</head>

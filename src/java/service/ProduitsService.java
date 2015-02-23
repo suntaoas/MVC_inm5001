@@ -38,9 +38,10 @@ public class ProduitsService {
                         produit.setDescription(obj[1].toString());
                         produit.setPrix(Float.parseFloat(obj[2].toString()));
                         produit.setQuantite(Integer.parseInt(obj[3].toString()));
-                        produit.setCategorie(obj[4].toString());
-                        produit.setPhoto(obj[5].toString());
-                        produit.setStatut(obj[6].toString());
+                        produit.setUniteMesure(obj[4].toString());
+                        produit.setCategorie(obj[5].toString());
+                        produit.setPhoto(obj[6].toString());
+                        produit.setStatut(obj[7].toString());
 			
 			newAl.add(produit);
 
@@ -48,8 +49,8 @@ public class ProduitsService {
 		return newAl;
 	}
         public boolean ajouterProduit(Produits produitNouveau) {
-        String sql = "insert into Produits(description,prix,quantite,categorie,photo,statut) values (?,?,?,?,?,?)";
-        String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};
+        String sql = "insert into Produits(description,prix,quantite,categorie,photo,statut) values (?,?,?,?,?,?,?)";
+        String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getUniteMesure(), produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
