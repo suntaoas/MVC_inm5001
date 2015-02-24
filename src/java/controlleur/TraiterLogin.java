@@ -26,7 +26,7 @@ public class TraiterLogin extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
-        //obtenir noClient et password 
+        //obtenir courriel et password 
         String courriel = request.getParameter("courriel");
         String p = request.getParameter("password");
 

@@ -45,18 +45,27 @@ public class ClientsService {
     }
 
     public Clients getClientById(String id) {
-        Clients client = new Clients();
         String sql = "select * from Clients where noClient=? and statut='1'";
         String paras[] = {id};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        Clients client = new Clients();
         if (al.size() == 1) {
             Object obj[] = (Object[]) al.get(0);
+            client.setNoClient(Integer.parseInt(obj[0].toString()));
+            client.setNom(obj[1].toString());
+            client.setPrenom(obj[2].toString());
+            client.setPassword(obj[3].toString());
+            client.setAge(Integer.parseInt(obj[4].toString()));
+            client.setSexe(obj[5].toString());
+            client.setAdresse(obj[6].toString());
+            client.setTelephone(obj[7].toString());
+            client.setCourriel(obj[8].toString());
+            client.setStatut(obj[9].toString());
+            client.setUsager(obj[10].toString());
         }
         return client;
     }
-/*
-    pas fini
-    */
+
     public ArrayList<Clients> getClientParCertainsChamps(String[] champs, String[] paras) {
         ArrayList<Clients> certainsClients = new ArrayList<Clients>();
         String champsTemp = "";
@@ -117,6 +126,18 @@ public class ClientsService {
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
-    
-    
+
+    public boolean supprimerClientParNoClient(String noClient) {
+        String sql = "update Clients set statut='0' where noClient=? and statut='1'";
+        String paras[] = {noClient};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
+
+    public boolean modifierClient(Clients clientModifier) {
+        String sql = "update Clients set nom=?,prenom=?,password=?,age=?,sexe=?,adresse=?,telephone=?,courriel=?,usager=? where noClient=? and statut='1'";
+        String[] paras = {clientModifier.getNom(), clientModifier.getPrenom(), clientModifier.getPassword(), clientModifier.getAge() + "", clientModifier.getSexe(), clientModifier.getAdresse(), clientModifier.getTelephone(), clientModifier.getCourriel(), clientModifier.getUsager()};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
 }

@@ -1,5 +1,5 @@
 <%-- 
-    C'est la page de la gestion de client pour consulter 
+    C'est la page de la gestion de client pour modifier ou supprimer 
 --%>
 
 <%@page import="domain.Clients"%>
@@ -92,6 +92,8 @@
                                             <th>Telephone</th>
                                             <th>Courriel</th>
                                             <th>Admin/client</th>
+                                            <th>Modifier</th>
+                                            <th>Supprimer</th>
                                         </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("clients");
                                             for (int i = 0; i < al.size(); i++) {
@@ -105,7 +107,9 @@
                                                 out.print("<td>" + client.getAdresse() + "</td>");
                                                 out.print("<td>" + client.getTelephone() + "</td>");
                                                 out.print("<td>" + client.getCourriel() + "</td>");
-                                                out.print("<td>" + client.getUsager() + "</td></tr>");
+                                                out.print("<td>" + client.getUsager() + "</td>");
+                                                out.print("<td> <a href='/MVC_inm5001/ClientModifier?noClient=" + client.getNoClient() + "'>Modifier</a> </td>");
+                                                out.print("<td> <a href='/MVC_inm5001/ClientSupprimer?noClient=" + client.getNoClient() + "'>Supprimer</a> </td></tr>");
                                             }
                                         %> 
                                     </table>

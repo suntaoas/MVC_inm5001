@@ -38,6 +38,9 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerAjouterUnProduit":
                 request.getRequestDispatcher("/WEB-INF/gestionProduit_ajouter.jsp").forward(request, response);
                 break;
+            case "tournerModifierOuSupprimerClients":
+                request.getRequestDispatcher("/WEB-INF/gestionClient_modiOuSuppri_conditions.jsp").forward(request, response);
+                break;
 
         }
 

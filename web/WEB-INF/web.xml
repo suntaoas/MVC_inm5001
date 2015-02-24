@@ -55,6 +55,18 @@
         <servlet-name>ProduitConsulterPourTout</servlet-name>
         <servlet-class>controlleur.ProduitConsulterPourTout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientModifierOuSupprimer</servlet-name>
+        <servlet-class>controlleur.ClientModifierOuSupprimer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientModifier</servlet-name>
+        <servlet-class>controlleur.ClientModifier</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientSupprimer</servlet-name>
+        <servlet-class>controlleur.ClientSupprimer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -98,6 +110,18 @@
     <servlet-mapping>
         <servlet-name>ProduitConsulterPourTout</servlet-name>
         <url-pattern>/ProduitConsulterPourTout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientModifierOuSupprimer</servlet-name>
+        <url-pattern>/ClientModifierOuSupprimer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientModifier</servlet-name>
+        <url-pattern>/ClientModifier</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientSupprimer</servlet-name>
+        <url-pattern>/ClientSupprimer</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
