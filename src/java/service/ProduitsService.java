@@ -73,7 +73,7 @@ public class ProduitsService {
     }
 
     public boolean ajouterProduit(Produits produitNouveau) {
-        String sql = "insert into Produits(description,prix,quantite,categorie,photo,statut) values (?,?,?,?,?,?,?)";
+        String sql = "insert into Produits(description,prix,quantite,unitemesure,categorie,photo,statut) values (?,?,?,?,?,?,?)";
         String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getUniteMesure(), produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;

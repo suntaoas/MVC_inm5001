@@ -28,6 +28,12 @@ public class ProduitConsulterPourTout extends HttpServlet {
 
         ProduitsService produitsservice = new ProduitsService();
         ArrayList tousProduits = produitsservice.getTousProduits();
+        //for(int i=0;i<tousProduits.size();i++){
+           // Produits produitTemp = (Produits) tousProduits.get(i);
+            //System.out.println(produitTemp.getNoProduit());
+            //System.out.println(produitTemp.getDescription());
+            //System.out.println(produitTemp.getUniteMesure());
+        //}
 
         request.setAttribute("produits", tousProduits);
 
