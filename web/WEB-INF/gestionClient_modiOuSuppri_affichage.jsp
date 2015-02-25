@@ -111,7 +111,12 @@
                                                 out.print("<td> <a href='/MVC_inm5001/ClientModifier?noClient=" + client.getNoClient() + "'>Modifier</a> </td>");
                                                 out.print("<td> <a href='/MVC_inm5001/ClientSupprimer?noClient=" + client.getNoClient() + "'>Supprimer</a> </td></tr>");
                                             }
-                                        %> 
+                                        %>                                        
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>

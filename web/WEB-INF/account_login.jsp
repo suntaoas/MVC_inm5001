@@ -10,6 +10,7 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <%
     System.out.println("entrer account_login.jsp !");
+    session.invalidate();
 %>
 <html lang="en">
     <!--<![endif]-->

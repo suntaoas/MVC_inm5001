@@ -109,7 +109,7 @@
                                     <li><a href="category.html">Statistique de paiement</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="contact_us.html" title="Retourner">Retourner</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></li>
                         </ul>
                     </nav>
 

@@ -5,11 +5,14 @@ package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import service.MyCart;
+import service.ProduitsService;
 
 public class TournerUnePageWeb extends HttpServlet {
 
@@ -43,6 +46,14 @@ public class TournerUnePageWeb extends HttpServlet {
                 break;
             case "tournerConsulterCertainsProduits":
                 request.getRequestDispatcher("/WEB-INF/gestionProduit_consulter_conditions.jsp").forward(request, response);
+                break;
+            case "tournerPagePrincipale":
+                MyCart myCart = new MyCart();
+                request.getSession().setAttribute("myCart", myCart);
+                ProduitsService produitsservice = new ProduitsService();
+                ArrayList al = produitsservice.getTousProduits();
+                request.setAttribute("produits", al);
+                request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
                 break;
 
         }

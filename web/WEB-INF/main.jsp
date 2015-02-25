@@ -10,7 +10,10 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <%
-    Clients client = (Clients) session.getAttribute("loginUser");
+    Clients client = new Clients();
+    if (session.getAttribute("loginUser") != null) {
+        client = (Clients) session.getAttribute("loginUser");
+    }
 %>
 <html lang="en">
     <!--<![endif]-->
