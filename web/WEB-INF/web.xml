@@ -67,6 +67,10 @@
         <servlet-name>ClientSupprimer</servlet-name>
         <servlet-class>controlleur.ClientSupprimer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProduitConsulterPourCertains</servlet-name>
+        <servlet-class>controlleur.ProduitConsulterPourCertains</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -122,6 +126,10 @@
     <servlet-mapping>
         <servlet-name>ClientSupprimer</servlet-name>
         <url-pattern>/ClientSupprimer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProduitConsulterPourCertains</servlet-name>
+        <url-pattern>/ProduitConsulterPourCertains</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

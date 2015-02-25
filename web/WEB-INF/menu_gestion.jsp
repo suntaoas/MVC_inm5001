@@ -83,6 +83,7 @@
                                     <li><a href="category.html">Modifier produit</a></li>
                                     <li><a href="category.html">Supprimer produit</a></li>
                                     <li><a href="/MVC_inm5001/ProduitConsulterPourTout">Consulter produit</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsProduits">Consulter Certains clients</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="blog.html" title="Gestion Commandes">Gestion Commandes</a>

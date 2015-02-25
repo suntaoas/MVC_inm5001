@@ -86,19 +86,20 @@
                                             <th>Description</th>
                                             <th>Prix</th>
                                             <th>Quantite</th>
+                                             <th>UniteMesure</th>
                                             <th>Categorie</th>
                                             <th>Photo</th>
                                          </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("produits");
                                             for (int i = 0; i < al.size(); i++) {
-                                                Produits produit = (Produits) al.get(i);
-                                                out.print("<tr><td>" + produit.getNoProduit() + "</td>");
-                                                out.print("<td>" + produit.getDescription() + "</td>");
-                                                out.print("<td>" + produit.getPrix() + "</td>");
-                                                out.print("<td>" + produit.getQuantite() + "</td>");
-                                                out.print("<td>" + produit.getUniteMesure() + "</td>");
-                                                out.print("<td>" + produit.getCategorie() + "</td>");
-                                                out.print("<td>" + produit.getPhoto() + "</td>");
+                                                Produits produitTemp = (Produits) al.get(i);
+                                                out.print("<tr><td>" + produitTemp.getNoProduit() + "</td>");
+                                                out.print("<td>" + produitTemp.getDescription() + "</td>");
+                                                out.print("<td>" + produitTemp.getPrix() + "</td>");
+                                                out.print("<td>" + produitTemp.getQuantite() + "</td>");
+                                                out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
+                                                out.print("<td>" + produitTemp.getCategorie() + "</td>");
+                                                out.print("<td>" + produitTemp.getPhoto() + "</td></tr>");
                                                 
                                             }
                                         %> 
