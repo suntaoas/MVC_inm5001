@@ -26,15 +26,23 @@
         </script>
     </head>
     <%
-        Clients clientModifier = (Clients)session.getAttribute("clientModifier");
+        Clients clientModifier = (Clients) session.getAttribute("clientModifier");
     %>
 
     <body BGCOLOR="grey">
         <h2 align="center">MODIFIER LE CLIENT</h2>
-        
+
         <hr />
-        <form name="form" method="post" action="/MVC_inm5001/ClientConsulterPourCertains" onSubmit="return isValid();">
+        <form name="form" method="post" action="/MVC_inm5001/ClientModifierTraite" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
+                <tr> 
+                    <td width="39%" height="43"> 
+                        <div align="right"><font color="#CC9900">NoClient :</font></div>
+                    </td>
+                    <td width="46%" height="43"> 
+                        <input name="noClient" type="text" id="nomClient" value="<%=clientModifier.getNoClient()%>" readonly>
+                    </td>
+                </tr>
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#CC9900">NOM :</font></div>
@@ -49,6 +57,14 @@
                     </td>
                     <td width="46%" height="43"> 
                         <input name="prenomClient" type="text" id="prenomClient" value="<%=clientModifier.getPrenom()%>">
+                    </td>
+                </tr>
+                <tr> 
+                    <td width="39%" height="43"> 
+                        <div align="right"><font color="#CC9900">MotDePasse :</font></div>
+                    </td>
+                    <td width="46%" height="43"> 
+                        <input name="pass" type="text" id="pass" value="<%=clientModifier.getPassword()%>">
                     </td>
                 </tr>
                 <tr> 
