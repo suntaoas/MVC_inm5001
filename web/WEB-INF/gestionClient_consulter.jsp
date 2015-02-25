@@ -109,6 +109,11 @@
                                             }
                                         %> 
                                     </table>
+                                    <table>
+                                        <tr>
+                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
