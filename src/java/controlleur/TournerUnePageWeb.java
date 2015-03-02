@@ -41,12 +41,16 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerAjouterUnProduit":
                 request.getRequestDispatcher("/WEB-INF/gestionProduit_ajouter.jsp").forward(request, response);
                 break;
-            case "tournerModifierOuSupprimerClients":
-                request.getRequestDispatcher("/WEB-INF/gestionClient_modiOuSuppri_conditions.jsp").forward(request, response);
-                break;
             case "tournerConsulterCertainsProduits":
                 request.getRequestDispatcher("/WEB-INF/gestionProduit_consulter_conditions.jsp").forward(request, response);
                 break;
+            case "tournerModifierOuSupprimerClients":
+                request.getRequestDispatcher("/WEB-INF/gestionClient_modiOuSuppri_conditions.jsp").forward(request, response);
+                break;
+            case "tournerModifierOuSupprimerProduits":
+                request.getRequestDispatcher("/WEB-INF/gestionProduit_modiOuSuppri_conditions.jsp").forward(request, response);
+                break;
+
             case "tournerPagePrincipale":
                 MyCart myCart = new MyCart();
                 request.getSession().setAttribute("myCart", myCart);

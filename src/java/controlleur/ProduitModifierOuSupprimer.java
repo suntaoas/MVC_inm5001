@@ -1,6 +1,6 @@
 /*
- *   C'est la classe de controlleur du servlet pour consulter des produits
- *   
+ *   C'est la classe de controlleur du servlet pour chercher des produits a modifier ou supprimer
+ *   "menu_gestion.jsp->gestion produits->modifier ou supprimer" ----->"gestionProduit_modiOuSuppri_conditions.jsp"----->  "ProduitModifierOuSupprimer.java"  -----> "gestionProduit_modiOuSuppri_affichage.jsp"
  */
 package controlleur;
 
@@ -19,7 +19,7 @@ import service.ClientsService;
 import service.MyCart;
 import service.ProduitsService;
 
-public class ProduitConsulterPourCertains extends HttpServlet {
+public class ProduitModifierOuSupprimer extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,17 +30,19 @@ public class ProduitConsulterPourCertains extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ProduitsService produitsservice = new ProduitsService();
-        //ArrayList tousProduits = produitsservice.getTousProduits();
+        ArrayList tousProduits = produitsservice.getTousProduits();
 
-       
+        
+        
+               
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
-        nomChampsTemp.put("prix", request.getParameter("prixProduit").trim());
-        nomChampsTemp.put("quantite", request.getParameter("quantite").trim());
-        nomChampsTemp.put("unitemesure", request.getParameter("unitemesure").trim());
+        nomChampsTemp.put("prix", request.getParameter("prixProduit"));
+        nomChampsTemp.put("quantite", request.getParameter("quantite"));
+        nomChampsTemp.put("unitemesure", request.getParameter("unitemesure").trim());        
         nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
         nomChampsTemp.put("photo", request.getParameter("photo").trim());
-        nomChampsTemp.put("statut", request.getParameter("statut").trim());
+        
 
         int nombre = nomChampsTemp.size();
 
@@ -67,10 +69,10 @@ public class ProduitConsulterPourCertains extends HttpServlet {
         }
         */        
         if (null != nomChamps) {
-            ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
+            ArrayList certainsProduits = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
 
-            request.setAttribute("produits", certainsClients);
-            request.getRequestDispatcher("/WEB-INF/gestionProduit_consulter.jsp").forward(request, response);
+            request.setAttribute("produits", certainsProduits);
+            request.getRequestDispatcher("/WEB-INF/gestionProduit_modiOuSuppri_affichage.jsp").forward(request, response);
         }
         return;
     }

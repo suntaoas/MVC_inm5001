@@ -1,59 +1,16 @@
 <%-- 
-    C'est la page de la gestion de client pour consulter 
+    C'est la page de la gestion de produit pour modifier ou supprimer 
 --%>
 
-<%@page import="domain.Clients"%>
+<%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<!doctype html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
 
 <html lang="en">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
-        <!--js-->
-        <script src="js/jquery-1.8.2.min.js"></script>
-        <script src="js/common.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/ddsmoothmenu.js"></script>
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/jquery.elastislide.js"></script>
-        <script src="js/jquery.jcarousel.min.js"></script>
-        <script src="js/jquery.accordion.js"></script>
-        <script src="js/light_box.js"></script>
-        <script type="text/javascript">$(document).ready(function() {
-                $(".inline").colorbox({inline: true, width: "50%"});
-            });</script>
-        <!--end js-->
-
-        <!-- Mobile Specific Metas ================================================== -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-        <!-- CSS ================================================== -->
-
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/colors.css">
-        <link rel="stylesheet" href="css/skeleton.css">
-        <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/ddsmoothmenu.css"/>
-        <link rel="stylesheet" href="css/elastislide.css"/>
-        <link rel="stylesheet" href="css/home_flexslider.css"/>
-
-        <link rel="stylesheet" href="css/light_box.css"/>
-        <script src="js/html5.js"></script>
-
-        <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-        <!--[if lt IE 9]>
-                                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-                        <![endif]-->
 
     </head>
     <body>
@@ -123,34 +80,34 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#00FF00" frame="border" width="50%" >
+                                    <table border="4" bgcolor="grey" frame="border" width="50%" >
                                         <tr>
-                                            <th>NoClient</th>
-                                            <th>Nom</th>
-                                            <th>Prenom</th>
-                                            <th>MotDePasse</th>
-                                            <th>Sexe</th>
-                                            <th>Age</th>
-                                            <th>Adresse</th>
-                                            <th>Telephone</th>
-                                            <th>Courriel</th>
-                                            <th>Admin/client</th>
-                                        </tr>
-                                        <%  ArrayList al = (ArrayList) request.getAttribute("clients");
+                                            <th>NoProduit</th>
+                                            <th>Description</th>
+                                            <th>Prix</th>
+                                            <th>Quantite</th>
+                                             <th>UniteMesure</th>
+                                            <th>Categorie</th>
+                                            <th>Photo</th>
+                                         </tr>
+                                        <%  ArrayList al = (ArrayList) request.getAttribute("produits");
                                             for (int i = 0; i < al.size(); i++) {
-                                                Clients client = (Clients) al.get(i);
-                                                out.print("<tr><td>" + client.getNoClient() + "</td>");
-                                                out.print("<td>" + client.getNom() + "</td>");
-                                                out.print("<td>" + client.getPrenom() + "</td>");
-                                                out.print("<td>" + client.getPassword() + "</td>");
-                                                out.print("<td>" + client.getAge() + "</td>");
-                                                out.print("<td>" + client.getSexe() + "</td>");
-                                                out.print("<td>" + client.getAdresse() + "</td>");
-                                                out.print("<td>" + client.getTelephone() + "</td>");
-                                                out.print("<td>" + client.getCourriel() + "</td>");
-                                                out.print("<td>" + client.getUsager() + "</td></tr>");
+                                                Produits produitTemp = (Produits) al.get(i);
+                                                out.print("<tr><td>" + produitTemp.getNoProduit() + "</td>");
+                                                out.print("<td>" + produitTemp.getDescription() + "</td>");
+                                                out.print("<td>" + produitTemp.getPrix() + "</td>");
+                                                out.print("<td>" + produitTemp.getQuantite() + "</td>");
+                                                out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
+                                                out.print("<td>" + produitTemp.getCategorie() + "</td>");
+                                                out.print("<td>" + produitTemp.getPhoto() + "</td></tr>");
+                                                
                                             }
-                                        %> 
+                                        %>                                        
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>

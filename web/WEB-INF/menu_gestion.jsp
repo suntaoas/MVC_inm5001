@@ -80,10 +80,9 @@
                             <li class=""><a href="category.html" title="Gestion Produits">Gestion Produits</a>
                                 <ul>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerAjouterUnProduit">Ajouter produit</a></li>
-                                    <li><a href="category.html">Modifier produit</a></li>
-                                    <li><a href="category.html">Supprimer produit</a></li>
-                                    <li><a href="/MVC_inm5001/ProduitConsulterPourTout">Consulter produit</a></li>
-                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsProduits">Consulter Certains clients</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerModifierOuSupprimerClients">Modifier & Supprimer produit</a></li>
+                                    <li><a href="/MVC_inm5001/ClientConsulterPourTout">Consulter Tous les produits</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsProduits">Consulter Certains produits</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="blog.html" title="Gestion Commandes">Gestion Commandes</a>

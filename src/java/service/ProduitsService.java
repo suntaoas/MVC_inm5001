@@ -47,7 +47,7 @@ public class ProduitsService {
         return TousProduitTemp;
     }
 
-    public ArrayList<Produits> getClientParCertainsChamps(String[] champs, String[] paras) {
+    public ArrayList<Produits> getProduitParCertainsChamps(String[] champs, String[] paras) {
         ArrayList<Produits> certainsProduits = new ArrayList<Produits>();
         String champsTemp = "";
         for (int i = 0; i < champs.length; i++) {
@@ -75,6 +75,19 @@ public class ProduitsService {
     public boolean ajouterProduit(Produits produitNouveau) {
         String sql = "insert into Produits(description,prix,quantite,unitemesure,categorie,photo,statut) values (?,?,?,?,?,?,?)";
         String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getUniteMesure(), produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
+    
+    public boolean modifierProduit(Produits produitModifier) {
+        String sql = "update Produits set description=?,prix=?,quantite=?,unitemesure=?,categorie=?,photo=? where noProduit=? and statut='1'";
+        String[] paras = {produitModifier.getDescription(), produitModifier.getPrix() + "", produitModifier.getQuantite() + "", produitModifier.getUniteMesure(), produitModifier.getCategorie(), produitModifier.getPhoto(),produitModifier.getNoProduit()+""};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
+     public boolean supprimerProduitParNoProduit(String noProduit) {
+        String sql = "update Produits set statut='0' where noProduit=? and statut='1'";
+        String paras[] = {noProduit};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
