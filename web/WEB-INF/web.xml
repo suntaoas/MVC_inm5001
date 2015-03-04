@@ -91,6 +91,10 @@
         <servlet-name>ProduitSupprimer</servlet-name>
         <servlet-class>controlleur.ProduitSupprimer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CommandeConsulterPourCertains</servlet-name>
+        <servlet-class>controlleur.CommandeConsulterPourCertains</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -170,6 +174,10 @@
     <servlet-mapping>
         <servlet-name>ProduitSupprimer</servlet-name>
         <url-pattern>/ProduitSupprimer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommandeConsulterPourCertains</servlet-name>
+        <url-pattern>/CommandeConsulterPourCertains</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

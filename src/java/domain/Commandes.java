@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Commandes {
     private int noCommande;
-    private Date date;
+    private String datetime;
     private String noClient;
     private float montant;
     private String paiement;
@@ -14,12 +14,15 @@ public class Commandes {
         this.noCommande = noCommande;
     }
 
+    public Commandes() {
+    }
+    
     public int getNoCommande() {
         return noCommande;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDatetime() {
+        return datetime;
     }
 
     public String getNoClient() {
@@ -42,8 +45,8 @@ public class Commandes {
         this.noCommande = noCommande;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 
     public void setNoClient(String noClient) {

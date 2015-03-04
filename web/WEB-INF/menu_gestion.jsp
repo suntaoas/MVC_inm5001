@@ -90,7 +90,7 @@
                                     <li><a href="category.html">Ajouter commande</a></li>
                                     <li><a href="category.html">Modifier commande</a></li>
                                     <li><a href="category.html">Supprimer commande</a></li>
-                                    <li><a href="category.html">Consulter commande</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsCommandes">Consulter commande</a></li>
                                     <li><a href="category.html">Paiement pour commande</a></li>
                                 </ul>
                             </li>

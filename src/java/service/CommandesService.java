@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 import domain.Produits;
 import domain.Clients;
+import domain.Commandes;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import utils.*;
 
 //处理与订单相关的业务逻辑
@@ -21,7 +24,7 @@ public class CommandesService {
     //下单涉及到两张表
     public void submitOrder(MyCart myCart, Clients user) {
 
-        String sql = "insert into orders values(order_seq.nextval,?,?,sysdate)";
+        String sql = "insert into commandes values(order_seq.nextval,?,?,sysdate)";
         //因为添加订单很复杂，因此我们不使用SQLHelper,而是专门针对下订单写对数据库的操作
         try {
             ct = DBUtil.getCon();
@@ -73,5 +76,28 @@ public class CommandesService {
             DBUtil.close(rs, ps, ct);
         }
 
+    }
+    
+    public ArrayList<Commandes> getCommandeParCertainsChamps(String[] champs, String[] paras) {
+        ArrayList<Commandes> certainsCommandes = new ArrayList<Commandes>();
+        String champsTemp = "";
+        for (int i = 0; i < champs.length; i++) {
+            champsTemp += champs[i] + "=? and ";
+        }
+        String sql = "select * from Commandes where " + champsTemp + "statut='1'";
+        ArrayList al = new SqlHelper().executeQuery(sql, paras); 
+        for (int i = 0; i < al.size(); i++) {
+            Object obj[] = (Object[]) al.get(i);
+            Commandes commande = new Commandes();
+            commande.setNoCommande(Integer.parseInt(obj[0].toString()));
+            commande.setDatetime(obj[1].toString());
+            commande.setNoClient(obj[2].toString());
+            commande.setMontant(Float.parseFloat(obj[3].toString()));
+            commande.setPaiement(obj[4].toString());
+            commande.setStatut(obj[5].toString());
+
+            certainsCommandes.add(commande);
+        }
+        return certainsCommandes;
     }
 }
