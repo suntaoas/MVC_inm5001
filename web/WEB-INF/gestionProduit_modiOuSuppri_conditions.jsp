@@ -60,7 +60,7 @@
                         <div align="right"><font color="#CC9900">UNITEMESURE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
-                        <select name="sexe">
+                        <select name="unitemesure">
                             <option value="LB">LIVRE</option>
                             <option value="KG">KILOGRAMME</option>
                             <option value="CHQ">CHAQUE</option>                            
