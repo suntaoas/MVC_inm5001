@@ -44,7 +44,7 @@
                 {
                     if (trObj == trObj.parentNode.children[trNo])
                     {
-                        no = trNo ;
+                        no = trNo;
                     }
                 }
                 //alert(no);
@@ -105,16 +105,18 @@
                         <th>Montant</th>
                         <th>Ajouter Dans Panier</th>
                     </tr>
-                    <%  ArrayList al = (ArrayList) request.getAttribute("produitsChoisiPourNouvelleCommande");
-                        for (int i = 0; i < al.size(); i++) {
-                            Produits produitTemp = (Produits) al.get(i);
-                            out.print("<tr><td>" + produitTemp.getNoProduit() + "</td>");
-                            out.print("<td>" + produitTemp.getDescription() + "</td>");
-                            out.print("<td>" + produitTemp.getPrix() + "</td>");
-                            out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
-                            out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
-                            out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
-                            out.print("<td><input type='checkbox' name='check' /></td></tr>");
+                    <%  if (request.getAttribute("produitsChoisiPourNouvelleCommande") != null) {
+                            ArrayList al = (ArrayList) request.getAttribute("produitsChoisiPourNouvelleCommande");
+                            for (int i = 0; i < al.size(); i++) {
+                                Produits produitTemp = (Produits) al.get(i);
+                                out.print("<tr><td>" + produitTemp.getNoProduit() + "</td>");
+                                out.print("<td>" + produitTemp.getDescription() + "</td>");
+                                out.print("<td>" + produitTemp.getPrix() + "</td>");
+                                out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
+                                out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
+                                out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
+                                out.print("<td><input type='checkbox' name='check' /></td></tr>");
+                            }
                         }
                     %> 
                 </table>
