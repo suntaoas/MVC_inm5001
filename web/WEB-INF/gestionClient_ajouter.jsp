@@ -109,7 +109,7 @@
                 </tr>
 
                 <tr>
-                    <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
+                    <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">
                         <div align="left">
                             <input type="submit" name="Submit" value="AJOUTER" >

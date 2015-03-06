@@ -7,23 +7,7 @@
 <html>
     <head>
         <title>Untitled Document</title>
-        <%--
-        <script>
-            function isValid() {
-                if (document.form.nom.value == "") {
-                    window.alert("Nom S.V.P!");
-                    document.form.nom.focus();
-                    return false;
-                }
-                if (document.form.pass.value == "")
-                {
-                    window.alert("MotDePasse S.V.P!");
-                    document.form.pass.focus();
-                    return false;
-                }
-            }
-        </script>
-        --%>
+        
     </head>
 
     <body BGCOLOR="green">
@@ -73,8 +57,8 @@
                     </td>
                     <td width="46%" height="43"> 
                         <select name="categorie">
-                            <option value="M">FRUITS</option>
-                            <option value="F">LEGUMES</option>              			   
+                            <option value="F">FRUITS</option>
+                            <option value="L">LEGUMES</option>              			   
                         </select>
                     </td>
                 </tr>
@@ -89,7 +73,7 @@
                 </tr>
 
                 <tr>
-                    <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
+                    <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">
                         <div align="left">
                             <input type="submit" name="Submit" value="CHERCHER" >

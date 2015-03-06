@@ -89,6 +89,8 @@
                                              <th>UniteMesure</th>
                                             <th>Categorie</th>
                                             <th>Photo</th>
+                                            <th>Modifier</th>
+                                            <th>Supprimer</th>
                                          </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("produits");
                                             for (int i = 0; i < al.size(); i++) {
@@ -99,7 +101,9 @@
                                                 out.print("<td>" + produitTemp.getQuantite() + "</td>");
                                                 out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
                                                 out.print("<td>" + produitTemp.getCategorie() + "</td>");
-                                                out.print("<td>" + produitTemp.getPhoto() + "</td></tr>");
+                                                out.print("<td>" + produitTemp.getPhoto() + "</td>");
+                                                out.print("<td> <a href='/MVC_inm5001/ProduitModifier?noClient=" + produitTemp.getNoProduit() + "'>Modifier</a> </td>");
+                                                out.print("<td> <a href='/MVC_inm5001/ProduitSupprimer?noClient=" + produitTemp.getNoProduit() + "'>Supprimer</a> </td></tr>");
                                                 
                                             }
                                         %>                                        
