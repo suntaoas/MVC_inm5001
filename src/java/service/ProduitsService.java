@@ -55,6 +55,9 @@ public class ProduitsService {
         }
         String sql = "select * from Produits where " + champsTemp + "statut='1'";
         System.out.println(sql);
+        for(int i=0;i<paras.length;i++){
+            System.out.println(paras[i]);
+        }
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         for (int i = 0; i < al.size(); i++) {
             Object obj[] = (Object[]) al.get(i);

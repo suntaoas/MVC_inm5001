@@ -99,6 +99,10 @@
         <servlet-name>GoPagePrincipale</servlet-name>
         <servlet-class>controlleur.GoPagePrincipale</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CommandeAjouterPanier</servlet-name>
+        <servlet-class>controlleur.CommandeAjouterPanier</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -186,6 +190,10 @@
     <servlet-mapping>
         <servlet-name>GoPagePrincipale</servlet-name>
         <url-pattern>/GoPagePrincipale</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommandeAjouterPanier</servlet-name>
+        <url-pattern>/CommandeAjouterPanier</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

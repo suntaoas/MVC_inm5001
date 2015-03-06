@@ -87,7 +87,7 @@
                             </li>
                             <li class=""><a href="blog.html" title="Gestion Commandes">Gestion Commandes</a>
                                 <ul>
-                                    <li><a href="category.html">Ajouter commande</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerAjouterUneCommande">Ajouter commande</a></li>
                                     <li><a href="category.html">Modifier commande</a></li>
                                     <li><a href="category.html">Supprimer commande</a></li>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsCommandes">Consulter commande</a></li>
