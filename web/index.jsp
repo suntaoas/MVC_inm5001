@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/MVC_inm5001/GoPagePrincipale">
+        
         <title>BIENVNUE</title>
     </head>
     <body>
-        <jsp:forward page="/WEB-INF/account_login.jsp"></jsp:forward>
+        
     </body>
 </html>

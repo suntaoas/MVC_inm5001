@@ -9,11 +9,12 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
+
 <%
-    Clients client = new Clients();
-    if (session.getAttribute("loginUser") != null) {
-        client = (Clients) session.getAttribute("loginUser");
-    }
+    //Clients client = new Clients();
+    //if (session.getAttribute("loginUser") != null) {
+    //    client = (Clients) session.getAttribute("loginUser");
+    //}
 %>
 <html lang="en">
     <!--<![endif]-->
@@ -67,7 +68,10 @@
                     <div class="head-right">
                         <ul class="top-nav">
                             <%
-                                if ("1".equals(client.getUsager())) {
+                                if (session.getAttribute("loginUser") != null) {
+                                    Clients client = new Clients();
+                                    client = (Clients) session.getAttribute("loginUser");
+                                    if ("1".equals(client.getUsager())) {
                             %>
                             <li> <a class="mainCurrency" href="#">BIENVNU ADMINISTRATREUR: <%=client.getPrenom()%></a></li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Gestion">Gestion</a></li>
@@ -82,7 +86,13 @@
                             <li class=""><a href="404_error.html" title="Mes Commandes">Mes Commandes</a></li>
                             <li class="my-wishlist"><a href="404_error.html" title="Mon Panier">Mon Panier</a></li>
                             <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
-
+                                <%
+                                } else {
+                                %>
+                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">Connection</a></li>
+                                <%
+                                    }
+                                %>
                         </ul>
                         <section class="header-bottom">
                             <div class="cart-block">
@@ -131,7 +141,7 @@
                                     </ol>
                                 </div>
                                 -->
-                            </div>
+                            </div> 
                             <div class="search-block">
                                 <input type="text" value="Nom de produit seulment" />
                                 <input type="submit" value="Search" title="Search" />

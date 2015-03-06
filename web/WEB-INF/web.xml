@@ -95,6 +95,10 @@
         <servlet-name>CommandeConsulterPourCertains</servlet-name>
         <servlet-class>controlleur.CommandeConsulterPourCertains</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GoPagePrincipale</servlet-name>
+        <servlet-class>controlleur.GoPagePrincipale</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -179,6 +183,10 @@
         <servlet-name>CommandeConsulterPourCertains</servlet-name>
         <url-pattern>/CommandeConsulterPourCertains</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GoPagePrincipale</servlet-name>
+        <url-pattern>/GoPagePrincipale</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
@@ -186,5 +194,6 @@
         <welcome-file>default.html</welcome-file>
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
+        <welcome-file>GoPagePrincipale</welcome-file>
     </welcome-file-list>
 </web-app>

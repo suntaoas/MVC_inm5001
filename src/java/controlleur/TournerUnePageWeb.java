@@ -26,6 +26,9 @@ public class TournerUnePageWeb extends HttpServlet {
         String type = request.getParameter("type");
 
         switch (type) {
+            case "tournerConnection":
+                request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
+                break;
             case "tournerDeconnection":
                 request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
                 break;
