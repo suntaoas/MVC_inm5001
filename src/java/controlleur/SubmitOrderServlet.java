@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import domain.Clients;
-import service.MyCart;
+import service.MonPanier;
 import service.CommandesService;
 
 public class SubmitOrderServlet extends HttpServlet {
@@ -23,7 +23,7 @@ public class SubmitOrderServlet extends HttpServlet {
 		//该Servlet处理下订单的请求
 		try {
 			CommandesService orderservice=new CommandesService();
-			MyCart myCart=(MyCart)request.getSession().getAttribute("myCart");
+			MonPanier myCart=(MonPanier)request.getSession().getAttribute("myCart");
 			Clients user=(Clients)request.getSession().getAttribute("loginUser");
 			orderservice.submitOrder(myCart, user);
 			

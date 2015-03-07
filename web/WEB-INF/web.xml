@@ -10,8 +10,8 @@
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
-        <servlet-name>ShoppingCLServlet</servlet-name>
-        <servlet-class>controlleur.ShoppingCLServlet</servlet-class>
+        <servlet-name>MonPanierTraite</servlet-name>
+        <servlet-class>controlleur.MonPanierTraite</servlet-class>
     </servlet>
     <servlet>
         <description>This is the description of my J2EE component</description>
@@ -28,8 +28,8 @@
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
-        <servlet-name>GoShowMycart</servlet-name>
-        <servlet-class>controlleur.GoShowMycart</servlet-class>
+        <servlet-name>GoAfficherMonPanier</servlet-name>
+        <servlet-class>controlleur.GoAfficherMonPanier</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ClientConsulterPourTout</servlet-name>
@@ -108,8 +108,8 @@
         <url-pattern>/GoHallUI</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ShoppingCLServlet</servlet-name>
-        <url-pattern>/ShoppingCLServlet</url-pattern>
+        <servlet-name>MonPanierTraite</servlet-name>
+        <url-pattern>/MonPanierTraite</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>GoMyOrderServlet</servlet-name>
@@ -120,8 +120,8 @@
         <url-pattern>/SubmitOrderServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>GoShowMycart</servlet-name>
-        <url-pattern>/GoShowMycart</url-pattern>
+        <servlet-name>GoAfficherMonPanier</servlet-name>
+        <url-pattern>/GoAfficherMonPanier</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ClientConsulterPourTout</servlet-name>

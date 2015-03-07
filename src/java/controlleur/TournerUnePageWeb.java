@@ -11,7 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.MyCart;
+import service.MonPanier;
 import service.ProduitsService;
 
 public class TournerUnePageWeb extends HttpServlet {
@@ -60,7 +60,7 @@ public class TournerUnePageWeb extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/gestionCommande_ajouter.jsp").forward(request, response);
                 break;
             case "tournerPagePrincipale":
-                MyCart myCart = new MyCart();
+                MonPanier myCart = new MonPanier();
                 request.getSession().setAttribute("myCart", myCart);
                 ProduitsService produitsservice = new ProduitsService();
                 ArrayList al = produitsservice.getTousProduits();

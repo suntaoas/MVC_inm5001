@@ -19,6 +19,15 @@ public class ProduitsService {
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         if (al.size() == 1) {
             Object obj[] = (Object[]) al.get(0);
+            produit.setNoProduit(Integer.parseInt(obj[0].toString()));
+            produit.setDescription(obj[1].toString());
+            produit.setPrix(Float.parseFloat(obj[2].toString()));
+            produit.setQuantite(Integer.parseInt(obj[3].toString()));
+            produit.setUniteMesure(obj[4].toString());
+            produit.setCategorie(obj[5].toString());
+            produit.setPhoto(obj[6].toString());
+            produit.setStatut(obj[6].toString());
+            
         }
         return produit;
     }

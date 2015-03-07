@@ -56,8 +56,8 @@ public class TraiterLogin extends HttpServlet {
             request.getSession().setAttribute("loginUser", loginuser);
 
             //creer un shopping cart
-            MyCart myCart = new MyCart();
-            request.getSession().setAttribute("myCart", myCart);
+            MonPanier unpanier = new MonPanier();
+            request.getSession().setAttribute("monPanier", unpanier);
 
             ProduitsService produitsservice = new ProduitsService();
             ArrayList al = produitsservice.getTousProduits();

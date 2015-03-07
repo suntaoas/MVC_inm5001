@@ -32,7 +32,7 @@ public class GoPagePrincipale extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
 
         //creer un shopping cart
-        MyCart myCart = new MyCart();
+        MonPanier myCart = new MonPanier();
         request.getSession().setAttribute("myCart", myCart);
 
         request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);

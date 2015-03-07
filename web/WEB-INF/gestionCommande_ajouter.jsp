@@ -2,6 +2,7 @@
     c'est la page d'ajout de produit
 --%>
 
+<%@page import="service.*"%>
 <%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,7 +11,7 @@
     <head>
         <title>Untitled Document</title>
         <script language="javascript" type="text/javascript">
-            //得到行对象
+            //obtenir l'objet ligne
             function getRowObj(obj)
             {
                 var i = 0;
@@ -22,7 +23,7 @@
                 }
                 return obj;
             }
-            //根据得到的行对象得到所在的行数
+            //obtenir le numero de ligne selon l'objet de ligne
             function getRowNo(obj)
             {
                 var trObj = getRowObj(obj);
@@ -56,6 +57,30 @@
                 //alert(price * nombre);
                 document.getElementById("tb").rows[no].cells[5].innerHTML = parseFloat((price * nombre).toFixed(2));
             }
+
+            //function SelectionProduit(obj,unNouveauPanier) {
+            //    var trObj = getRowObj(obj);
+            //    var trArr = trObj.parentNode.children;
+            //    var panier = new MonPanier();
+
+
+            //     for (var trNo = 0; trNo < trArr.length; trNo++)
+            //    {
+            //        if (trObj == trObj.parentNode.children[trNo])
+            //       {
+            //           no = trNo;
+            //       }
+            //   }
+            //  alert(no);
+            //    if (obj.type == "checkbox" && obj.checked) {
+            //       alert('vous choissez' + (no));
+
+            //   }
+            //  if (obj.type == "checkbox" && !(obj.checked)) {
+            //       alert('vous annulez' + (no));
+            //   }
+
+            //}
         </script>
     </head>
 
@@ -115,7 +140,8 @@
                                 out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
                                 out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
                                 out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
-                                out.print("<td><input type='checkbox' name='check' /></td></tr>");
+                                //out.print("<td><input type='checkbox' name='check' onchange='SelectionProduit(this,unNouveauPanier)'/></td></tr>");
+                                out.print("<td> <a href='/MVC_inm5001/MonPanierTraite?type=ajouter&quantite="+ produitTemp.getNoProduit() +"&id=" + produitTemp.getNoProduit() + " '>AJOUTER</a> </td></tr>");
                             }
                         }
                     %> 

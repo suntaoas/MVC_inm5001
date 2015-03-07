@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import service.ClientsService;
 import service.CommandesService;
-import service.MyCart;
+import service.MonPanier;
 import service.ProduitsService;
 
 public class CommandeConsulterPourCertains extends HttpServlet {

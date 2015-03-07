@@ -22,7 +22,7 @@ public class CommandesService {
     private ResultSet rs = null;
 
     //下单涉及到两张表
-    public void submitOrder(MyCart myCart, Clients user) {
+    public void submitOrder(MonPanier myCart, Clients user) {
 
         String sql = "insert into commandes values(order_seq.nextval,?,?,sysdate)";
         //因为添加订单很复杂，因此我们不使用SQLHelper,而是专门针对下订单写对数据库的操作
@@ -34,7 +34,7 @@ public class CommandesService {
 
             ps = ct.prepareStatement(sql);
             ps.setInt(1, user.getNoClient());
-            ps.setFloat(2, myCart.getTotalPrice());
+            ps.setFloat(2, myCart.getMontantTotal());
             ps.executeUpdate();
             //如何得到刚刚插入的订单记录的订单号	
             sql = "select order_seq.currval from orders";//选择刚刚用的序列
@@ -47,7 +47,7 @@ public class CommandesService {
                 orderId = rs.getInt(1);
             }
             //把订单细节表生成（批量提交！！）
-            ArrayList al = myCart.showMyCart();
+            ArrayList al = myCart.afficherMonPanier();
             for (int i = 0; i < al.size(); i++) {
                 Produits produit = (Produits) al.get(i);
                 sql = "insert into orderitem values(orderitem_seq.nextval,?,?,?)";

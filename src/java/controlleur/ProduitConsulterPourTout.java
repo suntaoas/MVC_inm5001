@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import service.ClientsService;
-import service.MyCart;
+import service.MonPanier;
 import service.ProduitsService;
 
 public class ProduitConsulterPourTout extends HttpServlet {

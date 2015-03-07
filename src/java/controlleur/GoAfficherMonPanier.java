@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import service.MyCart;
+import service.MonPanier;
 
 //防止重复刷新
-public class GoShowMycart extends HttpServlet {
+public class GoAfficherMonPanier extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -20,12 +20,13 @@ public class GoShowMycart extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		//获得登陆时创建的购物车
-		MyCart myCart=(MyCart)request.getSession().getAttribute("myCart");
+		MonPanier monPanier=(MonPanier)request.getSession().getAttribute("monPanier");
 		//把要显示的数据放入request，准备显示
-		request.setAttribute("booklist", myCart.showMyCart());
-		request.setAttribute("toltalPrice", myCart.getTotalPrice());
+                System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
+		request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
+		request.setAttribute("MontantTotal", monPanier.getMontantTotal());
 		//跳转到 显示我的购物车去
-		request.getRequestDispatcher("/WEB-INF/ShowMyCart.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/affichageMonPanier.jsp").forward(request, response);
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
