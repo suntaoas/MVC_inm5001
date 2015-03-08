@@ -56,31 +56,27 @@
                 //alert(nombre);
                 //alert(price * nombre);
                 document.getElementById("tb").rows[no].cells[5].innerHTML = parseFloat((price * nombre).toFixed(2));
+                document.getElementById("tb").rows[no].cells[6].innerHTML = nombre;
             }
 
-            //function SelectionProduit(obj,unNouveauPanier) {
-            //    var trObj = getRowObj(obj);
-            //    var trArr = trObj.parentNode.children;
-            //    var panier = new MonPanier();
-
-
-            //     for (var trNo = 0; trNo < trArr.length; trNo++)
-            //    {
-            //        if (trObj == trObj.parentNode.children[trNo])
-            //       {
-            //           no = trNo;
-            //       }
-            //   }
-            //  alert(no);
-            //    if (obj.type == "checkbox" && obj.checked) {
-            //       alert('vous choissez' + (no));
-
-            //   }
-            //  if (obj.type == "checkbox" && !(obj.checked)) {
-            //       alert('vous annulez' + (no));
-            //   }
-
-            //}
+            function ajouterProduit(noProduit) {
+                alert(noProduit);
+                var nombre = 0;
+                //var id = 0;
+                var tableId = document.getElementById("tb");
+                //nombre = document.getElementById("tb").rows[1].cells[6].innerHTML;
+                for(var i=0;i<tableId.rows.length;i++){
+                    if(tableId.rows[i].cells[0].innerHTML == noProduit){
+                        nombre = tableId.rows[i].cells[6].innerHTML;
+                        //id = i;
+                        break;
+                    }
+                }
+                location.href = "/MVC_inm5001/MonPanierTraite?type=ajouter&id="+noProduit+"&quantite=" + nombre;
+                //alert(nombre);
+                //alert(id);
+                
+            }
         </script>
     </head>
 
@@ -128,6 +124,7 @@
                         <th>UniteMesure</th>
                         <th>Quantite</th>
                         <th>Montant</th>
+                        <th>QuantiteTemp</th>
                         <th>Ajouter Dans Panier</th>
                     </tr>
                     <%  if (request.getAttribute("produitsChoisiPourNouvelleCommande") != null) {
@@ -139,13 +136,17 @@
                                 out.print("<td>" + produitTemp.getPrix() + "</td>");
                                 out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
                                 out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
+                                //out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' /></td>");
                                 out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
+                                out.print("<td><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
                                 //out.print("<td><input type='checkbox' name='check' onchange='SelectionProduit(this,unNouveauPanier)'/></td></tr>");
-                                out.print("<td> <a href='/MVC_inm5001/MonPanierTraite?type=ajouter&quantite="+ produitTemp.getNoProduit() +"&id=" + produitTemp.getNoProduit() + " '>AJOUTER</a> </td></tr>");
+                                //out.print("<td> <a href='/MVC_inm5001/MonPanierTraite?type=ajouter&id=" + produitTemp.getNoProduit() + " ' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
+                                out.print("<td><a href='javascript: ajouterProduit("+produitTemp.getNoProduit()+")' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
                             }
                         }
                     %> 
                 </table>
+
             </div>
         </section>
     </body>

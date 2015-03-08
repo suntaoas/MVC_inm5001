@@ -85,11 +85,11 @@
                                         <tr>
                                             <th>NoProduit</th>
                                             <th>DescriptionProduit</th>
-                                            <th>Prix</th><th>Quantite</th>
+                                            <th>Prix</th>
+                                            <th>Quantite</th>
                                             <th>SUPPRIMER</th>
                                         </tr>
                                         <%
-                                            //从request中取出要显示的商品信息
                                             float montantTotal = Float.parseFloat(request.getAttribute("MontantTotal").toString());
                                             ArrayList al = (ArrayList) request.getAttribute("listeDeProduit");
                                             System.out.println("al size : " + al.size());
@@ -105,7 +105,6 @@
                                             </td><td><a href="/MVC_inm5001/MonPanierTraite?type=del&id=<%=produit.getNoProduit()%>">SUPPRIMER</a></td></tr>
                                             <%
                                                 }
-
                                             %>
                                         <tr><td colspan="6"><input type="submit" value="update"></td></tr>
                                         <tr><td colspan="6">MontantTotal ：<%=montantTotal%>  </td></tr>

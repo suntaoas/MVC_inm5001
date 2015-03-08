@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.MonPanier;
 
-//防止重复刷新
 public class GoAfficherMonPanier extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -19,13 +18,13 @@ public class GoAfficherMonPanier extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		//获得登陆时创建的购物车
+
 		MonPanier monPanier=(MonPanier)request.getSession().getAttribute("monPanier");
-		//把要显示的数据放入request，准备显示
-                System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
+
+                //System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
 		request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
 		request.setAttribute("MontantTotal", monPanier.getMontantTotal());
-		//跳转到 显示我的购物车去
+
 		request.getRequestDispatcher("/WEB-INF/affichageMonPanier.jsp").forward(request, response);
 	}
 
