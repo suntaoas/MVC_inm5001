@@ -25,7 +25,7 @@ public class GoAfficherMonPanier extends HttpServlet {
 		request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
 		request.setAttribute("MontantTotal", monPanier.getMontantTotal());
 
-		request.getRequestDispatcher("/WEB-INF/affichageMonPanier.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/gestionCommande_affichageMonPanier.jsp").forward(request, response);
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)

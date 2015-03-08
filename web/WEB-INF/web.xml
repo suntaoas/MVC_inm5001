@@ -103,6 +103,10 @@
         <servlet-name>CommandeAjouterPanier</servlet-name>
         <servlet-class>controlleur.CommandeAjouterPanier</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CommandeCreer</servlet-name>
+        <servlet-class>controlleur.CommandeCreer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -194,6 +198,10 @@
     <servlet-mapping>
         <servlet-name>CommandeAjouterPanier</servlet-name>
         <url-pattern>/CommandeAjouterPanier</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommandeCreer</servlet-name>
+        <url-pattern>/CommandeCreer</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

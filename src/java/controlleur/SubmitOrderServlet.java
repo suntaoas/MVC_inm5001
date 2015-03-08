@@ -25,7 +25,7 @@ public class SubmitOrderServlet extends HttpServlet {
 			CommandesService orderservice=new CommandesService();
 			MonPanier myCart=(MonPanier)request.getSession().getAttribute("myCart");
 			Clients user=(Clients)request.getSession().getAttribute("loginUser");
-			orderservice.submitOrder(myCart, user);
+			orderservice.ajouterCommande(myCart, 1);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

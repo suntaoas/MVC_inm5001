@@ -22,7 +22,7 @@ public class CommandesService {
     private ResultSet rs = null;
 
     //下单涉及到两张表
-    public void submitOrder(MonPanier myCart, Clients user) {
+    public boolean ajouterCommande(MonPanier monpanier, int noClient) {
 
         String sql = "insert into commandes values(order_seq.nextval,?,?,sysdate)";
         //因为添加订单很复杂，因此我们不使用SQLHelper,而是专门针对下订单写对数据库的操作
@@ -33,8 +33,8 @@ public class CommandesService {
             ct.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             ps = ct.prepareStatement(sql);
-            ps.setInt(1, user.getNoClient());
-            ps.setFloat(2, myCart.getMontantTotal());
+            //ps.setInt(1, noClient.getNoClient());
+            ps.setFloat(2, monpanier.getMontantTotal());
             ps.executeUpdate();
             //如何得到刚刚插入的订单记录的订单号	
             sql = "select order_seq.currval from orders";//选择刚刚用的序列
@@ -47,7 +47,7 @@ public class CommandesService {
                 orderId = rs.getInt(1);
             }
             //把订单细节表生成（批量提交！！）
-            ArrayList al = myCart.afficherMonPanier();
+            ArrayList al = monpanier.afficherMonPanier();
             for (int i = 0; i < al.size(); i++) {
                 Produits produit = (Produits) al.get(i);
                 sql = "insert into orderitem values(orderitem_seq.nextval,?,?,?)";
@@ -59,7 +59,7 @@ public class CommandesService {
             }
             //整体提交
             ct.commit();
-
+            
         } catch (Exception e) {
 
             //若失败，则回滚
@@ -75,7 +75,7 @@ public class CommandesService {
         } finally {
             DBUtil.close(rs, ps, ct);
         }
-
+        return true;    
     }
     
     public ArrayList<Commandes> getCommandeParCertainsChamps(String[] champs, String[] paras) {
@@ -91,13 +91,20 @@ public class CommandesService {
             Commandes commande = new Commandes();
             commande.setNoCommande(Integer.parseInt(obj[0].toString()));
             commande.setDatetime(obj[1].toString());
-            commande.setNoClient(obj[2].toString());
+            commande.setNoClient(Integer.parseInt(obj[2].toString()));
             commande.setMontant(Float.parseFloat(obj[3].toString()));
             commande.setPaiement(obj[4].toString());
             commande.setStatut(obj[5].toString());
 
             certainsCommandes.add(commande);
         }
+        return certainsCommandes;
+    }
+    
+        public ArrayList<Commandes> getTousCommandes() {
+        ArrayList<Commandes> certainsCommandes = new ArrayList<Commandes>();
+        String champsTemp = "";
+        
         return certainsCommandes;
     }
 }

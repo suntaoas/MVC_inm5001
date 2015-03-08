@@ -27,13 +27,15 @@ public class MonPanierTraite extends HttpServlet {
         //System.out.println("MonPanierTraite.java--id =======" + id);
         //System.out.println("MonPanierTraite.java--type =======" + type);
         if (type.equals("supprimer")) {
+            System.out.println("MonPanier--supprimeer :");
             //obtenir le monPanier
             if (request.getSession().getAttribute("monPanier") != null) {
                 MonPanier unNouveauPanierAdm = (MonPanier) request.getSession().getAttribute("monPanier");
                 unNouveauPanierAdm.supprimerProduit(id);
+                System.out.println("MonPanier--supprimeer : size of monPanier : " + unNouveauPanierAdm.afficherMonPanier().size());
 
                 //request.setAttribute("listeDeProduit", unNouveauPanierAdm.afficherMonPanier());
-		//request.setAttribute("MontantTotal", unNouveauPanierAdm.getMontantTotal());
+                //request.setAttribute("MontantTotal", unNouveauPanierAdm.getMontantTotal());
                 //request.getRequestDispatcher("/WEB-INF/affichageMonPanier.jsp").forward(request, response);
                 request.getSession().setAttribute("monPanier", unNouveauPanierAdm);
                 response.sendRedirect("/MVC_inm5001/GoAfficherMonPanier");
@@ -58,16 +60,15 @@ public class MonPanierTraite extends HttpServlet {
             }
             response.sendRedirect("/MVC_inm5001/GoAfficherMonPanier");
         } else if (type.equals("modifier")) {
-            String bookIds[] = request.getParameterValues("id");
-            String nums[] = request.getParameterValues("booknum");
+            int nombre = Integer.parseInt(request.getParameter("quantite"));
 
-            MonPanier myCart = (MonPanier) request.getSession().getAttribute("myCart");
-            for (int i = 0; i < bookIds.length; i++) {
-                myCart.modifierProduit(bookIds[i], nums[i]);
-            }
-            request.setAttribute("booklist", myCart.afficherMonPanier());
-            request.setAttribute("toltalPrice", myCart.getMontantTotal());
-            request.getRequestDispatcher("/WEB-INF/ShowMyCart.jsp").forward(request, response);
+            MonPanier monPanier = (MonPanier) request.getSession().getAttribute("monPanier");
+
+            monPanier.modifierProduit(id, nombre);
+
+            System.out.println("MonPanierTraite.java--nombre =======" + nombre);
+            request.getSession().setAttribute("monPanier", monPanier);
+            response.sendRedirect("/MVC_inm5001/GoAfficherMonPanier");
         } else if (type.equals("show")) {
 
             response.sendRedirect("/MyShopping/GoShowMycart");

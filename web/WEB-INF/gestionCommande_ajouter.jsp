@@ -60,7 +60,7 @@
             }
 
             function ajouterProduit(noProduit) {
-                alert(noProduit);
+                //alert(noProduit);
                 var nombre = 0;
                 //var id = 0;
                 var tableId = document.getElementById("tb");
@@ -124,7 +124,6 @@
                         <th>UniteMesure</th>
                         <th>Quantite</th>
                         <th>Montant</th>
-                        <th>QuantiteTemp</th>
                         <th>Ajouter Dans Panier</th>
                     </tr>
                     <%  if (request.getAttribute("produitsChoisiPourNouvelleCommande") != null) {
@@ -136,11 +135,8 @@
                                 out.print("<td>" + produitTemp.getPrix() + "</td>");
                                 out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
                                 out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
-                                //out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' /></td>");
                                 out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
-                                out.print("<td><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
-                                //out.print("<td><input type='checkbox' name='check' onchange='SelectionProduit(this,unNouveauPanier)'/></td></tr>");
-                                //out.print("<td> <a href='/MVC_inm5001/MonPanierTraite?type=ajouter&id=" + produitTemp.getNoProduit() + " ' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
+                                out.print("<td style='display:none;'><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
                                 out.print("<td><a href='javascript: ajouterProduit("+produitTemp.getNoProduit()+")' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
                             }
                         }

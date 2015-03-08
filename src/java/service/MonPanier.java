@@ -43,10 +43,10 @@ public class MonPanier {
     }
 
 
-    public void modifierProduit(String id, String nums) {
+    public void modifierProduit(String id, int nums) {
 
         Produits book = hm.get(id);
-        book.setShoppingNum(Integer.parseInt(nums));
+        book.setShoppingNum(nums);
     }
 
 

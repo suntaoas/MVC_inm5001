@@ -5,7 +5,7 @@ import java.util.Date;
 public class Commandes {
     private int noCommande;
     private String datetime;
-    private String noClient;
+    private int noClient;
     private float montant;
     private String paiement;
     private String statut;
@@ -25,7 +25,7 @@ public class Commandes {
         return datetime;
     }
 
-    public String getNoClient() {
+    public int getNoClient() {
         return noClient;
     }
 
@@ -49,7 +49,7 @@ public class Commandes {
         this.datetime = datetime;
     }
 
-    public void setNoClient(String noClient) {
+    public void setNoClient(int noClient) {
         this.noClient = noClient;
     }
 
