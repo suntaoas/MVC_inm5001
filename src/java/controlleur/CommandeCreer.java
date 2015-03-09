@@ -29,29 +29,29 @@ public class CommandeCreer extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
 
-        int noClient = Integer.parseInt(request.getParameter("nomClient").trim().toString());
-        float montant = Float.parseFloat(request.getParameter("montant").trim().toString());
+        int noClient = Integer.parseInt(request.getParameter("noClient"));
+        float montant = Float.parseFloat(request.getParameter("montant"));
+        System.out.println("CommandeCreer.java------noClient and montantTotal :"+noClient+"---"+montant);
+        
         MonPanier monPanier = (MonPanier) request.getSession().getAttribute("monPanier");
-        
-        Commandes commande = new Commandes();
-        commande.setNoClient(noClient);
-        commande.setMontant(montant);
-        
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        System.out.println("CommandeCreer.java------ get.MmontantTotal() :"+monPanier.getMontantTotal());
+
+        Commandes nouveauCommande = new Commandes();
+        nouveauCommande.setNoClient(noClient);
+        nouveauCommande.setMontant(montant);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
         Date curDate = new Date(System.currentTimeMillis());
         String datetime = formatter.format(curDate);
-        commande.setDatetime(datetime);
-
+        nouveauCommande.setDatetime(datetime);
+        System.out.println("CommandeCreer.java------ datetime :"+nouveauCommande.getDatetime());
+        
         CommandesService commandesservice = new CommandesService();
-        boolean res = commandesservice.ajouterCommande(monPanier,noClient);
-        if (res) {
-            ArrayList<Commandes> tousCommandes = commandesservice.getTousCommandes();
-            request.setAttribute("commandes", tousCommandes);
-            request.getRequestDispatcher("/WEB-INF/gestionClient_consulter.jsp").forward(request, response);
-        }else{
-            System.out.println("c'est echec !");
-        }
-        return;
+        commandesservice.ajouterCommande(monPanier, nouveauCommande);
+        
+        ArrayList<Commandes> tousCommandes = commandesservice.getTousCommandes();
+        request.setAttribute("commandes", tousCommandes);
+        request.getRequestDispatcher("/WEB-INF/gestionCommande_consulter_conditions.jsp").forward(request, response);
     }
 
     @Override

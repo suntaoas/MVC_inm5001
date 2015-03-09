@@ -11,7 +11,8 @@ import domain.Produits;
 import java.util.Map;
 
 public class MonPanier {
-
+    
+    //float montantTotal;
     Map<String, Produits> hm = new HashMap<String, Produits>();
 
     public Produits getHm(String id) {
@@ -72,6 +73,7 @@ public class MonPanier {
         while (iterator.hasNext()) {
 
             String noProduit = (String) iterator.next();
+            System.out.println("MonPanier.java------ getMmontantTotal()-----noProduit :"+noProduit);
 
             Produits produit = hm.get(noProduit);
 

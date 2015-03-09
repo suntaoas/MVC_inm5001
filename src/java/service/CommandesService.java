@@ -14,47 +14,48 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import utils.*;
 
-//处理与订单相关的业务逻辑
 public class CommandesService {
 
     private Connection ct = null;
     private PreparedStatement ps = null;
     private ResultSet rs = null;
 
-    //下单涉及到两张表
-    public boolean ajouterCommande(MonPanier monpanier, int noClient) {
-
-        String sql = "insert into commandes values(order_seq.nextval,?,?,sysdate)";
-        //因为添加订单很复杂，因此我们不使用SQLHelper,而是专门针对下订单写对数据库的操作
+    public void ajouterCommande(MonPanier monpanier, Commandes nouveauCommande) {
+        System.out.println("CommandeService.java------noClient, datetime , MontantTotal :"+nouveauCommande.getNoClient()+"---"+nouveauCommande.getDatetime()+"---"+monpanier.getMontantTotal());
+        String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values(?,?,?,'0','1')";
+        //String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values('2015-34-09 00:34:46',3,3.00,'0','1')";
+        
         try {
             ct = DBUtil.getCon();
-            //为了保证我们的订单号是稳定的，所以将我们的事务隔离级别升级（可串行）
             ct.setAutoCommit(false);
             ct.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 
             ps = ct.prepareStatement(sql);
-            //ps.setInt(1, noClient.getNoClient());
-            ps.setFloat(2, monpanier.getMontantTotal());
-            ps.executeUpdate();
-            //如何得到刚刚插入的订单记录的订单号	
-            sql = "select order_seq.currval from orders";//选择刚刚用的序列
+            ps.setString(1,nouveauCommande.getDatetime());
+            ps.setInt(2, nouveauCommande.getNoClient());
+            ps.setFloat(3, monpanier.getMontantTotal());
+            ps.executeUpdate();	
+            sql = "select MAX(noCommande) from Commandes";//选择刚刚用的序列
             ps = ct.prepareStatement(sql);
             rs = ps.executeQuery();
             int orderId = 0;
+            //rs = ps.getGeneratedKeys();
             if (rs.next()) {
 
-                //取出刚刚生成的订单号
                 orderId = rs.getInt(1);
             }
-            //把订单细节表生成（批量提交！！）
             ArrayList al = monpanier.afficherMonPanier();
             for (int i = 0; i < al.size(); i++) {
                 Produits produit = (Produits) al.get(i);
-                sql = "insert into orderitem values(orderitem_seq.nextval,?,?,?)";
+                
+                sql = "insert into DetailCommande values(?,?,?,?,?)";
+
                 ps = ct.prepareStatement(sql);
                 ps.setInt(1, orderId);
                 ps.setInt(2, produit.getNoProduit());
-                ps.setInt(3, produit.getShoppingNum());
+                ps.setFloat(3,produit.getPrix());
+                ps.setInt(4, produit.getShoppingNum());
+                ps.setFloat(5, produit.getShoppingNum()*produit.getPrix());
                 ps.executeUpdate();
             }
             //整体提交
@@ -74,8 +75,7 @@ public class CommandesService {
             // TODO: handle exception
         } finally {
             DBUtil.close(rs, ps, ct);
-        }
-        return true;    
+        }            
     }
     
     public ArrayList<Commandes> getCommandeParCertainsChamps(String[] champs, String[] paras) {

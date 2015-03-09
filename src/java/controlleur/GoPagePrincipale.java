@@ -32,8 +32,8 @@ public class GoPagePrincipale extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
 
         //creer un shopping cart
-        MonPanier myCart = new MonPanier();
-        request.getSession().setAttribute("myCart", myCart);
+        MonPanier monpanier = new MonPanier();
+        request.getSession().setAttribute("monPanier", monpanier);
 
         request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
         return;
