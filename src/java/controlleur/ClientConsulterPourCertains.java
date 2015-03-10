@@ -32,17 +32,6 @@ public class ClientConsulterPourCertains extends HttpServlet {
         ClientsService clientsservice = new ClientsService();
         ArrayList tousClients = clientsservice.getTousClients();
 
-        /*
-         String nomChamps[] = null;
-         String ValeurChamps[] = null;
-         int i = 0;
-         String nomClient = request.getParameter("nomClient").trim();
-         if (nomClient != null) {
-         nomChamps[i] = "nomClient";
-         ValeurChamps[i] = nomClient;
-         i++;
-         }
-         */
         // ArrayList<String> nomChampsTemp = new ArrayList<String>();
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("nom", request.getParameter("nomClient").trim());
