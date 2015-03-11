@@ -40,7 +40,7 @@ public class CommandeCreer extends HttpServlet {
         nouveauCommande.setNoClient(noClient);
         nouveauCommande.setMontant(montant);
 
-        SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date curDate = new Date(System.currentTimeMillis());
         String datetime = formatter.format(curDate);
         nouveauCommande.setDatetime(datetime);
