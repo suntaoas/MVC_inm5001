@@ -80,14 +80,14 @@
         </script>
     </head>
 
-    <body BGCOLOR="green">
+    <body BGCOLOR="#F0F8FF">
         <h2 align="center">CHOISIR PRODUITS POUR UNE COMMANDE</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/CommandeAjouterPanier">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">DESCRIPTION :</font></div>
+                        <div align="right"><font color="#000000">DESCRIPTION :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="descripProduit" type="text" id="descripProduit">
@@ -95,7 +95,7 @@
                 </tr>
                 <tr> 
                     <td width="46%" height="43">
-                        <div align="right"><font color="#CC9900">CATEGORIE :</font></div>
+                        <div align="right"><font color="#000000">CATEGORIE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="categorie">
@@ -105,7 +105,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
+                    <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">
                         <div align="left">
                             <input type="submit" name="Submit" value="CHERCHER" >
