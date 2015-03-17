@@ -99,7 +99,7 @@
                             <div >
                                 <div>
                                     <form name="form" method="post" action="/MVC_inm5001/CommandeCreer">
-                                        <table border="4" bgcolor="grey" frame="border" width="50%" id="tbl">
+                                        <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" id="tbl">
                                             <tr>
                                                 <th>NoProduit</th>
                                                 <th>DescriptionProduit</th>

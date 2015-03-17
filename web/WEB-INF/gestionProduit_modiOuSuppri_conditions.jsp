@@ -10,14 +10,14 @@
         
     </head>
 
-    <body BGCOLOR="grey">
+    <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU PRODUIT</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ProduitModifierOuSupprimer" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">DESCRIPTION :</font></div>
+                        <div align="right"><font color="#000000">DESCRIPTION :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="descripProduit" type="text" id="descripProduit">
@@ -25,7 +25,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">PRIX :</font></div>
+                        <div align="right"><font color="#000000">PRIX :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="prixProduit" type="text" id="prixProduit">
@@ -33,7 +33,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">QUANTITE :</font></div>
+                        <div align="right"><font color="#000000">QUANTITE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="quantite" type="text" id="quantite">
@@ -41,7 +41,7 @@
                 </tr>
                 <tr> 
                     <td width="46%" height="43">
-                        <div align="right"><font color="#CC9900">UNITEMESURE :</font></div>
+                        <div align="right"><font color="#000000">UNITEMESURE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="unitemesure">
@@ -53,7 +53,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">CATEGORIE :</font></div>
+                        <div align="right"><font color="#000000">CATEGORIE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="categorie">
@@ -64,7 +64,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">PHOTO :</font></div>
+                        <div align="right"><font color="#000000">PHOTO :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="photo" type="text" id="photo">
@@ -72,7 +72,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">STATUT :</font></div>
+                        <div align="right"><font color="#000000">STATUT :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="statut" type="text" id="statut">

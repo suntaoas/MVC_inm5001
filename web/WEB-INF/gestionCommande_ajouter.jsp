@@ -116,7 +116,7 @@
         </form>
         <section >
             <div style="text-align:center;">
-                <table border="4" bgcolor="grey" frame="border" width="60%" style="margin:auto" id="tb">
+                <table border="4" bgcolor="#F0F8FF" frame="border" width="60%" style="margin:auto" id="tb">
                     <tr>
                         <th>NoProduit</th>
                         <th>Description</th>

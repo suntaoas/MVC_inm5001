@@ -24,7 +24,7 @@
         </script>
     </head>
 
-    <body bgcolor="grey">
+    <body bgcolor="#F0F8FF">
         <h2 align="center">RECHERCHE DU CLIENT</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ClientConsulterPourCertains" onSubmit="return isValid();">

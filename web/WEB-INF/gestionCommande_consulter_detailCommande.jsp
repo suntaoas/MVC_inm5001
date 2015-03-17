@@ -37,7 +37,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="grey" frame="border" width="50%" >
+                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>NoCommande</th>
                                             <th>NoProduit</th>
