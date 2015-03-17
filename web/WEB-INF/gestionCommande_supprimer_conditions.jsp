@@ -26,14 +26,14 @@
         --%>
     </head>
 
-    <body BGCOLOR="green">
+    <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU COMMANDES POUR SUPPRIMER</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/CommandeConsulterPourSupprimer?type=supprimer" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">noCommande :</font></div>
+                        <div align="right"><font color="#000000">noCommande :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="noCommande" type="text" id="noCommande">
@@ -41,7 +41,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">noClient :</font></div>
+                        <div align="right"><font color="#000000">noClient :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="noClient" type="text" id="noClient">
@@ -49,7 +49,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">paiement</font></div>
+                        <div align="right"><font color="#000000">paiement</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="paiement">
@@ -60,7 +60,7 @@
                 </tr>
                 <tr> 
                     <td width="46%" height="43">
-                        <div align="right"><font color="#CC9900">statut :</font></div>
+                        <div align="right"><font color="#000000">statut :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="statut">

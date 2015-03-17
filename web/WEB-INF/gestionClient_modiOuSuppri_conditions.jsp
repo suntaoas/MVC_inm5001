@@ -24,14 +24,14 @@
         </script>
     </head>
 
-    <body BGCOLOR="grey">
+    <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU CLIENT</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ClientModifierOuSupprimer" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">NOM :</font></div>
+                        <div align="right"><font color="#000000">NOM :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="nomClient" type="text" id="nomClient">
@@ -39,7 +39,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">PRENOM :</font></div>
+                        <div align="right"><font color="#000000">PRENOM :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="prenomClient" type="text" id="prenomClient">
@@ -47,7 +47,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">AGE :</font></div>
+                        <div align="right"><font color="#000000">AGE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="age" type="text" id="age">
@@ -55,7 +55,7 @@
                 </tr>
                 <tr> 
                     <td width="46%" height="43">
-                        <div align="right"><font color="#CC9900">SEXE :</font></div>
+                        <div align="right"><font color="#000000">SEXE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="sexe">
@@ -66,7 +66,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">STATUT :</font></div>
+                        <div align="right"><font color="#000000">STATUT :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="statut" type="text" id="statut">
@@ -74,7 +74,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">ADRESSE :</font></div>
+                        <div align="right"><font color="#000000">ADRESSE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="adresse" type="text" id="adresse">
@@ -82,7 +82,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">TELEPHONE :</font></div>
+                        <div align="right"><font color="#000000">TELEPHONE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="telephone" type="text" id="telephone">
@@ -90,7 +90,7 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">COURRIEL :</font></div>
+                        <div align="right"><font color="#000000">COURRIEL :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <input name="courriel" type="text" id="courriel">
@@ -98,7 +98,7 @@
                 </tr>
                 <tr> 
                     <td width="46%" height="43">
-                        <div align="right"><font color="#CC9900">ADMIN/USAGE :</font></div>
+                        <div align="right"><font color="#000000">ADMIN/USAGE :</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="usager">

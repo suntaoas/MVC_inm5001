@@ -38,7 +38,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#00FF00" frame="border" width="50%" >
+                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>noCommande</th>
                                             <th>datetime</th>
