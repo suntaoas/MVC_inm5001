@@ -121,6 +121,18 @@
         <servlet-name>CommandeConsulterPourSupprimer</servlet-name>
         <servlet-class>controlleur.CommandeConsulterPourSupprimer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LivraisonConsulterPourCertain</servlet-name>
+        <servlet-class>controlleur.LivraisonConsulterPourCertain</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LivraisonAjouter</servlet-name>
+        <servlet-class>controlleur.LivraisonAjouter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LivraisonConsulterPourTout</servlet-name>
+        <servlet-class>controlleur.LivraisonConsulterPourTout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -232,6 +244,18 @@
     <servlet-mapping>
         <servlet-name>CommandeConsulterPourSupprimer</servlet-name>
         <url-pattern>/CommandeConsulterPourSupprimer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LivraisonConsulterPourCertain</servlet-name>
+        <url-pattern>/LivraisonConsulterPourCertain</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LivraisonAjouter</servlet-name>
+        <url-pattern>/LivraisonAjouter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LivraisonConsulterPourTout</servlet-name>
+        <url-pattern>/LivraisonConsulterPourTout</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

@@ -95,8 +95,8 @@
                             </li>
                             <li class=""><a href="faq.html" title="Gestion Livraison">Gestion Livraison</a>
                                 <ul>
-                                    <li><a href="category.html">Ajouter livraison</a></li>
-                                    <li><a href="category.html">Consulter livraison</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerLivraisonCondition">Ajouter livraison</a></li>
+                                    <li><a href="/MVC_inm5001/LivraisonConsulterPourTout">Consulter livraison</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="about_us.html" title="Gestion System">Gestion System</a>

@@ -34,7 +34,7 @@ public class CommandesService {
             ps.setInt(2, nouveauCommande.getNoClient());
             ps.setFloat(3, monpanier.getMontantTotal());
             ps.executeUpdate();
-            sql = "select MAX(noCommande) from Commandes";//选择刚刚用的序列
+            sql = "select MAX(noCommande) from Commandes";
             ps = ct.prepareStatement(sql);
             rs = ps.executeQuery();
             int orderId = 0;
@@ -57,12 +57,10 @@ public class CommandesService {
                 ps.setFloat(5, produit.getShoppingNum() * produit.getPrix());
                 ps.executeUpdate();
             }
-            //整体提交
             ct.commit();
 
         } catch (Exception e) {
 
-            //若失败，则回滚
             try {
                 ct.rollback();
             } catch (SQLException e1) {
