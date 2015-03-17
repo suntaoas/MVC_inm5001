@@ -83,7 +83,7 @@ public class CommandesService {
         for (int i = 0; i < champs.length; i++) {
             champsTemp += champs[i] + "=? and ";
         }
-        String sql = "select * from Commandes where " + champsTemp + "statut='1'";
+        String sql = "select * from Commandes where " + champsTemp + "1='1'";
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         for (int i = 0; i < al.size(); i++) {
             Object obj[] = (Object[]) al.get(i);
@@ -124,5 +124,41 @@ public class CommandesService {
             arrDetailCommande.add(detailCommande);
         }
         return arrDetailCommande;
+    }
+    
+    public Clients getCommandeById(String noCommande) {
+        String sql = "select * from Clients where noClient=? and statut='1'";
+        String paras[] = {noCommande};
+        ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        Clients client = new Clients();
+        if (al.size() == 1) {
+            Object obj[] = (Object[]) al.get(0);
+            client.setNoClient(Integer.parseInt(obj[0].toString()));
+            client.setNom(obj[1].toString());
+            client.setPrenom(obj[2].toString());
+            client.setPassword(obj[3].toString());
+            client.setAge(Integer.parseInt(obj[4].toString()));
+            client.setSexe(obj[5].toString());
+            client.setAdresse(obj[6].toString());
+            client.setTelephone(obj[7].toString());
+            client.setCourriel(obj[8].toString());
+            client.setStatut(obj[9].toString());
+            client.setUsager(obj[10].toString());
+        }
+        return client;
+    }
+    
+    public boolean supprimerCommande(String commande){
+        String sql = "update Commandes set statut='0' where noCommande=? and statut='1'";
+        String[] paras = {commande};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
+    
+    public boolean payerCommande(String commande){
+        String sql = "update Commandes set paiement='1' where noCommande=? and statut='1' and paiement='0'";
+        String[] paras = {commande};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
     }
 }

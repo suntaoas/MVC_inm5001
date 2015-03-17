@@ -88,10 +88,9 @@
                             <li class=""><a href="blog.html" title="Gestion Commandes">Gestion Commandes</a>
                                 <ul>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerAjouterUneCommande">Ajouter commande</a></li>
-                                    <li><a href="category.html">Modifier commande</a></li>
-                                    <li><a href="category.html">Supprimer commande</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerSupprimerCondition">Supprimer commande</a></li>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterCertainsCommandes">Consulter commande</a></li>
-                                    <li><a href="category.html">Paiement pour commande</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPaiementCondition">Paiement pour commande</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="faq.html" title="Gestion Livraison">Gestion Livraison</a>

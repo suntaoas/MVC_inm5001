@@ -27,9 +27,9 @@
     </head>
 
     <body BGCOLOR="green">
-        <h2 align="center">RECHERCHE DU COMMANDES</h2>
+        <h2 align="center">RECHERCHE DU COMMANDES POUR SUPPRIMER</h2>
         <hr />
-        <form name="form" method="post" action="/MVC_inm5001/CommandeConsulterPourCertains?type=consulter" onSubmit="return isValid();">
+        <form name="form" method="post" action="/MVC_inm5001/CommandeConsulterPourSupprimer?type=supprimer" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 
@@ -37,14 +37,6 @@
                     </td>
                     <td width="46%" height="43"> 
                         <input name="noCommande" type="text" id="noCommande">
-                    </td>
-                </tr>
-                <tr> 
-                    <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">date :</font></div>
-                    </td>
-                    <td width="46%" height="43"> 
-                        <input name="date" type="text" id="date">
                     </td>
                 </tr>
                 <tr> 
@@ -57,20 +49,12 @@
                 </tr>
                 <tr> 
                     <td width="39%" height="43"> 
-                        <div align="right"><font color="#CC9900">montant :</font></div>
-                    </td>
-                    <td width="46%" height="43"> 
-                        <input name="montant" type="text" id="montant">
-                    </td>
-                </tr>
-                <tr> 
-                    <td width="39%" height="43"> 
                         <div align="right"><font color="#CC9900">paiement</font></div>
                     </td>
                     <td width="46%" height="43"> 
                         <select name="paiement">
+                            <option value="0">ne paie pas encore</option> 
                             <option value="1">fini de paiement</option>
-                            <option value="0">ne paie pas encore</option>                        
                         </select>
                     </td>
                 </tr>
@@ -80,12 +64,10 @@
                     </td>
                     <td width="46%" height="43"> 
                         <select name="statut">
-                            <option value="1">EXITE</option>
-                            <option value="0">SUPPRIMANT</option>              			   
+                            <option value="1">EXITE</option>            			   
                         </select>
                     </td>
                 </tr>
-
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">
