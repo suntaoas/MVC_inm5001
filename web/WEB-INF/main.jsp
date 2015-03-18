@@ -227,10 +227,10 @@
                 <div class="banner-block container">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li><img title="Banner" alt="Banner" src="banner1.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="banner2.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="banner3.jpg" /></li>
-                            <li><img title="Banner" alt="Banner" src="banner4.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/pomme.jpe" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/tomate.jpe" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/pomme.jpe" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/tomate.jpe" /></li>
                         </ul>
                     </div>
                     <ul class="banner-add">
