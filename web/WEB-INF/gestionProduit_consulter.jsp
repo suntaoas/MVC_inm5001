@@ -74,7 +74,8 @@
                 </header>
             </div>
             <!--Content Block-->
-            <section >
+               <h2 align="center">LISTE DES PRODUITS</h2>
+            <section>
                 <div >
                     <div >
                         <div >

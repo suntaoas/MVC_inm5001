@@ -61,6 +61,7 @@
 
     </head>
     <body>
+           
         <div class="mainContainer sixteen container">
             <!--Header Block-->
             <div class="header-wrapper">
@@ -151,7 +152,9 @@
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
+                            
                         </a></h1>
+                      
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
                             <li class="active"><a href="index-2.html" title="Home">Liquidation</a></li>
