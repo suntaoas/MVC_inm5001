@@ -68,6 +68,9 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerLivraisonCondition":
                 request.getRequestDispatcher("/WEB-INF/gestionLivraison_consulter_conditions.jsp").forward(request, response);
                 break;
+            case "tournerInscription":
+                request.getRequestDispatcher("/WEB-INF/Client_inscription_information_input.jsp").forward(request, response);
+                break;
             case "tournerPagePrincipale":
                 MonPanier myCart = new MonPanier();
                 request.getSession().setAttribute("myCart", myCart);

@@ -133,6 +133,10 @@
         <servlet-name>LivraisonConsulterPourTout</servlet-name>
         <servlet-class>controlleur.LivraisonConsulterPourTout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientInscription</servlet-name>
+        <servlet-class>controlleur.ClientInscription</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -256,6 +260,10 @@
     <servlet-mapping>
         <servlet-name>LivraisonConsulterPourTout</servlet-name>
         <url-pattern>/LivraisonConsulterPourTout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientInscription</servlet-name>
+        <url-pattern>/ClientInscription</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

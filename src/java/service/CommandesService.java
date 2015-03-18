@@ -19,7 +19,7 @@ public class CommandesService {
     private PreparedStatement ps = null;
     private ResultSet rs = null;
 
-    public void ajouterCommande(MonPanier monpanier, Commandes nouveauCommande) {
+    public int ajouterCommande(MonPanier monpanier, Commandes nouveauCommande) {
         System.out.println("CommandeService.java------noClient, datetime , MontantTotal :" + nouveauCommande.getNoClient() + "---" + nouveauCommande.getDatetime() + "---" + monpanier.getMontantTotal());
         String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values(?,?,?,'0','1')";
         //String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values('2015-34-09 00:34:46',3,3.00,'0','1')";
@@ -58,7 +58,7 @@ public class CommandesService {
                 ps.executeUpdate();
             }
             ct.commit();
-
+            return orderId;
         } catch (Exception e) {
 
             try {
@@ -67,12 +67,14 @@ public class CommandesService {
                 // TODO 自动生成的 catch 块
                 e1.printStackTrace();
                 throw new RuntimeException(e.getMessage());
+                
             }
             e.printStackTrace();
             // TODO: handle exception
         } finally {
             DBUtil.close(rs, ps, ct);
         }
+        return -1;
     }
 
     public ArrayList<Commandes> getCommandeParCertainsChamps(String[] champs, String[] paras) {
