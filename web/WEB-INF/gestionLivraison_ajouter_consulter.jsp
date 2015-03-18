@@ -14,7 +14,7 @@
         <title>Magasin de Fruits & Légumes</title>
 
     </head>
-    <body>
+    <body style="background:url('images/photo2.jpg')">
         <div class="mainContainer sixteen container">
             <!--Header Block-->
 

@@ -32,7 +32,7 @@
         </script>
     </head>
 
-    <body BGCOLOR="#F0F8FF">
+    <body style="background:url('images/photo2.jpg')" BGCOLOR="#F0F8FF">
         <h2 align="center">ENTRER LA DATE ET LE TEMPS POUR LIVRAISON</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/LivraisonAjouter?type=livrer" onSubmit="return isValid();">
