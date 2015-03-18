@@ -46,7 +46,7 @@ public class ClientInscription extends HttpServlet {
             if (res) {
                 ArrayList tousClients = clientsservice.getTousClients();
                 request.setAttribute("clients", tousClients);
-                request.getRequestDispatcher("/WEB-INF/gestionClient_consulter.jsp").forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
             } else {
                 System.out.println("c'est echec !");
             }
