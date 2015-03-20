@@ -72,11 +72,15 @@ public class TournerUnePageWeb extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/Client_inscription_information_input.jsp").forward(request, response);
                 break;
             case "tournerPagePrincipale":
-                MonPanier myCart = new MonPanier();
-                request.getSession().setAttribute("myCart", myCart);
-                ProduitsService produitsservice = new ProduitsService();
-                ArrayList al = produitsservice.getTousProduits();
-                request.setAttribute("produits", al);
+                if (request.getAttribute("myCart") == null) {
+                    MonPanier myCart = new MonPanier();
+                    request.getSession().setAttribute("myCart", myCart);
+                }
+                if (request.getAttribute("produits") == null) {
+                    ProduitsService produitsservice = new ProduitsService();
+                    ArrayList al = produitsservice.getTousProduits();
+                    request.setAttribute("produits", al);
+                }
                 request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
                 break;
 

@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import domain.Produits;
+import java.text.DecimalFormat;
 import java.util.Map;
 
 public class MonPanier {
@@ -79,6 +80,8 @@ public class MonPanier {
 
             toltalPrice += produit.getPrix() * produit.getShoppingNum();
         }
+        DecimalFormat df = new DecimalFormat("#.00");
+        toltalPrice = Float.parseFloat(df.format(toltalPrice));
         return toltalPrice;
     }
 

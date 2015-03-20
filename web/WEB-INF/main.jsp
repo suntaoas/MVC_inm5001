@@ -58,7 +58,15 @@
         <!--[if lt IE 9]>
                                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
                         <![endif]-->
-
+        <%
+            Produits produitTemp = new Produits();
+        %>
+        <script language="javascript" type="text/javascript">
+            var id = 0;
+            function js_method(){
+                id = this.title.value;
+            }
+        </script>
     </head>
     <body>
            
@@ -266,94 +274,13 @@
                                 <div class="pro-hover-block">
                                     <h4 class="pro-name"><%=produit.getDescription()%></h4>
                                     <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
+                                        <!--<a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> -->
+                                        <a href="/MVC_inm5001/ProduitConsulterDetail?noProduit=<%=produit.getNoProduit()%>" class="quickproLink" title="Link">Product link</a></div>
+                                        <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
                                     <div class="pro-price"><%=produit.getPrix()%></div>
                                 </div>
                             </li>
                             <%}%>
-                            <!--
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/default_img.png" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name">Htc One 1120</h4>
-                                    <div class="link-block"> 
-                                        <a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> 
-                                        <a href="view.html" class="quickproLink" title="Link">Product link</a></div>
-                                    <div class="pro-price">$1.99</div>
-                                </div>
-                            </li>
-                            -->
                         </ul>
                     </div>
                     <div class="heading-block">
@@ -481,6 +408,7 @@
             </section>
         </div> 
         <!--Quick view Block-->
+        <!--
         <script type="text/javascript">
             jQuery(function() {
                 var tabContainers = jQuery('div.tabs > div');
@@ -549,7 +477,8 @@
                     <div class="clearfix"></div>
                 </div>
             </section>
-        </article>       
+        </article>   
+        -->
         <!--Footer Block-->
         <section class="footer-wrapper">
 
