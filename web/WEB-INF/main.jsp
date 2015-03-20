@@ -93,7 +93,7 @@
                                 %>
                             <li class=""><a href="404_error.html" title="Mon Profil">Mon Profil</a></li>
                             <li class=""><a href="404_error.html" title="Mes Commandes">Mes Commandes</a></li>
-                            <li class="my-wishlist"><a href="404_error.html" title="Mon Panier">Mon Panier</a></li>
+                            <li class="my-wishlist"><a href="/MVC_inm5001/GoAfficherMonPanierPourClient" title="Mon Panier">Mon Panier</a></li>
                             <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
                                 <%
                                 } else {

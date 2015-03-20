@@ -11,6 +11,15 @@
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/colors.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/ddsmoothmenu.css"/>
+        <link rel="stylesheet" href="css/elastislide.css"/>
+        <link rel="stylesheet" href="css/home_flexslider.css"/>
+
         <script language="javascript" type="text/javascript">
             //obtenir l'objet ligne
             function getRowObj(obj)
@@ -84,61 +93,56 @@
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
-                        </a></h1>
+                        </a>
+                    </h1>
+                    <ul class="top-nav">
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription" title="Inscription">Inscription</a></li>
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">Connection</a></li>
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">CONTINUE</a></li>
+                    </ul>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-
+                        <h4 align="center">MON PANIER</h4>
                     </nav>
 
                 </header>
             </div>
             <!--Content Block-->
             <section >
-                <div >
-                    <div >
-                        <div >
-                            <div >
-                                <div>
-                                    <form name="form" method="post" action="/MVC_inm5001/CommandeCreer">
-                                        <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" id="tbl">
-                                            <tr>
-                                                <th>NoProduit</th>
-                                                <th>DescriptionProduit</th>
-                                                <th>Prix</th>
-                                                <th>Quantite</th>
-                                                <th>METTRE A JOUR</th>
-                                                <th>SUPPRIMER</th>
-                                            </tr>
-                                            <%
-                                                float montantTotal = Float.parseFloat(request.getAttribute("MontantTotal").toString());
-                                                ArrayList al = (ArrayList) request.getAttribute("listeDeProduit");
-                                                System.out.println("al size : " + al.size());
-                                                for (int i = 0; i < al.size(); i++) {
+                <div align="center" >
+                    <form name="form" method="post" action="/MVC_inm5001/CommandeCreer">
+                        <table align="center" border="1" bgcolor="#F0F8FF" frame="border" width="50%" id="tbl">
+                            <tr>
+                                <th>NoProduit</th>
+                                <th>DescriptionProduit</th>
+                                <th>Prix</th>
+                                <th>Quantite</th>
+                                <th>Modifier</th>
+                                <th>Supprimer</th>
+                            </tr>
+                            <%
+                                float montantTotal = Float.parseFloat(request.getAttribute("MontantTotal").toString());
+                                ArrayList al = (ArrayList) request.getAttribute("listeDeProduit");
+                                System.out.println("al size : " + al.size());
+                                for (int i = 0; i < al.size(); i++) {
 
-                                                    Produits produit = (Produits) al.get(i);
-                                                    //System.out.println("affichage : " + produit.getDescription());
-                                                    out.print("<tr><td>" + produit.getNoProduit() + "</td>");
-                                                    out.print("<td>" + produit.getDescription() + "</td>");
-                                                    out.print("<td>" + produit.getPrix() + "</td>");
-                                                    out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value=" + produit.getShoppingNum() + " onkeyup='return Text_OnChange(this)'/></td>");
-                                                    out.print("<td style='display:none;'><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
-                                                    out.print("<td><a href='javascript: modifierNombreProduit(" + produit.getNoProduit() + ")' id=" + produit.getNoProduit() + ">METTRE A JOUR</a> </td>");
-                                                    out.print("<td><a href='/MVC_inm5001/MonPanierTraiterPourClient?type=supprimer&id=" + produit.getNoProduit() + "'>SUPPRIMER</a> </td></tr>");
-                                                }
-                                            %>
-                                            <tr><td colspan="2">MontantTotal ：  </td>
-                                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=montantTotal%>"/></td></tr>
-                                            <tr><td colspan="6"><input type="submit" value="CREER UNE COMMANDE"></td></tr>
-                                        </table>
-                                    </form>
-                                    <table>
-                                        <tr>
-                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">RETOURNER</a></div></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    Produits produit = (Produits) al.get(i);
+                                    //System.out.println("affichage : " + produit.getDescription());
+                                    out.print("<tr><td>" + produit.getNoProduit() + "</td>");
+                                    out.print("<td>" + produit.getDescription() + "</td>");
+                                    out.print("<td>" + produit.getPrix() + "</td>");
+                                    out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value=" + produit.getShoppingNum() + " onkeyup='return Text_OnChange(this)'/></td>");
+                                    out.print("<td style='display:none;'><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
+                                    out.print("<td><a href='javascript: modifierNombreProduit(" + produit.getNoProduit() + ")' id=" + produit.getNoProduit() + ">Modifer</a> </td>");
+                                    out.print("<td><a href='/MVC_inm5001/MonPanierTraiterPourClient?type=supprimer&id=" + produit.getNoProduit() + "'>Supprimer</a> </td></tr>");
+                                }
+                            %>
+                            <tr><td colspan="2">MontantTotal ：  </td>
+                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=montantTotal%>"/></td></tr>
+                            <tr>
+                                <td colspan="3"><input type="submit" value="CREER UNE COMMANDE"></td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
             </section>
         </div>

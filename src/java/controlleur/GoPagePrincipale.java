@@ -29,7 +29,7 @@ public class GoPagePrincipale extends HttpServlet {
         ArrayList al = produitservice.getTousProduits();
         request.setAttribute("produits", al);
 
-        request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
+        //request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
 
         //creer un shopping cart
         MonPanier monpanier = new MonPanier();
