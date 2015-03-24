@@ -19,7 +19,7 @@ import service.ClientsService;
 import service.MonPanier;
 import service.ProduitsService;
 
-public class ClientModifierOuSupprimer extends HttpServlet {
+public class ProfilModifierOuSupprimer extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -45,15 +45,15 @@ public class ClientModifierOuSupprimer extends HttpServlet {
          */
         // ArrayList<String> nomChampsTemp = new ArrayList<String>();
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
-        nomChampsTemp.put("nom", request.getParameter("nomClient").trim());
-        nomChampsTemp.put("prenom", request.getParameter("prenomClient").trim());
-       // nomChampsTemp.add(request.getParameter("age").trim());
-        nomChampsTemp.put("sexe", request.getParameter("sexe").trim());
-        nomChampsTemp.put("adresse", request.getParameter("adresse").trim());
-        nomChampsTemp.put("telephone", request.getParameter("telephone").trim());
+        //nomChampsTemp.put("nom", request.getParameter("nomClient").trim());
+        //nomChampsTemp.put("prenom", request.getParameter("prenomClient").trim());
+        //nomChampsTemp.add(request.getParameter("age").trim());
+        //nomChampsTemp.put("sexe", request.getParameter("sexe").trim());
+       // nomChampsTemp.put("adresse", request.getParameter("adresse").trim());
+       // nomChampsTemp.put("telephone", request.getParameter("telephone").trim());
         nomChampsTemp.put("courriel", request.getParameter("courriel").trim());
-        nomChampsTemp.put("usager", request.getParameter("usager").trim());
-        nomChampsTemp.put("statut", request.getParameter("statut").trim());
+       // nomChampsTemp.put("usager", request.getParameter("usager").trim());
+       // nomChampsTemp.put("statut", request.getParameter("statut").trim());
 
         int nombre = nomChampsTemp.size();
 
@@ -83,7 +83,7 @@ public class ClientModifierOuSupprimer extends HttpServlet {
             ArrayList certainsClients = clientsservice.getClientParCertainsChamps(nomChamps, ValeurChamps);
 
             request.setAttribute("clients", certainsClients);
-            request.getRequestDispatcher("/WEB-INF/gestionClient_modiOuSuppri_affichage.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/profilClient_modiOuSuppri_affichage.jsp").forward(request, response);
         }
         return;
     }

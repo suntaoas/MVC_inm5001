@@ -149,6 +149,26 @@
         <servlet-name>GoAfficherMonPanierPourClient</servlet-name>
         <servlet-class>controlleur.GoAfficherMonPanierPourClient</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientProfil</servlet-name>
+        <servlet-class>controlleur.ClientProfil</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfilClient_Modifier</servlet-name>
+        <servlet-class>controlleur.ProfilClient_Modifier</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfilModifier</servlet-name>
+        <servlet-class>controlleur.ProfilModifier</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfilModifierOuSupprimer</servlet-name>
+        <servlet-class>controlleur.ProfilModifierOuSupprimer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfilModifierTraite</servlet-name>
+        <servlet-class>controlleur.ProfilModifierTraite</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -288,6 +308,26 @@
     <servlet-mapping>
         <servlet-name>GoAfficherMonPanierPourClient</servlet-name>
         <url-pattern>/GoAfficherMonPanierPourClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientProfil</servlet-name>
+        <url-pattern>/ClientProfil</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfilClient_Modifier</servlet-name>
+        <url-pattern>/ProfilClient_Modifier</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfilModifier</servlet-name>
+        <url-pattern>/ProfilModifier</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfilModifierOuSupprimer</servlet-name>
+        <url-pattern>/ProfilModifierOuSupprimer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfilModifierTraite</servlet-name>
+        <url-pattern>/ProfilModifierTraite</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

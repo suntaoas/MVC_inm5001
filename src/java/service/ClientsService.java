@@ -142,4 +142,10 @@ public class ClientsService {
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
+    public boolean modifierProfil(Clients clientModifier) {
+        String sql = "update Clients set nom=?,prenom=?,password=?,age=?,sexe=?,adresse=?,telephone=?,courriel=? where noClient=? and statut='1'";
+        String[] paras = {clientModifier.getNom(), clientModifier.getPrenom(), clientModifier.getPassword(), clientModifier.getAge() + "", clientModifier.getSexe(), clientModifier.getAdresse(), clientModifier.getTelephone(), clientModifier.getCourriel(), clientModifier.getNoClient() + ""};
+        boolean res = new SqlHelper().executeUpdate(sql, paras);
+        return res;
+    }
 }
