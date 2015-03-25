@@ -26,7 +26,7 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-                        
+
                     </nav>
 
                 </header>
@@ -38,7 +38,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
+                                    <table align="center" border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>noCommande</th>
                                             <th>datetime</th>
@@ -57,8 +57,13 @@
                                                 out.print("<td>" + commandeTemp.getNoClient() + "</td>");
                                                 out.print("<td>" + commandeTemp.getMontant() + "</td>");
                                                 out.print("<td>" + commandeTemp.getPaiement() + "</td>");
-                                                out.print("<td>" + commandeTemp.getNoLivraison() + "</td>");
-                                                out.print("<td>" + commandeTemp.getDateLivraison() + "</td>");
+                                                if (commandeTemp.getNoLivraison() != -1) {
+                                                    out.print("<td>" + commandeTemp.getNoLivraison() + "</td>");
+                                                    out.print("<td>" + commandeTemp.getDateLivraison() + "</td>");
+                                                } else {
+                                                    out.print("<td>Pas livrer</td>");
+                                                    out.print("<td>Pas livrer</td>");
+                                                }
                                                 out.print("<td> <a href='/MVC_inm5001/CommandeConsulterDetailCommande?noCommande=" + commandeTemp.getNoCommande() + "'>DETAIL</a> </td></tr>");
 
                                             }

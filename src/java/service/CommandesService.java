@@ -150,7 +150,7 @@ public class CommandesService {
 
     public ArrayList<Commandes> getCommandeByNoClient(int noClient) {
         ArrayList<Commandes> certainsCommandes = new ArrayList<Commandes>();
-        String sql = "select Commandes.noCommande,datetime,noClient,montant,paiement,Livraison.noLivraison,Livraison.dateLivraison from Commandes,Livraison where Commandes.noCommande=Livraison.noCommande and Commandes.noClient=? and Commandes.statut='1'";
+        String sql = "select Commandes.noCommande,datetime,noClient,montant,paiement,IFNULL(Livraison.noLivraison,-1),IFNULL(Livraison.dateLivraison,-1) from Commandes left join Livraison on Commandes.noCommande=Livraison.noCommande where Commandes.noClient=? and Commandes.statut='1'";
         String paras[] = {noClient + ""};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         for (int i = 0; i < al.size(); i++) {
@@ -163,7 +163,6 @@ public class CommandesService {
             commande.setPaiement(obj[4].toString());
             commande.setNoLivraison(Integer.parseInt(obj[5].toString()));
             commande.setDateLivraison(obj[6].toString());
-
             certainsCommandes.add(commande);
         }
         return certainsCommandes;
