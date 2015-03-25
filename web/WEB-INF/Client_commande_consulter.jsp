@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
+        
     </head>
     <body style="background:url('images/photo5.jpg')">
         <div class="mainContainer sixteen container">
@@ -69,6 +69,8 @@
                                             }
                                         %> 
                                     </table>
+                                        <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
+                                    
                                 </div>
                             </div>
                         </div>
