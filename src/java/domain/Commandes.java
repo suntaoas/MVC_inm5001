@@ -3,12 +3,15 @@ package domain;
 import java.util.Date;
 
 public class Commandes {
+
     private int noCommande;
     private String datetime;
     private int noClient;
     private float montant;
     private String paiement;
     private String statut;
+    private int noLivraison;
+    private String dateLivraison;
 
     public Commandes(int noCommande) {
         this.noCommande = noCommande;
@@ -16,7 +19,7 @@ public class Commandes {
 
     public Commandes() {
     }
-    
+
     public int getNoCommande() {
         return noCommande;
     }
@@ -39,6 +42,14 @@ public class Commandes {
 
     public String getStatut() {
         return statut;
+    }
+
+    public int getNoLivraison() {
+        return noLivraison;
+    }
+
+    public String getDateLivraison() {
+        return dateLivraison;
     }
 
     public void setNoCommande(int noCommande) {
@@ -64,6 +75,13 @@ public class Commandes {
     public void setStatut(String statut) {
         this.statut = statut;
     }
-    
-    
+
+    public void setNoLivraison(int noLivraison) {
+        this.noLivraison = noLivraison;
+    }
+
+    public void setDateLivraison(String dateLivraison) {
+        this.dateLivraison = dateLivraison;
+    }
+
 }

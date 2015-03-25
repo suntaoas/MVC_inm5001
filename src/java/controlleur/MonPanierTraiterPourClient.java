@@ -46,7 +46,9 @@ public class MonPanierTraiterPourClient extends HttpServlet {
             } else {
                 MonPanier monPanier = new MonPanier();
                 monPanier.ajouterProduit(id, nombre);
+                request.getSession().setMaxInactiveInterval(30);
                 request.getSession().setAttribute("monPanier", monPanier);
+                System.out.println("-----MonPanierTraiterPourClient.java------"+request.getSession().getAttribute("monPanier"));
                 System.out.println("monPanier2 :");
                 System.out.println(monPanier.getHm(id).getNoProduit());
                 System.out.println(monPanier.getHm(id).getPrix());

@@ -53,6 +53,7 @@ public class CommandeCreer extends HttpServlet {
         System.out.println("Nouveau noCommande : "+orderId);
 
         //envoyer le courriel pour client
+        /*
         SendMailToSomeone smts = new SendMailToSomeone();
 
         String mailbody = "<table width=\"70%\" border=\"1\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"comm\">"
@@ -81,7 +82,7 @@ public class CommandeCreer extends HttpServlet {
         mailbody += "</table>";
 
 	smts.send("你在时尚购物网有订单", mailbody, "suntaoas@hotmail.com","inm5001@sohu.com","qwer@1234","smtp.sohu.com");
-        
+        */
         ArrayList<Commandes> tousCommandes = commandesservice.getTousCommandes();
         request.setAttribute("commandes", tousCommandes);
         request.getRequestDispatcher("/WEB-INF/gestionCommande_consulter_conditions.jsp").forward(request, response);

@@ -34,6 +34,7 @@ public class GoPagePrincipale extends HttpServlet {
         //creer un shopping cart
         MonPanier monpanier = new MonPanier();
         request.getSession().setAttribute("monPanier", monpanier);
+         System.out.println("-----GoPagePrincipale.java------monPanier est cree !!"+request.getSession().getAttribute("monPanier"));
 
         request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
         return;

@@ -67,7 +67,7 @@ public class CommandesService {
                 // TODO 自动生成的 catch 块
                 e1.printStackTrace();
                 throw new RuntimeException(e.getMessage());
-                
+
             }
             e.printStackTrace();
             // TODO: handle exception
@@ -120,14 +120,14 @@ public class CommandesService {
             detailCommande.setPrixProduit(Float.parseFloat(obj[2].toString()));
             detailCommande.setQuantiteProduit(Integer.parseInt(obj[3].toString()));
             detailCommande.setMontantProduit(Float.parseFloat(obj[4].toString()));
-            
+
             arrDetailCommande.add(detailCommande);
         }
         return arrDetailCommande;
     }
-    
+
     public Clients getCommandeById(String noCommande) {
-        String sql = "select * from Clients where noClient=? and statut='1'";
+        String sql = "select Commandes.noCommande,datetime,noClient,montant,paiement,Livraison.noLivraison,Livraison.dateLivraison from Commandes,Livraison where Commandes.noCommande=Livraison.noCommande and Commandes.noClient=? and Commandes.statut='1'";
         String paras[] = {noCommande};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         Clients client = new Clients();
@@ -147,15 +147,36 @@ public class CommandesService {
         }
         return client;
     }
-    
-    public boolean supprimerCommande(String commande){
+
+    public ArrayList<Commandes> getCommandeByNoClient(int noClient) {
+        ArrayList<Commandes> certainsCommandes = new ArrayList<Commandes>();
+        String sql = "select Commandes.noCommande,datetime,noClient,montant,paiement,Livraison.noLivraison,Livraison.dateLivraison from Commandes,Livraison where Commandes.noCommande=Livraison.noCommande and Commandes.noClient=? and Commandes.statut='1'";
+        String paras[] = {noClient + ""};
+        ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        for (int i = 0; i < al.size(); i++) {
+            Commandes commande = new Commandes();
+            Object obj[] = (Object[]) al.get(i);
+            commande.setNoCommande(Integer.parseInt(obj[0].toString()));
+            commande.setDatetime(obj[1].toString());
+            commande.setNoClient(Integer.parseInt(obj[2].toString()));
+            commande.setMontant(Float.parseFloat(obj[3].toString()));
+            commande.setPaiement(obj[4].toString());
+            commande.setNoLivraison(Integer.parseInt(obj[5].toString()));
+            commande.setDateLivraison(obj[6].toString());
+
+            certainsCommandes.add(commande);
+        }
+        return certainsCommandes;
+    }
+
+    public boolean supprimerCommande(String commande) {
         String sql = "update Commandes set statut='0' where noCommande=? and statut='1'";
         String[] paras = {commande};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
-    
-    public boolean payerCommande(String commande){
+
+    public boolean payerCommande(String commande) {
         String sql = "update Commandes set paiement='1' where noCommande=? and statut='1' and paiement='0'";
         String[] paras = {commande};
         boolean res = new SqlHelper().executeUpdate(sql, paras);

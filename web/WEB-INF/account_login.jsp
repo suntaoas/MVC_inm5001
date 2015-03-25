@@ -10,7 +10,7 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <%
     System.out.println("entrer account_login.jsp !");
-    session.invalidate();
+    //session.invalidate();
 %>
 <html lang="en">
     <!--<![endif]-->
@@ -81,7 +81,8 @@
                                     <p>En créant un compte sur notre boutique, vous serez en mesure de se déplacer à travers le processus de paiement plus rapide, stocker des adresses d'expédition multiples, consulter et suivre vos commandes dans votre compte et plus encore.</p>
                                 </div>
                                 <div class="buttons-set">
-                                    <a class="colors-btn" title="Creer un compte" href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription"><span><span>Create an Account</span></span></a>
+                                    <a class="colors-btn" title="Creer un compte" href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription"><span><span>Creer an Account</span></span></a>
+                                    <a class="colors-btn" title="Tourner la page Principale" href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">Tourner la page Principale</a>
                                     <div class="clear"></div>
                                 </div>
                             </div>

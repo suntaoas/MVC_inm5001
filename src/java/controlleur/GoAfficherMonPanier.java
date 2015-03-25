@@ -12,26 +12,30 @@ import service.MonPanier;
 
 public class GoAfficherMonPanier extends HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter out = response.getWriter();
+        if (request.getSession().getAttribute("monPanier") != null) {
+            MonPanier monPanier = (MonPanier) request.getSession().getAttribute("monPanier");
 
-		MonPanier monPanier=(MonPanier)request.getSession().getAttribute("monPanier");
+            //System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
+            request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
+            request.setAttribute("MontantTotal", monPanier.getMontantTotal());
 
-                //System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
-		request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
-		request.setAttribute("MontantTotal", monPanier.getMontantTotal());
+        } else {
+            System.out.println("---------------monPanier est null dans GoAfficherMonPanier.java ----------------");
+        }
 
-		request.getRequestDispatcher("/WEB-INF/gestionCommande_affichageMonPanier.jsp").forward(request, response);
-	}
+        request.getRequestDispatcher("/WEB-INF/gestionCommande_affichageMonPanier.jsp").forward(request, response);
+    }
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		this.doGet(request, response);
-	}
+        this.doGet(request, response);
+    }
 
 }

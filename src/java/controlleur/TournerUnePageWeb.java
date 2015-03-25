@@ -30,6 +30,7 @@ public class TournerUnePageWeb extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
                 break;
             case "tournerDeconnection":
+                request.getSession().removeAttribute("loginUser");
                 request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
                 break;
             case "tournerMenuGestion":

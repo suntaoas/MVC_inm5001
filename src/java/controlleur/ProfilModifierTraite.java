@@ -33,7 +33,7 @@ public class ProfilModifierTraite extends HttpServlet {
         clientModifierTemp.setAdresse(request.getParameter("adresse").trim());
         clientModifierTemp.setTelephone(request.getParameter("telephone").trim());
         clientModifierTemp.setCourriel(request.getParameter("courriel").trim());
-        clientModifierTemp.setUsager(request.getParameter("usager").trim());
+        //clientModifierTemp.setUsager(request.getParameter("usager").trim());
 
         ClientsService clientsservice = new ClientsService();
         //ArrayList unClient = clientsservice.getClientById(null);

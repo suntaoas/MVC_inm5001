@@ -169,6 +169,14 @@
         <servlet-name>ProfilModifierTraite</servlet-name>
         <servlet-class>controlleur.ProfilModifierTraite</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CommandeCreerPourClient</servlet-name>
+        <servlet-class>controlleur.CommandeCreerPourClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CommandeConsulterPourUnClient</servlet-name>
+        <servlet-class>controlleur.CommandeConsulterPourUnClient</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -328,6 +336,14 @@
     <servlet-mapping>
         <servlet-name>ProfilModifierTraite</servlet-name>
         <url-pattern>/ProfilModifierTraite</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommandeCreerPourClient</servlet-name>
+        <url-pattern>/CommandeCreerPourClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommandeConsulterPourUnClient</servlet-name>
+        <url-pattern>/CommandeConsulterPourUnClient</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

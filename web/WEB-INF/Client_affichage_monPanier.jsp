@@ -95,11 +95,24 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a>
                     </h1>
+                    <%
+                        if (request.getSession().getAttribute("loginUser") == null) {
+                    %>
                     <ul class="top-nav">
                         <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription" title="Inscription">Inscription</a></li>
                         <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">Connection</a></li>
                         <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">CONTINUE</a></li>
                     </ul>
+                    <%
+                    } else {
+                    %>
+                    <ul class="top-nav">
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">CONTINUE</a></li>
+                    </ul>
+                    <%
+                    }
+                    %>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <h4 align="center">MON PANIER</h4>
                     </nav>
@@ -109,7 +122,7 @@
             <!--Content Block-->
             <section >
                 <div align="center" >
-                    <form name="form" method="post" action="/MVC_inm5001/CommandeCreer">
+                    <form name="form" method="post" action="/MVC_inm5001/CommandeCreerPourClient">
                         <table align="center" border="1" bgcolor="#F0F8FF" frame="border" width="50%" id="tbl">
                             <tr>
                                 <th>NoProduit</th>
