@@ -47,7 +47,7 @@ public class ClientModifierOuSupprimer extends HttpServlet {
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("nom", request.getParameter("nomClient").trim());
         nomChampsTemp.put("prenom", request.getParameter("prenomClient").trim());
-       // nomChampsTemp.add(request.getParameter("age").trim());
+       nomChampsTemp.put("age",request.getParameter("age").trim());
         nomChampsTemp.put("sexe", request.getParameter("sexe").trim());
         nomChampsTemp.put("adresse", request.getParameter("adresse").trim());
         nomChampsTemp.put("telephone", request.getParameter("telephone").trim());

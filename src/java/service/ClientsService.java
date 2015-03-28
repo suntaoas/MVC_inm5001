@@ -148,4 +148,31 @@ public class ClientsService {
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
+    
+    public ArrayList<Clients> getClientByNoClients( int noClient) {
+        ArrayList<Clients> TousClientTemp = new ArrayList<Clients>();
+        String sql = "select Clients.noClient * from Clients where 1=? and statut='1'";
+        String[] paras = {"1"};
+        ArrayList al = new SqlHelper().executeQuery(sql, paras);
+        //second encapsulation 
+        for (int i = 0; i < al.size(); i++) {
+            Object obj[] = (Object[]) al.get(i);
+            Clients client = new Clients();
+            client.setNoClient(Integer.parseInt(obj[0].toString()));
+            client.setNom(obj[1].toString());
+            client.setPrenom(obj[2].toString());
+            client.setPassword(obj[3].toString());
+            client.setAge(Integer.parseInt(obj[4].toString()));
+            client.setSexe(obj[5].toString());
+            client.setAdresse(obj[6].toString());
+            client.setTelephone(obj[7].toString());
+            client.setCourriel(obj[8].toString());
+            client.setStatut(obj[9].toString());
+            client.setUsager(obj[10].toString());
+
+            TousClientTemp.add(client);
+        }
+        return TousClientTemp;
+    }
+    
 }
