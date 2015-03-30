@@ -91,7 +91,7 @@
                                             <th>Adresse</th>
                                             <th>Telephone</th>
                                             <th>Courriel</th>
-                                           <!-- <th>Admin/client</th>-->
+                                            <!-- <th>Admin/client</th>-->
                                         </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("clients");
                                             for (int i = 0; i < al.size(); i++) {
@@ -105,7 +105,6 @@
                                                 out.print("<td>" + client.getAdresse() + "</td>");
                                                 out.print("<td>" + client.getTelephone() + "</td>");
                                                 out.print("<td>" + client.getCourriel() + "</td>");
-                                                //out.print("<td>" + client.getUsager() + "</td></tr>");
                                             }
                                         %> 
                                     </table>
