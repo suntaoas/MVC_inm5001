@@ -63,13 +63,13 @@
         %>
         <script language="javascript" type="text/javascript">
             var id = 0;
-            function js_method(){
+            function js_method() {
                 id = this.title.value;
             }
         </script>
     </head>
     <body>
-           
+
         <div class="mainContainer sixteen container">
             <!--Header Block-->
             <div class="header-wrapper">
@@ -105,14 +105,14 @@
                                 %>
                         </ul>
                         <section class="header-bottom">
-                            
+
                         </section>
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
-                            
+
                         </a></h1>
-                      
+
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
                             <li class="active"><a href="index-2.html" title="Home">Liquidation</a></li>
@@ -139,7 +139,7 @@
                 </header>
             </div>
             <!--Banner Block-->
-           
+
             <!--Content Block-->
             <section class="content-wrapper">
                 <div class="content-container container">
@@ -150,28 +150,34 @@
                         </ul>
                     </div>
                     <div class="feature-block">
+                        <%
+                            ArrayList al = (ArrayList) request.getAttribute("produits");
+                            int i = 0;
+                            while (i < al.size()) {
+                        %>
                         <ul id="mix" class="product-grid">
                             <%
-                                ArrayList al = (ArrayList) request.getAttribute("produits");
-                                for (int i = 0; i < al.size(); i++) {
+                                do {
                                     Produits produit = (Produits) al.get(i);
-                                    System.out.println(produit.getPhoto());
-                                    System.out.println(produit.getPrix());
-                                    System.out.println(produit.getDescription());
                             %>
                             <li>
                                 <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/<%=String.valueOf(produit.getPhoto())%>" /></div>
                                 <div class="pro-hover-block">
                                     <h4 class="pro-name"><%=produit.getDescription()%></h4>
                                     <div class="link-block"> 
-                                        <!--<a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> -->
                                         <a href="/MVC_inm5001/ProduitConsulterDetail?noProduit=<%=produit.getNoProduit()%>" class="quickproLink" title="Link">Product link</a></div>
-                                        <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
+                                    <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
                                     <div class="pro-price"><%=produit.getPrix()%></div>
                                 </div>
                             </li>
-                            <%}%>
+                            <%
+                                    i++;
+                                } while ((i % 3 != 0) && (i < al.size()));
+                            %>
                         </ul>
+                        <%
+                            }
+                        %>
                     </div>
                     <div class="news-letter-container">
                         <div class="free-shipping-block">
@@ -182,7 +188,7 @@
                 </div>
             </section>
         </div> 
-        
+
         <section class="footer-wrapper">
 
         </section>

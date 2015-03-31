@@ -1,7 +1,6 @@
 /*
  *  cette classe fait des oprations SQL de BD pour obtenir des informations des produits
  */
-
 package service;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class ProduitsService {
             produit.setCategorie(obj[5].toString());
             produit.setPhoto(obj[6].toString());
             produit.setStatut(obj[6].toString());
-            
+
         }
         return produit;
     }
@@ -64,7 +63,7 @@ public class ProduitsService {
         }
         String sql = "select * from Produits where " + champsTemp + "statut='1'";
         System.out.println(sql);
-        for(int i=0;i<paras.length;i++){
+        for (int i = 0; i < paras.length; i++) {
             System.out.println(paras[i]);
         }
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
@@ -91,14 +90,15 @@ public class ProduitsService {
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
-    
+
     public boolean modifierProduit(Produits produitModifier) {
         String sql = "update Produits set description=?,prix=?,quantite=?,unitemesure=?,categorie=?,photo=? where noProduit=? and statut='1'";
-        String[] paras = {produitModifier.getDescription(), produitModifier.getPrix() + "", produitModifier.getQuantite() + "", produitModifier.getUniteMesure(), produitModifier.getCategorie(), produitModifier.getPhoto(),produitModifier.getNoProduit()+""};
+        String[] paras = {produitModifier.getDescription(), produitModifier.getPrix() + "", produitModifier.getQuantite() + "", produitModifier.getUniteMesure(), produitModifier.getCategorie(), produitModifier.getPhoto(), produitModifier.getNoProduit() + ""};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
-     public boolean supprimerProduitParNoProduit(String noProduit) {
+
+    public boolean supprimerProduitParNoProduit(String noProduit) {
         String sql = "update Produits set statut='0' where noProduit=? and statut='1'";
         String paras[] = {noProduit};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
