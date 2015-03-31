@@ -105,13 +105,14 @@
                                 %>
                         </ul>
                         <section class="header-bottom">
+                            <!--
                             <div class="cart-block">
                                 <ul>
-                                    <!--<li>(2)</li>-->
+                                    
                                     <li><a href="cart.html" title="Item"><img title="Item" alt="Item" src="images/item_icon.png" /></a></li>
                                     <li>Mon panier</li>
                                 </ul>
-                                <!--
+                                
                                 <div id="minicart" class="remain_cart" style="display: none;">
                                     <p class="empty">You have 2 items in your shopping cart.</p>
                                     <ol>
@@ -150,12 +151,14 @@
                                         </li>
                                     </ol>
                                 </div>
-                                -->
+                                
                             </div> 
+                            
                             <div class="search-block">
                                 <input type="text" value="Nom de produit seulment" />
                                 <input type="submit" value="Search" title="Search" />
                             </div>
+                            -->
                         </section>
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
