@@ -177,6 +177,10 @@
         <servlet-name>CommandeConsulterPourUnClient</servlet-name>
         <servlet-class>controlleur.CommandeConsulterPourUnClient</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProduitConsulterPourCertainsPourClient</servlet-name>
+        <servlet-class>controlleur.ProduitConsulterPourCertainsPourClient</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GoHallUI</servlet-name>
         <url-pattern>/GoHallUI</url-pattern>
@@ -344,6 +348,10 @@
     <servlet-mapping>
         <servlet-name>CommandeConsulterPourUnClient</servlet-name>
         <url-pattern>/CommandeConsulterPourUnClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProduitConsulterPourCertainsPourClient</servlet-name>
+        <url-pattern>/ProduitConsulterPourCertainsPourClient</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

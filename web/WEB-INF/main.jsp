@@ -168,29 +168,14 @@
                       
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
-                            <li class="active"><a href="index-2.html" title="Home">Liquidation</a></li>
-                            <li class=""><a href="category.html" title="Shop by">Tous Les Produits</a>
+                            <li class="active"><a href="" title="Home">Liquidation</a></li>
+                            <li class=""><a href="" title="Shop by">Tous Les Produits</a>
                                 <ul>
-                                    <li><a href="category.html">Legumes</a>
-                                        <ul>
-                                            <li><a href="category.html">Tomate</a></li>
-                                            <li><a href="category.html">Pomme De Terre</a></li>
-                                            <li><a href="category.html">Poivron</a></li>
-                                            <li><a href="category.html">Brocoli</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="category.html">Fruits</a>
-                                        <ul>
-                                            <li><a href="category.html">Pomme</a></li>
-                                            <li><a href="category.html">Melon D'eau</a></li>
-                                            <li><a href="category.html">Banana</a></li>
-                                            <li><a href="category.html">Orange</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="category.html">Autre Produits</a></li>
+                                    <li><a href="category.html">Legumes</a></li>
+                                    <li><a href="category.html">Fruits</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="blog.html" title="Cherche advanced">Cherche advanced</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Cherche advanced">Cherche advanced</a></li>
                             <li class=""><a href="about_us.html" title="Quant A Nous">Quant A Nous</a></li>
                             <li class=""><a href="contact_us.html" title="Contact Nous">Contact Nous</a></li>
                         </ul>
