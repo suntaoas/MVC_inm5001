@@ -151,7 +151,7 @@ public class ClientsService {
     
     public ArrayList<Clients> getClientByNoClients( int id) {
         ArrayList<Clients> TousClientTemp = new ArrayList<Clients>();
-        String sql = "select * from Clients where noClient= id and statut='1'";
+        String sql = "select * from Clients where noClient= ? and statut='1'";
         String paras[] = {id + ""};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         for (int i = 0; i < al.size(); i++) {
