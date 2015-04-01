@@ -40,7 +40,7 @@ public class ProduitConsulterPourCertains extends HttpServlet {
         nomChampsTemp.put("unitemesure", request.getParameter("unitemesure").trim());
         nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
         nomChampsTemp.put("photo", request.getParameter("photo").trim());
-        nomChampsTemp.put("statut", request.getParameter("statut").trim());
+        //nomChampsTemp.put("statut", request.getParameter("statut").trim());
 
         int nombre = nomChampsTemp.size();
 

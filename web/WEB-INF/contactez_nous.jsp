@@ -1,24 +1,15 @@
 <%-- 
-    C'est la page principale du site web 
+    Document   : contactez_nous
+    Created on : Apr 1, 2015, 9:08:05 AM
+    Author     : suntao
 --%>
 
-<%@ page language="java" import="java.util.*,domain.*" pageEncoding="UTF-8"%>
+<%@page import="domain.Clients"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!doctype html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-
-<%
-    //Clients client = new Clients();
-    //if (session.getAttribute("loginUser") != null) {
-    //    client = (Clients) session.getAttribute("loginUser");
-    //}
-%>
-<html lang="en">
-    <!--<![endif]-->
+<html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <title>Megashop</title>
 
@@ -58,9 +49,7 @@
         <!--[if lt IE 9]>
                                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
                         <![endif]-->
-        <%
-            Produits produitTemp = new Produits();
-        %>
+
         <script language="javascript" type="text/javascript">
             var id = 0;
             function js_method() {
@@ -69,7 +58,6 @@
         </script>
     </head>
     <body>
-
         <div class="mainContainer sixteen container">
             <!--Header Block-->
             <div class="header-wrapper">
@@ -123,7 +111,7 @@
                                 </ul>
                             </li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Cherche advanced">Recherche advance</a></li>
-                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerContactezNous" title="Contact Nous">Contact Nous</a></li>
+                            <li class=""><a href="contact_us.html" title="Contact Nous">Contact Nous</a></li>
                         </ul>
                     </nav>
 
@@ -143,40 +131,13 @@
             <section class="content-wrapper">
                 <div class="content-container container">
                     <div class="heading-block">
-                        <h1>En Stocks</h1>
-                        <ul class="pagination">
-                            <li class="grid"><a href="#" title="Grid">Grid</a></li>
-                        </ul>
+
                     </div>
                     <div class="feature-block">
-                        <%
-                            ArrayList al = (ArrayList) request.getAttribute("produits");
-                            int i = 0;
-                            while (i < al.size()) {
-                        %>
-                        <ul id="mix" class="product-grid">
-                            <%
-                                do {
-                                    Produits produit = (Produits) al.get(i);
-                            %>
-                            <li>
-                                <div class="pro-img"><img title="Freature Product" alt="Freature Product" src="images/<%=String.valueOf(produit.getPhoto())%>" /></div>
-                                <div class="pro-hover-block">
-                                    <h4 class="pro-name"><%=produit.getDescription()%></h4>
-                                    <div class="link-block"> 
-                                        <a href="/MVC_inm5001/ProduitConsulterDetail?noProduit=<%=produit.getNoProduit()%>" class="quickproLink" title="Link">Product link</a></div>
-                                    <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
-                                    <div class="pro-price"><%=produit.getPrix()%></div>
-                                </div>
-                            </li>
-                            <%
-                                    i++;
-                                } while ((i % 3 != 0) && (i < al.size()));
-                            %>
-                        </ul>
-                        <%
-                            }
-                        %>
+                        <h4>Magasin TAO ET Leila</h4>
+                        <h4> 2802 Rue Sherbrooke Est, Montreal</h4>
+                        <h4> H2L 1V2</h4>
+
                     </div>
                     <div class="news-letter-container">
                         <div class="free-shipping-block">
@@ -188,8 +149,5 @@
             </section>
         </div> 
 
-        <section class="footer-wrapper">
-
-        </section>
     </body>
 </html>

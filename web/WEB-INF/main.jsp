@@ -168,16 +168,15 @@
                       
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
-                            <li class="active"><a href="" title="Home">Liquidation</a></li>
+                            <li class="active"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Home">Acceuil</a></li>
                             <li class=""><a href="" title="Shop by">Tous Les Produits</a>
                                 <ul>
                                     <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=legume">Legumes</a></li>
                                     <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=fruit">Fruits</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Cherche advanced">Cherche advanced</a></li>
-                            <li class=""><a href="about_us.html" title="Quant A Nous">Quant A Nous</a></li>
-                            <li class=""><a href="contact_us.html" title="Contact Nous">Contact Nous</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Recherche advance">Recherche advance</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerContactezNous" title="Contact Nous">Contact Nous</a></li>
                         </ul>
                     </nav>
 
