@@ -39,13 +39,19 @@ public class ProfilModifierTraite extends HttpServlet {
         //ArrayList unClient = clientsservice.getClientById(null);
         boolean res = clientsservice.modifierProfil(clientModifierTemp);
         if (res) {
-            ArrayList tousClients = clientsservice.getTousClients();
+            if (request.getSession().getAttribute("loginUser") != null) {
+            Clients loginUser = (Clients) request.getSession().getAttribute("loginUser");
+            int noClient = loginUser.getNoClient();
+         
+            ArrayList tousClients = clientsservice.getClientByNoClients(noClient);
+            //ArrayList tousClients = clientsservice.getTousClients();
             request.setAttribute("clients", tousClients);
             request.getRequestDispatcher("/WEB-INF/profilClient_consulter.jsp").forward(request, response);
-        }else{
+        } else {
             System.out.println("c'est echec !");
         }
         return;
+    }
     }
 
     @Override
