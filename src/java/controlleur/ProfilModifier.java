@@ -37,9 +37,9 @@ public class ProfilModifier extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/profilClient_modifier.jsp").forward(request, response);
             return;
 
-        } else {
+        //} else {
             //illegal
-            request.getRequestDispatcher("/WEB-INF/menu_gestion.jsp").forward(request, response);
+          //  request.getRequestDispatcher("/WEB-INF/menu_gestion.jsp").forward(request, response);
 
         }
 

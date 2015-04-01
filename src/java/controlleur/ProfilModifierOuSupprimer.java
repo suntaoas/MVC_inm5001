@@ -40,8 +40,8 @@ public class ProfilModifierOuSupprimer extends HttpServlet {
             ArrayList certainsClients = clientsservice.getClientByNoClients(noClient);
             request.setAttribute("clients", certainsClients);
             if (type.equals("consulter")) {
-                request.getRequestDispatcher("/WEB-INF/profilClient_consulter.jsp").forward(request, response);
-            
+                //request.getRequestDispatcher("/WEB-INF/profilClient_consulter.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/profilClient_modiOuSuppri_affichage.jsp").forward(request, response);
             }
         }
         return;

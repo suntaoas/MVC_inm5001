@@ -110,7 +110,8 @@
                                     </table>
                                     <table>
                                         <tr>
-                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                            <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
+                                            
                                         </tr>
                                     </table>
                                 </div>
