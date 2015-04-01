@@ -13,7 +13,7 @@
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU PRODUIT</h2>
         <hr />
-        <form name="form" method="post" action="/MVC_inm5001/ProduitConsulterPourCertainsPourClient" onSubmit="return isValid();">
+        <form name="form" method="post" action="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=rechercheAdvanced" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
                 <tr> 
                     <td width="39%" height="43"> 

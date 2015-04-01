@@ -31,42 +31,63 @@ public class ProduitConsulterPourCertainsPourClient extends HttpServlet {
 
         ProduitsService produitsservice = new ProduitsService();
         //ArrayList tousProduits = produitsservice.getTousProduits();
+        String type = request.getParameter("type");
+        if ("rechercheAdvanced".equals(type)) {
 
-       
-        Map<String, String> nomChampsTemp = new HashMap<String, String>();
-        nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
-        nomChampsTemp.put("prix", request.getParameter("prixProduit").trim());
-        nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
+            Map<String, String> nomChampsTemp = new HashMap<String, String>();
+            nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
+            nomChampsTemp.put("prix", request.getParameter("prixProduit").trim());
+            nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
 
-        int nombre = nomChampsTemp.size();
+            int nombre = nomChampsTemp.size();
 
-        String[] nomChamps = new String[nombre];
-        String[] ValeurChamps = new String[nombre];
-        int i = 0;
-        Iterator iter = nomChampsTemp.entrySet().iterator();
-        while (iter.hasNext()) {
-            Map.Entry entry = (Map.Entry) iter.next();
-            Object key = entry.getKey();
-            Object val = entry.getValue();
-            if (!val.toString().isEmpty()) {
-                nomChamps[i] = (String) key;
-                ValeurChamps[i] = (String) val;
-            }else{
-                nomChamps[i] = "1";
-                ValeurChamps[i] = "1";
+            String[] nomChamps = new String[nombre];
+            String[] ValeurChamps = new String[nombre];
+            int i = 0;
+            Iterator iter = nomChampsTemp.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry entry = (Map.Entry) iter.next();
+                Object key = entry.getKey();
+                Object val = entry.getValue();
+                if (!val.toString().isEmpty()) {
+                    nomChamps[i] = (String) key;
+                    ValeurChamps[i] = (String) val;
+                } else {
+                    nomChamps[i] = "1";
+                    ValeurChamps[i] = "1";
+                }
+                i++;
             }
-            i++;
+            /*
+             for(int j=0;j<nomChamps.length;j++){
+             System.out.println("nomChamps["+j+"]="+nomChamps[j]+"    "+"ValeurChamps["+j+"]="+ValeurChamps[j]);
+             }
+             */
+            if (null != nomChamps) {
+                ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
+
+                request.setAttribute("produits", certainsClients);
+                request.getRequestDispatcher("/WEB-INF/client_affichage_produit.jsp").forward(request, response);
+            }
         }
-        /*
-        for(int j=0;j<nomChamps.length;j++){
-            System.out.println("nomChamps["+j+"]="+nomChamps[j]+"    "+"ValeurChamps["+j+"]="+ValeurChamps[j]);
-        }
-        */        
-        if (null != nomChamps) {
+        if ("fruit".equals(type)) {
+            String[] nomChamps = {"categorie"};
+            String[] ValeurChamps = {"F"};
+
             ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
 
             request.setAttribute("produits", certainsClients);
             request.getRequestDispatcher("/WEB-INF/client_affichage_produit.jsp").forward(request, response);
+
+        }
+        if ("legume".equals(type)) {
+            String[] nomChamps = {"categorie"};
+            String[] ValeurChamps = {"L"};
+            ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
+
+            request.setAttribute("produits", certainsClients);
+            request.getRequestDispatcher("/WEB-INF/client_affichage_produit.jsp").forward(request, response);
+
         }
         return;
     }

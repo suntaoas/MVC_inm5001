@@ -171,8 +171,8 @@
                             <li class="active"><a href="" title="Home">Liquidation</a></li>
                             <li class=""><a href="" title="Shop by">Tous Les Produits</a>
                                 <ul>
-                                    <li><a href="category.html">Legumes</a></li>
-                                    <li><a href="category.html">Fruits</a></li>
+                                    <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=legume">Legumes</a></li>
+                                    <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=fruit">Fruits</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Cherche advanced">Cherche advanced</a></li>

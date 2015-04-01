@@ -33,7 +33,7 @@ public class SqlHelper {
             while (rs.next()) {
                 Object[] objects = new Object[columnNum];
                 for (int i = 0; i < objects.length; i++) {
-                    objects[i] = rs.getObject(i + 1); //返回对象数组
+                    objects[i] = rs.getObject(i + 1);
                 }
                 al.add(objects);
             }

@@ -83,7 +83,7 @@ public class ProduitsService {
         }
         return certainsProduits;
     }
-
+    
     public boolean ajouterProduit(Produits produitNouveau) {
         String sql = "insert into Produits(description,prix,quantite,unitemesure,categorie,photo,statut) values (?,?,?,?,?,?,?)";
         String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getUniteMesure(), produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};
