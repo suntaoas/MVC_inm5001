@@ -99,8 +99,8 @@
                     </td>
                     <td width="46%" height="43"> 
                         <select name="categorie">
-                            <option value="001">FRUITS</option>
-                            <option value="002">LEGUMES</option>              			   
+                            <option value="F">FRUITS</option>
+                            <option value="L">LEGUMES</option>              			   
                         </select>
                     </td>
                 </tr>

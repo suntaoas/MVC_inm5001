@@ -31,6 +31,7 @@ public class TournerUnePageWeb extends HttpServlet {
                 break;
             case "tournerDeconnection":
                 request.getSession().removeAttribute("loginUser");
+                request.getSession().removeAttribute("monPanier");
                 request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
                 break;
             case "tournerMenuGestion":
