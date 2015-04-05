@@ -74,6 +74,7 @@
                 </header>
             </div>
             <!--Content Block-->
+            <h2 align="center">LISTE DES CLIENTS</h2>
             <section >
                 <div >
                     <div >
@@ -111,7 +112,8 @@
                                     </table>
                                     <table>
                                         <tr>
-                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                            <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
+                                           <!-- <td height="52"><div align="center"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
                                         </tr>
                                     </table>
                                 </div>

@@ -13,6 +13,7 @@
         <title>Magasin de Fruits & Légumes</title>
 
     </head>
+    
     <body>
         <div class="mainContainer sixteen container">
             <!--Header Block-->

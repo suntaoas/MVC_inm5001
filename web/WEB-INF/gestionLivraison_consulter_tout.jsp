@@ -54,6 +54,7 @@
                                             }
                                         %> 
                                     </table>
+                                    <div height="52" align="left"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                                 </div>
                             </div>
                         </div>

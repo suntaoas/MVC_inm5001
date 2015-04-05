@@ -37,7 +37,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
+                                    <table align="center" border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>NoCommande</th>
                                             <th>NoProduit</th>
@@ -58,7 +58,8 @@
                                     </table>
                                     <table>
                                         <tr>
-                                            <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                            <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
+                                            <!--<td height="52"><div align="center"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
                                         </tr>
                                     </table>
                                 </div>

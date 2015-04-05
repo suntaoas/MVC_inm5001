@@ -27,7 +27,7 @@
     </head>
 
     <body BGCOLOR="#F0F8FF">
-        <h2 align="center">RECHERCHE DU COMMANDES POUR SUPPRIMER</h2>
+        <h2 align="center">RECHERCHE DE COMMANDES POUR SUPPRIMER</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/CommandeConsulterPourSupprimer?type=supprimer" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
