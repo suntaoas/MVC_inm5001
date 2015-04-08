@@ -14,7 +14,7 @@
         <title>Magasin de Fruits & Légumes</title>
 
     </head>
-    <body style="background:url('images/photo5.jpg')">
+    <body>
         <div class="mainContainer sixteen container">
             <!--Header Block-->
 
@@ -38,7 +38,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
+                                    <table align="center" border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>noCommande</th>
                                             <th>datetime</th>
@@ -62,6 +62,7 @@
                                             }
                                         %> 
                                     </table>
+                                    <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
                                 </div>
                             </div>
                         </div>

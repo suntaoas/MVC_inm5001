@@ -79,6 +79,9 @@ public class TournerUnePageWeb extends HttpServlet {
             case "tournerContactezNous":
                 request.getRequestDispatcher("/WEB-INF/contactez_nous.jsp").forward(request, response);
                 break;
+            case "tournerMessageErreur":
+                request.getRequestDispatcher("/WEB-INF/message_erreur.jsp").forward(request, response);
+                break;
             case "tournerPagePrincipale":
                 if (request.getAttribute("myCart") == null) {
                     MonPanier myCart = new MonPanier();

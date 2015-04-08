@@ -15,7 +15,7 @@
         <title>Magasin de Fruits & Légumes</title>
 
     </head>
-    <body style="background:url('images/photo2.jpg')">
+    <body>
         <div class="mainContainer sixteen container">
             <!--Header Block-->
 
@@ -27,7 +27,7 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-                        
+
                     </nav>
 
                 </header>
@@ -39,7 +39,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
+                                    <table align="center" border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>noLivraison</th>
                                             <th>noCommande</th>
@@ -54,7 +54,7 @@
                                             }
                                         %> 
                                     </table>
-                                    <div height="52" align="left"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
+                                    <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
                                 </div>
                             </div>
                         </div>

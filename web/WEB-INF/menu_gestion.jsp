@@ -101,10 +101,9 @@
                             </li>
                             <li class=""><a href="about_us.html" title="Gestion System">Gestion System</a>
                                 <ul>
-                                    <li><a href="category.html">Maintenance de type produit</a></li>
-                                    <li><a href="category.html">Maintenance de numero de client</a></li>
-                                    <li><a href="category.html">Maintenance de taxe</a></li>
-                                    <li><a href="category.html">Statistique de paiement</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMessageErreur">Maintenance de type produit</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMessageErreur">Maintenance de taxe</a></li>
+                                    <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMessageErreur">Statistique de paiement</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></li>
