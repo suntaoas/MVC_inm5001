@@ -63,13 +63,13 @@
         %>
         <script language="javascript" type="text/javascript">
             var id = 0;
-            function js_method(){
+            function js_method() {
                 id = this.title.value;
             }
         </script>
     </head>
     <body>
-           
+
         <div class="mainContainer sixteen container">
             <!--Header Block-->
             <div class="header-wrapper">
@@ -163,9 +163,9 @@
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
-                            
+
                         </a></h1>
-                      
+
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
                             <li class="active"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Home">Acceuil</a></li>
@@ -225,15 +225,15 @@
                 <div class="banner-block container">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li><img title="Banner" alt="Banner" src="images/pomme.jpe" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/tomate.jpe" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/pomme.jpe" /></li>
-                            <li><img title="Banner" alt="Banner" src="images/tomate.jpe" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/topfruitetlegume1.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/topfruitetlegume2.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/topfruitetlegume3.jpg" /></li>
+                            <li><img title="Banner" alt="Banner" src="images/topfruitetlegume4.jpg" /></li>
                         </ul>
                     </div>
                     <ul class="banner-add">
-                        <li class="add1"><a href="#" title=""><img title="add1" alt="add1" src="static1.jpg" /></a></li>
-                        <li class="add2"><a href="#" title=""><img title="add2" alt="add2" src="static2.jpg" /></a></li>
+                        <li class="add1"><a href="#" title=""><img title="add1" alt="add1" src="images/topfruitetlegume6.jpg" /></a></li>
+                        <li class="add2"><a href="#" title=""><img title="add2" alt="add2" src="images/topfruitetlegume5.jpg" /></a></li>
                     </ul>
                 </div>
             </section>
@@ -263,127 +263,13 @@
                                     <div class="link-block"> 
                                         <!--<a href="#quick-view-container" class="quickllook inline" title="Quick View">Quick View</a> -->
                                         <a href="/MVC_inm5001/ProduitConsulterDetail?noProduit=<%=produit.getNoProduit()%>" class="quickproLink" title="Link">Product link</a></div>
-                                        <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
+                                    <input style="display:none;" type="text" id="id_al" name="id_al" readonly value="<%=i%>"/>
                                     <div class="pro-price"><%=produit.getPrix()%></div>
                                 </div>
                             </li>
                             <%}%>
                         </ul>
-                    </div>
-                    <div class="heading-block">
-                        <h1>New Product</h1>
-                    </div>
-                    <div class="new-product-block">
-                        <ul class="product-grid">
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> 
-                                    <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> 
-                                    <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="product-grid">
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="pro-img">
-                                    <img title="Freature Product" alt="Freature Product" src="images/default_img.png" />
-                                </div>
-                                <div class="pro-content">
-                                    <p>produit</p>
-                                </div>
-                                <div class="pro-price">$1.99</div>
-                                <div class="pro-btn-block"> <a class="add-cart left" href="#" title="Add to Cart">Add to Cart</a> <a class="add-cart right quickCart inline" href="#quick-view-container" title="Quick View">Quick View</a> </div>
-                                <div class="pro-link-block"> <a class="add-wishlist left" href="#" title="Add to wishlist">Add to wishlist</a> <a class="add-compare right" href="#" title="Add to Compare">Add to Compare</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </li>
-                        </ul>
+
                     </div>
                     <div class="news-letter-container">
                         <div class="free-shipping-block">
