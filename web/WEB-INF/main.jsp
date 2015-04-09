@@ -241,7 +241,7 @@
             <section class="content-wrapper">
                 <div class="content-container container">
                     <div class="heading-block">
-                        <h1>Freatured Products</h1>
+                        <h1>Nos produits</h1>
                         <ul class="pagination">
                             <li class="grid"><a href="#" title="Grid">Grid</a></li>
                         </ul>

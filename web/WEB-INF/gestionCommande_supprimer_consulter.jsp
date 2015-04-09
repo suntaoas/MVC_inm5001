@@ -38,7 +38,7 @@
                         <div >
                             <div >
                                 <div>
-                                    <table border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
+                                    <table align="center" border="4" bgcolor="#F0F8FF" frame="border" width="50%" >
                                         <tr>
                                             <th>noCommande</th>
                                             <th>datetime</th>
@@ -63,6 +63,7 @@
                                             }
                                         %> 
                                     </table>
+                                    <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
                                 </div>
                             </div>
                         </div>

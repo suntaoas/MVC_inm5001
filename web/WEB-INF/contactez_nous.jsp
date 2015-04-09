@@ -134,9 +134,10 @@
 
                     </div>
                     <div class="feature-block">
-                        <h4>Magasin TAO ET Leila</h4>
-                        <h4> 2802 Rue Sherbrooke Est, Montreal</h4>
+                        <h4>Magasin TAO ET LEILA</h4>
+                        <h4> 2802 Rue Sherbrooke Est, Montréal</h4>
                         <h4> H2L 1V2</h4>
+                        <h4> 514-999-8888</h4>
 
                     </div>
                     <div class="news-letter-container">
