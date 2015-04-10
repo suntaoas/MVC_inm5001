@@ -94,7 +94,7 @@
                             <li class=""><a href="/MVC_inm5001/ProfilModifierOuSupprimer?type=consulter" title="Mon Profil">Mon Profil</a></li>
                             <li class=""><a href="/MVC_inm5001/CommandeConsulterPourUnClient?type=consulter" title="Mes Commandes">Mes Commandes</a></li>
                             <li class="my-wishlist"><a href="/MVC_inm5001/GoAfficherMonPanierPourClient" title="Mon Panier">Mon Panier</a></li>
-                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
+                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnexion</a></li>
                                 <%
                                 } else {
                                 %>

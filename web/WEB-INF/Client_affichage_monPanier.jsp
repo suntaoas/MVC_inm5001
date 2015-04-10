@@ -107,8 +107,8 @@
                     } else {
                     %>
                     <ul class="top-nav">
-                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnection</a></li>
-                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">CONTINUE</a></li>
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnexion</a></li>
+                        <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">Continue</a></li>
                     </ul>
                     <%
                     }
