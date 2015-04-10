@@ -81,7 +81,7 @@
                     <td width="46%" height="43"> 
                         <select name="statut">
                             <option value="1">EXITE</option>
-                            <option value="0">SUPPRIMANT</option>              			   
+                            <option value="0">SUPPRIME</option>              			   
                         </select>
                     </td>
                 </tr>

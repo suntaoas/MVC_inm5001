@@ -26,7 +26,7 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-
+                        <h4 align="center">MES COMMANDES</h4>
                     </nav>
 
                 </header>

@@ -34,7 +34,7 @@ public class CommandeCreerPourClient extends HttpServlet {
         if (request.getSession().getAttribute("loginUser") == null) {
             request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
         } else {
-            Clients loginUser = (Clients)request.getSession().getAttribute("loginUser");
+            Clients loginUser = (Clients) request.getSession().getAttribute("loginUser");
             int noClient = loginUser.getNoClient();
             float montant = Float.parseFloat(request.getParameter("montant"));
             System.out.println("CommandeCreer.java------noClient and montantTotal :" + noClient + "---" + montant);
@@ -58,37 +58,37 @@ public class CommandeCreerPourClient extends HttpServlet {
 
             //envoyer le courriel pour client
             /*
-            SendMailToSomeone smts = new SendMailToSomeone();
+             SendMailToSomeone smts = new SendMailToSomeone();
 
-            String mailbody = "<table width=\"70%\" border=\"1\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"comm\">"
-                    + "<tr>"
-                    + "<td align=\"center\">NoCommande</td>"
-                    + "<td align=\"center\">DescriptionProduit</td>"
-                    + "<td align=\"center\">PrixProduit</td>"
-                    + "<td align=\"center\">Quantite</td>"
-                    + "</tr>";
+             String mailbody = "<table width=\"70%\" border=\"1\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"comm\">"
+             + "<tr>"
+             + "<td align=\"center\">NoCommande</td>"
+             + "<td align=\"center\">DescriptionProduit</td>"
+             + "<td align=\"center\">PrixProduit</td>"
+             + "<td align=\"center\">Quantite</td>"
+             + "</tr>";
 
-            ArrayList al = (ArrayList) monPanier.afficherMonPanier();
-            for (int i = 0; i < al.size(); i++) {
-                Produits produit = (Produits) al.get(i);
+             ArrayList al = (ArrayList) monPanier.afficherMonPanier();
+             for (int i = 0; i < al.size(); i++) {
+             Produits produit = (Produits) al.get(i);
 
-                mailbody += "<tr>"
-                        + "<td align=\"center\">" + orderId + "</td>"
-                        + "<td align=\"center\">" + produit.getNoProduit() + "</td>"
-                        + "<td align=\"center\">" + produit.getDescription() + "</td>"
-                        + "<td align=\"center\">" + produit.getPrix() + "</td>"
-                        + "<td align=\"center\">" + produit.getShoppingNum() + "</td>"
-                        + "</tr>";
+             mailbody += "<tr>"
+             + "<td align=\"center\">" + orderId + "</td>"
+             + "<td align=\"center\">" + produit.getNoProduit() + "</td>"
+             + "<td align=\"center\">" + produit.getDescription() + "</td>"
+             + "<td align=\"center\">" + produit.getPrix() + "</td>"
+             + "<td align=\"center\">" + produit.getShoppingNum() + "</td>"
+             + "</tr>";
 
-            }
+             }
 
-            mailbody += "</table>";
+             mailbody += "</table>";
 
-            smts.send("你在时尚购物网有订单", mailbody, "suntaoas@hotmail.com", "inm5001@sohu.com", "qwer@1234", "smtp.sohu.com");
-            */
-            ArrayList<Commandes> tousCommandes = commandesservice.getTousCommandes();
-            request.setAttribute("commandes", tousCommandes);
-            request.getRequestDispatcher("/WEB-INF/gestionCommande_consulter_conditions.jsp").forward(request, response);
+             smts.send("你在时尚购物网有订单", mailbody, "suntaoas@hotmail.com", "inm5001@sohu.com", "qwer@1234", "smtp.sohu.com");
+             */
+            ArrayList certainsCommandes = commandesservice.getCommandeByNoClient(noClient);
+            request.setAttribute("commandes", certainsCommandes);
+            request.getRequestDispatcher("/WEB-INF/Client_commande_consulter.jsp").forward(request, response);
         }
     }
 

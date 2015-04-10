@@ -151,9 +151,19 @@
                             %>
                             <tr><td colspan="2">MontantTotal ：  </td>
                                 <td colspan="4"><input type="text" id="montant" name="montant" value="<%=montantTotal%>"/></td></tr>
+                            <%
+                            if(al.size() != 0){
+                            %>
                             <tr>
                                 <td colspan="3"><input type="submit" value="CREER UNE COMMANDE"></td>
                             </tr>
+                            <%
+                            }else{
+                            %>
+                            <tr>
+                                <td colspan="3"><input type="submit" value="CREER UNE COMMANDE" disabled></td>
+                            </tr>
+                            <%}%>
                         </table>
                     </form>
                 </div>

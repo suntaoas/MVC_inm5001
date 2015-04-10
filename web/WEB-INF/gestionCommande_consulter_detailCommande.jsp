@@ -2,6 +2,7 @@
     C'est la page de la gestion de client pour consulter 
 --%>
 
+<%@page import="domain.Clients"%>
 <%@page import="service.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -58,8 +59,17 @@
                                     </table>
                                     <table>
                                         <tr>
-                                            <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
-                                            <!--<td height="52"><div align="center"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
+                                            <%
+                                                Clients client = (Clients) session.getAttribute("loginUser");
+                                                if ("1".equals(client.getUsager())) {
+                                            %>
+                                        <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
+                                        <%
+                                        } else {
+                                        %>
+                                        <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
+                                        <%}%>
+                                        <!--<td height="52"><div align="center"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
                                         </tr>
                                     </table>
                                 </div>
