@@ -84,7 +84,7 @@
         <h2 align="center">CHOISIR PRODUITS POUR UNE COMMANDE</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/CommandeAjouterPanier">
-            <table width="75%" border="0" align="left">
+            <table  width="75%" border="0" align="center">
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#000000">DESCRIPTION :</font></div>

@@ -26,7 +26,8 @@
         --%>
     </head>
 
-    <body style="background:url('images/photo2.jpg')" BGCOLOR="#F0F8FF">
+    <!--<body style="background:url('images/photo2.jpg')" BGCOLOR="#F0F8FF">-->
+    <body  BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DE COMMANDES POUR LIVRAISON</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/LivraisonConsulterPourCertain?type=ajouter" onSubmit="return isValid();">
