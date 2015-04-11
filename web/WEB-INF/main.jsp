@@ -82,7 +82,7 @@
                                     client = (Clients) session.getAttribute("loginUser");
                                     if ("1".equals(client.getUsager())) {
                             %>
-                            <li> <a class="mainCurrency" href="#">BIENVNU ADMINISTRATREUR: <%=client.getPrenom()%></a></li>
+                            <li> <a class="mainCurrency" href="#">BIENVNU GESTIONNAIRE: <%=client.getPrenom()%></a></li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Gestion">Gestion</a></li>
                                 <%
                                 } else {
@@ -94,12 +94,12 @@
                             <li class=""><a href="/MVC_inm5001/ProfilModifierOuSupprimer?type=consulter" title="Mon Profil">Mon Profil</a></li>
                             <li class=""><a href="/MVC_inm5001/CommandeConsulterPourUnClient?type=consulter" title="Mes Commandes">Mes Commandes</a></li>
                             <li class="my-wishlist"><a href="/MVC_inm5001/GoAfficherMonPanierPourClient" title="Mon Panier">Mon Panier</a></li>
-                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Deconnexion</a></li>
+                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerDeconnection" title="Deconnection">Déconnexion</a></li>
                                 <%
                                 } else {
                                 %>
                             <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription" title="Inscription">INSCRIPTION</a></li>
-                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">CONNEXTON</a></li>
+                            <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">CONNEXION</a></li>
                                 <%
                                     }
                                 %>
@@ -168,14 +168,14 @@
 
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
-                            <li class="active"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Home">Acceuil</a></li>
+                            <li class="active"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Home">Accueil</a></li>
                             <li class=""><a href="" title="Shop by">Tous Les Produits</a>
                                 <ul>
-                                    <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=legume">Legumes</a></li>
+                                    <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=legume">Légumes</a></li>
                                     <li><a href="/MVC_inm5001/ProduitConsulterPourCertainsPourClient?type=fruit">Fruits</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Recherche advance">Recherche Avance</a></li>
+                            <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConsulterProduitPourClient" title="Recherche advance">Recherche Avancé</a></li>
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerContactezNous" title="Contact Nous">Contact Nous</a></li>
                         </ul>
                     </nav>

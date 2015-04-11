@@ -75,10 +75,10 @@ public class MonPanier {
 
             toltalPrice += produit.getPrix() * produit.getShoppingNum();
         }
-        if (toltalPrice != 0) {
-            DecimalFormat df = new DecimalFormat("#.00");
-            toltalPrice = Float.parseFloat(df.format(toltalPrice));
-        }
+        //if (toltalPrice != 0) {
+          //  DecimalFormat df = new DecimalFormat("#.00");
+            //toltalPrice = Float.parseFloat(df.format(toltalPrice));
+        //}
         return toltalPrice;
     }
 

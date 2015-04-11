@@ -121,7 +121,7 @@
                             <div class="col-1 new-users">
                                 <div class="content">
                                     <h2>Fonctionnalite Pour Administrateur</h2>
-                                    <p>Réaliser de la maintenance et de la gestion de la base de données.</p>
+                                    <p>Réaliser de la maintenance et la gestion de la base de données.</p>
                                 </div>
 
                             </div>
