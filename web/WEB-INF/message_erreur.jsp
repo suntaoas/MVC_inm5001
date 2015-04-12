@@ -135,7 +135,7 @@
 
                     </div>
                     <div class="feature-block">
-                        <h4>Temporairement cette fonctionnalite n'est pas developpe</h4>
+                        <h4>Temporairement cette fonctionnalité n'est pas développée</h4>
 
                     </div>
                 </div>
