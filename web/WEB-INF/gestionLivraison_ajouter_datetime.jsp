@@ -32,11 +32,11 @@
         </script>
     </head>
 
-    <body style="background:url('images/photo2.jpg')" BGCOLOR="#F0F8FF">
+    <body BGCOLOR="#F0F8FF">
         <h2 align="center">ENTRER LA DATE ET LE TEMPS POUR LIVRAISON</h2>
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/LivraisonAjouter?type=livrer" onSubmit="return isValid();">
-            <table width="75%" border="0" align="left">
+            <table width="75%" border="0" align="center">
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#000000">noCommande :</font></div>

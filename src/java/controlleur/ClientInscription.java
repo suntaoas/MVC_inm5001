@@ -51,7 +51,7 @@ public class ClientInscription extends HttpServlet {
                 System.out.println("c'est echec !");
             }
         }else{
-            
+            request.getRequestDispatcher("/WEB-INF/erreur_message_inscriptionClient.jsp").forward(request, response);
         }
         //ArrayList unClient = clientsservice.getClientById(null);
 
