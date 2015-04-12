@@ -47,6 +47,7 @@
                                             <th>Montant</th>
                                         </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("detailCommande");
+                                        System.out.println("gestionCommande_consulter_detailcommande.jsp=======al.size()="+al.size());
                                             for (int i = 0; i < al.size(); i++) {
                                                 DetailCommande detailCommande = (DetailCommande) al.get(i);
                                                 out.print("<tr><td>" + detailCommande.getNoCommande() + "</td>");

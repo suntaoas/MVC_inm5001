@@ -31,9 +31,11 @@ public class CommandeConsulterDetailCommande extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String noCommande = request.getParameter("noCommande");
+        System.out.println("CommandeConsulterDetailCommande.java=======noCommnade="+noCommande);
 
         CommandesService commandeservice = new CommandesService();
         ArrayList arrDetailCommande = commandeservice.getDetailParNoCommande(noCommande);
+        System.out.println("CommandeConsulterDetailCommande.java=======arrDetailCommande.size()="+arrDetailCommande.size());
 
         request.setAttribute("detailCommande", arrDetailCommande);
         request.getRequestDispatcher("/WEB-INF/gestionCommande_consulter_detailCommande.jsp").forward(request, response);

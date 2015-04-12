@@ -99,7 +99,7 @@
                                     <li><a href="/MVC_inm5001/LivraisonConsulterPourTout">Consulter livraison</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="about_us.html" title="Gestion System">Gestion System</a>
+                            <li class=""><a href="about_us.html" title="Gestion System">Gestion Systeme</a>
                                 <ul>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMessageErreur">Maintenance de type produit</a></li>
                                     <li><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMessageErreur">Maintenance de taxe</a></li>
