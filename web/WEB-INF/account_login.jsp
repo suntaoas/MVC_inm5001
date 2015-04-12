@@ -78,11 +78,11 @@
                             <div class="col-1 new-users">
                                 <div class="content">
                                     <h2>Nouveaux Clients</h2>
-                                    <p>En créant un compte sur notre boutique, vous serez en mesure de se déplacer à travers le processus de paiement plus rapide, stocker des adresses d'expédition multiples, consulter et suivre vos commandes dans votre compte et plus encore.</p>
+                                    <p>En créant un compte sur notre site, vous serez en mesure de vous déplacez à travers le processus de commande plus rapidement,consulter et suivre vos commandes et plus encore.</p>
                                 </div>
                                 <div class="buttons-set">
-                                    <a class="colors-btn" title="Creer un compte" href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription"><span><span>Creer an Account</span></span></a>
-                                    <a class="colors-btn" title="Tourner la page Principale" href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">Tourner la page Principale</a>
+                                    <a class="colors-btn" title="Creer un compte" href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription"><span><span>Creer un compte</span></span></a>
+                                    <a class="colors-btn" title="Tourner la page Principale" href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">Accueil</a>
                                     <div class="clear"></div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                 <div class="col-2 registered-users">
                                     <div class="content">
                                         <h2>Clients Enregistrés</h2>
-                                        <p>Si vous avez un compte avec nous, se il vous plaît vous connecter.</p>
+                                        <p>Si vous avez un compte avec nous, s'il vous plaît connectez-vous.</p>
                                         <ul class="form-list">
                                             <li>
                                                 <label class="required" for="noClient">Courriel:<em>*</em></label>
