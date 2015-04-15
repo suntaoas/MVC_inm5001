@@ -126,7 +126,7 @@
                                                 }
                                             %>
                                             <tr><td colspan="2">MontantTotal ：  </td>
-                                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=montantTotal%>"/></td></tr>
+                                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float)(Math.round(montantTotal*100))/100%>"/></td></tr>
                                             <tr><td colspan="2">Numero De Client ：</td>
                                                 <td colspan="4"><input type="text" id="noClient" name="noClient"/></td></tr>
                                             <tr><td colspan="6"><input type="submit" value="CREER UNE COMMANDE"></td></tr>

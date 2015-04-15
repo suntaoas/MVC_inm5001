@@ -150,7 +150,7 @@
                                 }
                             %>
                             <tr><td colspan="2">MontantTotal ：  </td>
-                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=montantTotal%>"/></td></tr>
+                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float)(Math.round(montantTotal*100))/100%>"/></td></tr>
                             <%
                             if(al.size() != 0){
                             %>
