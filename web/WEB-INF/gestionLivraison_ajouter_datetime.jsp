@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour ajouter informations de Client
---%>
-
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -31,7 +27,6 @@
             }
         </script>
     </head>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">ENTRER LA DATE ET LE TEMPS POUR LIVRAISON</h2>
         <hr />
@@ -53,7 +48,6 @@
                         <input name="datetime" type="text" id="datetime" value="<%=datetime%>">
                     </td>
                 </tr>
-
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">

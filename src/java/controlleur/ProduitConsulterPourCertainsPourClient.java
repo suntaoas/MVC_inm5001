@@ -1,10 +1,5 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des produits
- *   
- */
 package controlleur;
 
-import domain.Produits;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,8 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.ClientsService;
-import service.MonPanier;
 import service.ProduitsService;
 
 public class ProduitConsulterPourCertainsPourClient extends HttpServlet {
@@ -30,17 +23,13 @@ public class ProduitConsulterPourCertainsPourClient extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ProduitsService produitsservice = new ProduitsService();
-        //ArrayList tousProduits = produitsservice.getTousProduits();
         String type = request.getParameter("type");
         if ("rechercheAdvanced".equals(type)) {
-
             Map<String, String> nomChampsTemp = new HashMap<String, String>();
             nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
             nomChampsTemp.put("prix", request.getParameter("prixProduit").trim());
             nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
-
             int nombre = nomChampsTemp.size();
-
             String[] nomChamps = new String[nombre];
             String[] ValeurChamps = new String[nombre];
             int i = 0;
@@ -58,11 +47,6 @@ public class ProduitConsulterPourCertainsPourClient extends HttpServlet {
                 }
                 i++;
             }
-            /*
-             for(int j=0;j<nomChamps.length;j++){
-             System.out.println("nomChamps["+j+"]="+nomChamps[j]+"    "+"ValeurChamps["+j+"]="+ValeurChamps[j]);
-             }
-             */
             if (null != nomChamps) {
                 ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
 
@@ -73,21 +57,16 @@ public class ProduitConsulterPourCertainsPourClient extends HttpServlet {
         if ("fruit".equals(type)) {
             String[] nomChamps = {"categorie"};
             String[] ValeurChamps = {"F"};
-
             ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
-
             request.setAttribute("produits", certainsClients);
             request.getRequestDispatcher("/WEB-INF/client_affichage_produit.jsp").forward(request, response);
-
         }
         if ("legume".equals(type)) {
             String[] nomChamps = {"categorie"};
             String[] ValeurChamps = {"L"};
             ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
-
             request.setAttribute("produits", certainsClients);
             request.getRequestDispatcher("/WEB-INF/client_affichage_produit.jsp").forward(request, response);
-
         }
         return;
     }

@@ -1,19 +1,13 @@
-/*
- *  cette classe fait des oprations SQL de BD pour obtenir des informations des clients
- */
 package service;
 
 import domain.Clients;
 import java.util.ArrayList;
-
 import utils.SqlHelper;
 
 public class ClientsService {
 
-    //le fonction pour verifier usage legal.
     public boolean verifierClient(Clients client) {
         System.out.println("entrer la methode : verifierClient");
-        //verifier le donnee sur le BD
         String sql = "select * from clients where courriel=? and password=? and statut=1";
         String paras[] = {client.getCourriel() + "", client.getPassword()};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
@@ -21,7 +15,6 @@ public class ClientsService {
             return false;
         } else {
             Object[] objects = (Object[]) al.get(0);
-            //prendre les informations dans le objet user.
             for (int i = 0; i < 11; i++) {
                 System.out.println(objects[i]);
             }
@@ -101,7 +94,6 @@ public class ClientsService {
         String sql = "select * from Clients where 1=? and statut='1'";
         String[] paras = {"1"};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
-        //second encapsulation 
         for (int i = 0; i < al.size(); i++) {
             Object obj[] = (Object[]) al.get(i);
             Clients client = new Clients();
@@ -116,7 +108,6 @@ public class ClientsService {
             client.setCourriel(obj[8].toString());
             client.setStatut(obj[9].toString());
             client.setUsager(obj[10].toString());
-
             TousClientTemp.add(client);
         }
         return TousClientTemp;
@@ -142,22 +133,21 @@ public class ClientsService {
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
+
     public boolean modifierProfil(Clients clientModifier) {
         String sql = "update Clients set nom=?,prenom=?,password=?,age=?,sexe=?,adresse=?,telephone=?,courriel=? where noClient=? and statut='1'";
         String[] paras = {clientModifier.getNom(), clientModifier.getPrenom(), clientModifier.getPassword(), clientModifier.getAge() + "", clientModifier.getSexe(), clientModifier.getAdresse(), clientModifier.getTelephone(), clientModifier.getCourriel(), clientModifier.getNoClient() + ""};
         boolean res = new SqlHelper().executeUpdate(sql, paras);
         return res;
     }
-    
-    public ArrayList<Clients> getClientByNoClients( int id) {
+
+    public ArrayList<Clients> getClientByNoClients(int id) {
         ArrayList<Clients> TousClientTemp = new ArrayList<Clients>();
         String sql = "select * from Clients where noClient= ? and statut='1'";
         String paras[] = {id + ""};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
         for (int i = 0; i < al.size(); i++) {
-        
             Object obj[] = (Object[]) al.get(i);
-           
             Clients client = new Clients();
             client.setNoClient(Integer.parseInt(obj[0].toString()));
             client.setNom(obj[1].toString());
@@ -168,11 +158,9 @@ public class ClientsService {
             client.setAdresse(obj[6].toString());
             client.setTelephone(obj[7].toString());
             client.setCourriel(obj[8].toString());
-            
             TousClientTemp.add(client);
         }
         return TousClientTemp;
     }
-   
-    
+
 }

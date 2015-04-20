@@ -1,25 +1,14 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des commandes
- *   "menu_gestion.jsp->gestion commande->consulter" ----->  "CommandeConsulterPourCertains.java"  -----> "gestionCommande_consulter.jsp"
- */
 package controlleur;
 
 import domain.Clients;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.client.Client;
-import service.ClientsService;
 import service.CommandesService;
-import service.MonPanier;
-import service.ProduitsService;
 
 public class CommandeConsulterPourUnClient extends HttpServlet {
 

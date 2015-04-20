@@ -1,7 +1,3 @@
-/*
- *   C'est la classe de controlleur du servlet pour choisir des produits a une commande 
- *   
- */
 package controlleur;
 
 import domain.Produits;
@@ -28,7 +24,7 @@ public class CommandeAjouterPanier extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ProduitsService produitsservice = new ProduitsService();
-       
+
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
         nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
@@ -46,20 +42,18 @@ public class CommandeAjouterPanier extends HttpServlet {
             if (!val.toString().isEmpty()) {
                 nomChamps[i] = (String) key;
                 ValeurChamps[i] = (String) val;
-            }else{
+            } else {
                 nomChamps[i] = "1";
                 ValeurChamps[i] = "1";
             }
             i++;
         }
-            
         if (null != nomChamps) {
             ArrayList certainsProduits = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
-            for(int j=0;j<certainsProduits.size();j++){
-                Produits unproduit = (Produits)certainsProduits.get(j);
+            for (int j = 0; j < certainsProduits.size(); j++) {
+                Produits unproduit = (Produits) certainsProduits.get(j);
                 System.out.println(unproduit.getNoProduit());
             }
-
             request.setAttribute("produitsChoisiPourNouvelleCommande", certainsProduits);
             request.getRequestDispatcher("/WEB-INF/gestionCommande_ajouter.jsp").forward(request, response);
         }

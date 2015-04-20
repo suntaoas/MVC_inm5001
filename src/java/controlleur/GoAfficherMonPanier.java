@@ -2,12 +2,10 @@ package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import service.MonPanier;
 
 public class GoAfficherMonPanier extends HttpServlet {
@@ -20,8 +18,6 @@ public class GoAfficherMonPanier extends HttpServlet {
         PrintWriter out = response.getWriter();
         if (request.getSession().getAttribute("monPanier") != null) {
             MonPanier monPanier = (MonPanier) request.getSession().getAttribute("monPanier");
-
-            //System.out.println("GoShowMonPanier :"+monPanier.getMontantTotal());
             request.setAttribute("listeDeProduit", monPanier.afficherMonPanier());
             request.setAttribute("MontantTotal", monPanier.getMontantTotal());
 

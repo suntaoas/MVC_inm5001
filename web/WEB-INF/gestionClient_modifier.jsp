@@ -1,8 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour modifier des informations de Client
-    Pas fini !!!
---%>
-
 <%@page import="domain.Clients"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,10 +23,8 @@
     <%
         Clients clientModifier = (Clients) session.getAttribute("clientModifier");
     %>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">MODIFIER LE CLIENT</h2>
-
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ClientModifierTraite" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
@@ -131,7 +124,6 @@
                         </select>
                     </td>
                 </tr>
-
                 <tr>
                     <td height="52"><div align="right"><a href="index.html">RETOURNER</a></div></td>
                     <td width="46%" height="52">

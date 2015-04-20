@@ -1,26 +1,19 @@
-/*
- * c'est mon panier
- */
 package service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-
 import domain.Produits;
-import java.text.DecimalFormat;
 import java.util.Map;
 
 public class MonPanier {
 
-    //float montantTotal;
     Map<String, Produits> hm = new HashMap<String, Produits>();
 
     public Produits getHm(String id) {
         return hm.get(id);
     }
 
-    //ajoute produit dans mon cart
     public void ajouterProduit(String id, int nombreProduit) {
         System.out.println("fonc : ajouterProduit : id = " + id);
         Produits produitCart = new Produits();
@@ -52,33 +45,22 @@ public class MonPanier {
 
         Iterator itertor = hm.keySet().iterator();
         while (itertor.hasNext()) {
-
             String key = (String) itertor.next();
-
             Produits produit = hm.get(key);
             al.add(produit);
         }
-
         return al;
     }
 
     public float getMontantTotal() {
-
         float toltalPrice = 0.0f;
         Iterator iterator = hm.keySet().iterator();
         while (iterator.hasNext()) {
-
             String noProduit = (String) iterator.next();
             System.out.println("MonPanier.java------ getMmontantTotal()-----noProduit :" + noProduit);
-
             Produits produit = hm.get(noProduit);
-
             toltalPrice += produit.getPrix() * produit.getShoppingNum();
         }
-        //if (toltalPrice != 0) {
-          //  DecimalFormat df = new DecimalFormat("#.00");
-            //toltalPrice = Float.parseFloat(df.format(toltalPrice));
-        //}
         return toltalPrice;
     }
 

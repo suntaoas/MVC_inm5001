@@ -1,15 +1,9 @@
-<%-- 
-    C'est la page de la gestion de produit pour consulter informations de produit
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Untitled Document</title>
-        
     </head>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU PRODUIT</h2>
         <hr />
@@ -62,7 +56,6 @@
                         </select>
                     </td>
                 </tr>
-
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#000000">PHOTO :</font></div>
@@ -71,7 +64,6 @@
                         <input name="photo" type="text" id="adresse">
                     </td>
                 </tr>
-
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">

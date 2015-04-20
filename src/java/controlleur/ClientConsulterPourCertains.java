@@ -1,7 +1,3 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des clients
- *   "menu_gestion.jsp->gestion clients->consulter" ----->  "ClientConsulter.java"  -----> "gestionClient_consulter.jsp"
- */
 package controlleur;
 
 import domain.Clients;
@@ -32,11 +28,9 @@ public class ClientConsulterPourCertains extends HttpServlet {
         ClientsService clientsservice = new ClientsService();
         ArrayList tousClients = clientsservice.getTousClients();
 
-        // ArrayList<String> nomChampsTemp = new ArrayList<String>();
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("nom", request.getParameter("nomClient").trim());
         nomChampsTemp.put("prenom", request.getParameter("prenomClient").trim());
-        //nomChampsTemp.add(request.getParameter("age").trim());
         nomChampsTemp.put("sexe", request.getParameter("sexe").trim());
         nomChampsTemp.put("adresse", request.getParameter("adresse").trim());
         nomChampsTemp.put("telephone", request.getParameter("telephone").trim());
@@ -57,17 +51,12 @@ public class ClientConsulterPourCertains extends HttpServlet {
             if (!val.toString().isEmpty()) {
                 nomChamps[i] = (String) key;
                 ValeurChamps[i] = (String) val;
-            }else{
+            } else {
                 nomChamps[i] = "1";
                 ValeurChamps[i] = "1";
             }
             i++;
         }
-        /*
-        for(int j=0;j<nomChamps.length;j++){
-            System.out.println("nomChamps["+j+"]="+nomChamps[j]+"    "+"ValeurChamps["+j+"]="+ValeurChamps[j]);
-        }
-        */        
         if (null != nomChamps) {
             ArrayList certainsClients = clientsservice.getClientParCertainsChamps(nomChamps, ValeurChamps);
 

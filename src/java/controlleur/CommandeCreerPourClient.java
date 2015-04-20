@@ -1,12 +1,7 @@
-/*
- *   C'est la classe de controlleur du servlet pour ajouter des clients
- *   "menu_gestion.jsp->gestion clients->ajouter" ----->  "ClientAjouter.java"  -----> "gestionClient_ajouter.jsp"
- */
 package controlleur;
 
 import domain.Clients;
 import domain.Commandes;
-import domain.Produits;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -16,10 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.ClientsService;
 import service.CommandesService;
 import service.MonPanier;
-import service.SendMailToSomeone;
 
 public class CommandeCreerPourClient extends HttpServlet {
 
@@ -56,36 +49,6 @@ public class CommandeCreerPourClient extends HttpServlet {
             int orderId = commandesservice.ajouterCommande(monPanier, nouveauCommande);
             System.out.println("Nouveau noCommande : " + orderId);
 
-            //envoyer le courriel pour client
-            /*
-             SendMailToSomeone smts = new SendMailToSomeone();
-
-             String mailbody = "<table width=\"70%\" border=\"1\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"comm\">"
-             + "<tr>"
-             + "<td align=\"center\">NoCommande</td>"
-             + "<td align=\"center\">DescriptionProduit</td>"
-             + "<td align=\"center\">PrixProduit</td>"
-             + "<td align=\"center\">Quantite</td>"
-             + "</tr>";
-
-             ArrayList al = (ArrayList) monPanier.afficherMonPanier();
-             for (int i = 0; i < al.size(); i++) {
-             Produits produit = (Produits) al.get(i);
-
-             mailbody += "<tr>"
-             + "<td align=\"center\">" + orderId + "</td>"
-             + "<td align=\"center\">" + produit.getNoProduit() + "</td>"
-             + "<td align=\"center\">" + produit.getDescription() + "</td>"
-             + "<td align=\"center\">" + produit.getPrix() + "</td>"
-             + "<td align=\"center\">" + produit.getShoppingNum() + "</td>"
-             + "</tr>";
-
-             }
-
-             mailbody += "</table>";
-
-             smts.send("你在时尚购物网有订单", mailbody, "suntaoas@hotmail.com", "inm5001@sohu.com", "qwer@1234", "smtp.sohu.com");
-             */
             ArrayList certainsCommandes = commandesservice.getCommandeByNoClient(noClient);
             request.setAttribute("commandes", certainsCommandes);
             request.getRequestDispatcher("/WEB-INF/Client_commande_consulter.jsp").forward(request, response);

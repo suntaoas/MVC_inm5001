@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour consulter 
---%>
-
 <%@page import="domain.Produits"%>
 <%@page import="domain.Clients"%>
 <%@page import="java.util.ArrayList"%>
@@ -12,7 +8,6 @@
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
         <script language="javascript" type="text/javascript">
-            //obtenir l'objet ligne
             function getRowObj(obj)
             {
                 var i = 0;
@@ -24,7 +19,6 @@
                 }
                 return obj;
             }
-            //obtenir le numero de ligne selon l'objet de ligne
             function getRowNo(obj)
             {
                 var trObj = getRowObj(obj);
@@ -52,7 +46,6 @@
                 var nombre = obj.value;
                 document.getElementById("tbl").rows[no].cells[4].innerHTML = nombre;
             }
-
             function modifierNombreProduit(noProduit) {
                 //alert(noProduit);
                 var nombre = 0;
@@ -68,16 +61,11 @@
                 }
                 alert("traitement fini");
                 location.href = "/MVC_inm5001/MonPanierTraite?type=modifier&id=" + noProduit + "&quantite=" + nombre;
-                //alert(nombre);
-                //alert(id);
-
             }
         </script>
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -86,12 +74,9 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-
                     </nav>
-
                 </header>
             </div>
-            <!--Content Block-->
             <section >
                 <div >
                     <div >
@@ -113,9 +98,7 @@
                                                 ArrayList al = (ArrayList) request.getAttribute("listeDeProduit");
                                                 System.out.println("al size : " + al.size());
                                                 for (int i = 0; i < al.size(); i++) {
-
                                                     Produits produit = (Produits) al.get(i);
-                                                    //System.out.println("affichage : " + produit.getDescription());
                                                     out.print("<tr><td>" + produit.getNoProduit() + "</td>");
                                                     out.print("<td>" + produit.getDescription() + "</td>");
                                                     out.print("<td>" + produit.getPrix() + "</td>");
@@ -126,7 +109,7 @@
                                                 }
                                             %>
                                             <tr><td colspan="2">MontantTotal ：  </td>
-                                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float)(Math.round(montantTotal*100))/100%>"/></td></tr>
+                                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float) (Math.round(montantTotal * 100)) / 100%>"/></td></tr>
                                             <tr><td colspan="2">Numero De Client ：</td>
                                                 <td colspan="4"><input type="text" id="noClient" name="noClient"/></td></tr>
                                             <tr><td colspan="6"><input type="submit" value="CREER UNE COMMANDE"></td></tr>

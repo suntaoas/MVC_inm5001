@@ -1,16 +1,11 @@
-/*
- *  cette classe fait des oprations SQL de BD pour obtenir des informations des produits
- */
 package service;
 
 import java.util.ArrayList;
-
 import domain.Produits;
 import utils.SqlHelper;
 
 public class ProduitsService {
 
-    //selon noProduit et obtenir un produit
     public Produits getProduitById(String id) {
         Produits produit = new Produits();
         String sql = "select * from Produits where noProduit=? and statut='1'";
@@ -31,13 +26,11 @@ public class ProduitsService {
         return produit;
     }
 
-    //obtenir touts les produuits
     public ArrayList<Produits> getTousProduits() {
         ArrayList<Produits> TousProduitTemp = new ArrayList<Produits>();
         String sql = "select * from Produits where 1=? and statut='1'";
         String[] paras = {"1"};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
-        //second encapsulation 
         for (int i = 0; i < al.size(); i++) {
             Object obj[] = (Object[]) al.get(i);
             Produits produit = new Produits();
@@ -49,7 +42,6 @@ public class ProduitsService {
             produit.setCategorie(obj[5].toString());
             produit.setPhoto(obj[6].toString());
             produit.setStatut(obj[7].toString());
-
             TousProduitTemp.add(produit);
         }
         return TousProduitTemp;
@@ -78,12 +70,11 @@ public class ProduitsService {
             produit.setCategorie(obj[5].toString());
             produit.setPhoto(obj[6].toString());
             produit.setStatut(obj[7].toString());
-
             certainsProduits.add(produit);
         }
         return certainsProduits;
     }
-    
+
     public boolean ajouterProduit(Produits produitNouveau) {
         String sql = "insert into Produits(description,prix,quantite,unitemesure,categorie,photo,statut) values (?,?,?,?,?,?,?)";
         String[] paras = {produitNouveau.getDescription(), produitNouveau.getPrix() + "", produitNouveau.getQuantite() + "", produitNouveau.getUniteMesure(), produitNouveau.getCategorie(), produitNouveau.getPhoto(), "1"};

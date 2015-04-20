@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de commande pour consulter 
---%>
-
 <%@page import="domain.Commandes"%>
 <%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
@@ -12,12 +8,10 @@
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-        
+
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -31,7 +25,6 @@
 
                 </header>
             </div>
-            <!--Content Block-->
             <section >
                 <div >
                     <div >
@@ -65,12 +58,10 @@
                                                     out.print("<td>Pas livrer</td>");
                                                 }
                                                 out.print("<td> <a href='/MVC_inm5001/CommandeConsulterDetailCommande?noCommande=" + commandeTemp.getNoCommande() + "'>DETAIL</a> </td></tr>");
-
                                             }
                                         %> 
                                     </table>
-                                        <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
-                                    
+                                    <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
                                 </div>
                             </div>
                         </div>

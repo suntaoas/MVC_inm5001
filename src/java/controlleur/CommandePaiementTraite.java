@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import service.CommandesService;
 
-import service.ProduitsService;
-import service.MonPanier;
-
 public class CommandePaiementTraite extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -23,11 +20,10 @@ public class CommandePaiementTraite extends HttpServlet {
 
         String noCommande = request.getParameter("noCommande");
         CommandesService commandesservice = new CommandesService();
-        //ArrayList unClient = clientsservice.getClientById(null);
         boolean res = commandesservice.payerCommande(noCommande);
         if (res) {
             request.getRequestDispatcher("/WEB-INF/gestionCommande_paiement_conditions.jsp").forward(request, response);
-        }else{
+        } else {
             System.out.println("c'est echec !");
         }
         return;

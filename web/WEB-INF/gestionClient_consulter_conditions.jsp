@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour ajouter informations de Client
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,7 +19,6 @@
             }
         </script>
     </head>
-
     <body bgcolor="#F0F8FF">
         <h2 align="center">RECHERCHE DU CLIENT</h2>
         <hr />
@@ -107,7 +102,6 @@
                         </select>
                     </td>
                 </tr>
-
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>
                     <td width="46%" height="52">

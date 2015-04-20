@@ -1,6 +1,7 @@
 package service;
 
 public class DetailCommande {
+
     private int noCommande;
     private int noProduit;
     private float prixProduit;
@@ -8,7 +9,7 @@ public class DetailCommande {
     private float montantProduit;
 
     public DetailCommande() {
-        
+
     }
 
     public int getNoCommande() {
@@ -50,5 +51,5 @@ public class DetailCommande {
     public void setMontantProduit(float montantProduit) {
         this.montantProduit = montantProduit;
     }
-    
+
 }

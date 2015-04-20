@@ -1,6 +1,3 @@
-/*
- *   C'est la classe d'outil pour faire des oprations crud de BD
- */
 package utils;
 
 import java.sql.Connection;
@@ -13,8 +10,8 @@ import java.util.ArrayList;
 
 public class SqlHelper {
 
-    private static Connection ct = null;//connection
-    private static ResultSet rs = null;//resultat
+    private static Connection ct = null;
+    private static ResultSet rs = null;
     private static PreparedStatement ps = null;
 
     public ArrayList executeQuery(String sql, String[] paras) {
@@ -22,14 +19,12 @@ public class SqlHelper {
         try {
             ct = DBUtil.getCon();
             ps = ct.prepareStatement(sql);
-            //Valuation de ? dans phrase de SQL
             for (int i = 0; i < paras.length; i++) {
                 ps.setString(i + 1, paras[i]);
             }
             rs = ps.executeQuery();
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnNum = rsmd.getColumnCount();
-            //boucle pour obtenir le arraylist de la classe
             while (rs.next()) {
                 Object[] objects = new Object[columnNum];
                 for (int i = 0; i < objects.length; i++) {
@@ -50,12 +45,9 @@ public class SqlHelper {
     public ResultSet executeQuery(String sqlstr) {
         Statement stmt = null;
         try {
-            //obtenir la connection
             ct = DBUtil.getCon();
             stmt = ct.createStatement();
-            //creer l'ensemble de resultat
             rs = stmt.executeQuery(sqlstr);
-            //retourner le resultat
             return rs;
         } catch (SQLException e) {
             System.out.print("error");
@@ -78,7 +70,7 @@ public class SqlHelper {
             return res;
         } catch (Exception e) {
             System.out.print("erreur");
-        }finally {
+        } finally {
             DBUtil.close(rs, ps, ct);
         }
         return false;

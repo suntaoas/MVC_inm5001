@@ -1,10 +1,5 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des produits
- *   
- */
 package controlleur;
 
-import domain.Produits;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,8 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.ClientsService;
-import service.MonPanier;
 import service.ProduitsService;
 
 public class ProduitConsulterPourCertains extends HttpServlet {
@@ -30,9 +23,7 @@ public class ProduitConsulterPourCertains extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ProduitsService produitsservice = new ProduitsService();
-        //ArrayList tousProduits = produitsservice.getTousProduits();
 
-       
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("description", request.getParameter("descripProduit").trim());
         nomChampsTemp.put("prix", request.getParameter("prixProduit").trim());
@@ -40,10 +31,8 @@ public class ProduitConsulterPourCertains extends HttpServlet {
         nomChampsTemp.put("unitemesure", request.getParameter("unitemesure").trim());
         nomChampsTemp.put("categorie", request.getParameter("categorie").trim());
         nomChampsTemp.put("photo", request.getParameter("photo").trim());
-        //nomChampsTemp.put("statut", request.getParameter("statut").trim());
 
         int nombre = nomChampsTemp.size();
-
         String[] nomChamps = new String[nombre];
         String[] ValeurChamps = new String[nombre];
         int i = 0;
@@ -55,17 +44,12 @@ public class ProduitConsulterPourCertains extends HttpServlet {
             if (!val.toString().isEmpty()) {
                 nomChamps[i] = (String) key;
                 ValeurChamps[i] = (String) val;
-            }else{
+            } else {
                 nomChamps[i] = "1";
                 ValeurChamps[i] = "1";
             }
             i++;
         }
-        /*
-        for(int j=0;j<nomChamps.length;j++){
-            System.out.println("nomChamps["+j+"]="+nomChamps[j]+"    "+"ValeurChamps["+j+"]="+ValeurChamps[j]);
-        }
-        */        
         if (null != nomChamps) {
             ArrayList certainsClients = produitsservice.getProduitParCertainsChamps(nomChamps, ValeurChamps);
 

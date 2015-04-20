@@ -1,7 +1,3 @@
-/*
- *   C'est la classe de controlleur du servlet pour ajouter des clients
- *   "menu_gestion.jsp->gestion clients->ajouter" ----->  "ClientAjouter.java"  -----> "gestionClient_ajouter.jsp"
- */
 package controlleur;
 
 import domain.Clients;
@@ -40,7 +36,7 @@ public class ClientInscription extends HttpServlet {
 
         ClientsService clientsservice = new ClientsService();
         ArrayList<Clients> al = clientsservice.getClientParCertainsChamps(champs, paras);
-        System.out.println("al.size() = "+al.size());
+        System.out.println("al.size() = " + al.size());
         if (al.size() == 0) {
             boolean res = clientsservice.ajouterClient(clientNouveau);
             if (res) {
@@ -50,11 +46,9 @@ public class ClientInscription extends HttpServlet {
             } else {
                 System.out.println("c'est echec !");
             }
-        }else{
+        } else {
             request.getRequestDispatcher("/WEB-INF/erreur_message_inscriptionClient.jsp").forward(request, response);
         }
-        //ArrayList unClient = clientsservice.getClientById(null);
-
         return;
     }
 

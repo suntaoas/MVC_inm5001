@@ -1,22 +1,14 @@
-<%-- 
-    C'est la page de la gestion de produit pour consulter 
---%>
-
 <%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <html lang="en">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -25,12 +17,9 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-                        
                     </nav>
-
                 </header>
             </div>
-            <!--Content Block-->
             <h2 align="center">LISTE DES PRODUITS</h2>
             <section>
                 <div >
@@ -58,14 +47,12 @@
                                                 out.print("<td>" + produitTemp.getUniteMesure() + "</td>");
                                                 out.print("<td>" + produitTemp.getCategorie() + "</td>");
                                                 out.print("<td>" + produitTemp.getPhoto() + "</td></tr>");
-
                                             }
                                         %> 
                                     </table>
                                     <table>
                                         <tr>
-                                            <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
-                                            <!--<td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
+                                        <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></div>
                                         </tr>
                                     </table>
                                 </div>

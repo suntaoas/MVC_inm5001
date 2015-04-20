@@ -1,18 +1,11 @@
-/*
- *   C'est la classe de controlleur du servlet pour valider le client
- *   "gestionClient_modiOuSuppri_affichage.jsp" ----->  "ClientModifier.java"  -----> "gestionClient_modiOuSuppri_conditions.jsp"
- */
 package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import domain.Clients;
 import service.*;
 
@@ -24,8 +17,6 @@ public class ClientModifier extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-
-        //obtenir noClient 
         String noClient = request.getParameter("noClient");
         System.out.println("noClient = " + noClient);
 
@@ -36,13 +27,9 @@ public class ClientModifier extends HttpServlet {
             request.getSession().setAttribute("clientModifier", client);
             request.getRequestDispatcher("/WEB-INF/gestionClient_modifier.jsp").forward(request, response);
             return;
-
         } else {
-            //illegal
             request.getRequestDispatcher("/WEB-INF/menu_gestion.jsp").forward(request, response);
-
         }
-
     }
 
     @Override

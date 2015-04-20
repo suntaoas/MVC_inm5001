@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Client_detail_produit
-    Created on : Mar 19, 2015, 4:46:19 PM
-    Author     : suntao
---%>
-
 <%@page import="domain.Produits"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,15 +8,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <!--
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/colors.css">
-        <link rel="stylesheet" href="css/skeleton.css">
-        <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/ddsmoothmenu.css"/>
-        <link rel="stylesheet" href="css/elastislide.css"/>
-        <link rel="stylesheet" href="css/home_flexslider.css"/>
-        -->
     </head>
     <body>
         <div class="header-wrapper">
@@ -33,20 +18,10 @@
                         <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                     </a>
                 </h1>
-                <!--
-                <ul class="top-nav">
-                    <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerInscription" title="Inscription">Inscription</a></li>
-                    <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerConnection" title="Connection">Connection</a></li>
-                    <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">CONTINUE</a></li>
-                </ul>
-                -->
                 <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-
                 </nav>
-
             </header>
         </div>
-        <!--Quick view Block-->
         <section >
             <div align="center">
                 <form name="form" method="post" action="/MVC_inm5001/MonPanierTraiterPourClient?type=ajouter" >

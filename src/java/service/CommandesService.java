@@ -1,16 +1,10 @@
-/*
- *  cette classe fait des oprations SQL de BD pour obtenir des informations des commandes
- */
 package service;
 
 import java.sql.*;
 import java.util.ArrayList;
-
 import domain.Produits;
 import domain.Clients;
 import domain.Commandes;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import utils.*;
 
 public class CommandesService {
@@ -22,13 +16,10 @@ public class CommandesService {
     public int ajouterCommande(MonPanier monpanier, Commandes nouveauCommande) {
         System.out.println("CommandeService.java------noClient, datetime , MontantTotal :" + nouveauCommande.getNoClient() + "---" + nouveauCommande.getDatetime() + "---" + monpanier.getMontantTotal());
         String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values(?,?,?,'0','1')";
-        //String sql = "insert into commandes(datetime,noClient,montant,paiement,statut) values('2015-34-09 00:34:46',3,3.00,'0','1')";
-
         try {
             ct = DBUtil.getCon();
             ct.setAutoCommit(false);
             ct.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-
             ps = ct.prepareStatement(sql);
             ps.setString(1, nouveauCommande.getDatetime());
             ps.setInt(2, nouveauCommande.getNoClient());
@@ -38,17 +29,13 @@ public class CommandesService {
             ps = ct.prepareStatement(sql);
             rs = ps.executeQuery();
             int orderId = 0;
-            //rs = ps.getGeneratedKeys();
             if (rs.next()) {
-
                 orderId = rs.getInt(1);
             }
             ArrayList al = monpanier.afficherMonPanier();
             for (int i = 0; i < al.size(); i++) {
                 Produits produit = (Produits) al.get(i);
-
                 sql = "insert into DetailCommande values(?,?,?,?,?)";
-
                 ps = ct.prepareStatement(sql);
                 ps.setInt(1, orderId);
                 ps.setInt(2, produit.getNoProduit());
@@ -60,17 +47,13 @@ public class CommandesService {
             ct.commit();
             return orderId;
         } catch (Exception e) {
-
             try {
                 ct.rollback();
             } catch (SQLException e1) {
-                // TODO 自动生成的 catch 块
                 e1.printStackTrace();
                 throw new RuntimeException(e.getMessage());
-
             }
             e.printStackTrace();
-            // TODO: handle exception
         } finally {
             DBUtil.close(rs, ps, ct);
         }
@@ -94,7 +77,6 @@ public class CommandesService {
             commande.setMontant(Float.parseFloat(obj[3].toString()));
             commande.setPaiement(obj[4].toString());
             commande.setStatut(obj[5].toString());
-
             certainsCommandes.add(commande);
         }
         return certainsCommandes;
@@ -103,7 +85,6 @@ public class CommandesService {
     public ArrayList<Commandes> getTousCommandes() {
         ArrayList<Commandes> certainsCommandes = new ArrayList<Commandes>();
         String champsTemp = "";
-
         return certainsCommandes;
     }
 
@@ -120,7 +101,6 @@ public class CommandesService {
             detailCommande.setPrixProduit(Float.parseFloat(obj[2].toString()));
             detailCommande.setQuantiteProduit(Integer.parseInt(obj[3].toString()));
             detailCommande.setMontantProduit(Float.parseFloat(obj[4].toString()));
-
             arrDetailCommande.add(detailCommande);
         }
         return arrDetailCommande;

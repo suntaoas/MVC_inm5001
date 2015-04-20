@@ -1,20 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package service;
 
-import domain.Clients;
 import domain.Commandes;
 import domain.Livraison;
 import java.util.ArrayList;
 import utils.SqlHelper;
 
-/**
- *
- * @author suntao
- */
 public class LivraisonService {
 
     public boolean ajouterLivraison(String noCommande, String datetime) {
@@ -41,7 +31,6 @@ public class LivraisonService {
             commande.setMontant(Float.parseFloat(obj[3].toString()));
             commande.setPaiement(obj[4].toString());
             commande.setStatut(obj[5].toString());
-
             certainsCommandes.add(commande);
         }
         return certainsCommandes;
@@ -52,14 +41,12 @@ public class LivraisonService {
         String sql = "select * from Livraison where 1=?";
         String[] paras = {"1"};
         ArrayList al = new SqlHelper().executeQuery(sql, paras);
-        //second encapsulation 
         for (int i = 0; i < al.size(); i++) {
             Object obj[] = (Object[]) al.get(i);
             Livraison livraison = new Livraison();
             livraison.setNoLivraison(Integer.parseInt(obj[0].toString()));
             livraison.setNoCommande(Integer.parseInt(obj[1].toString()));
             livraison.setDateLivraison(obj[2].toString());
-
             TousLivraisonTemp.add(livraison);
         }
         return TousLivraisonTemp;

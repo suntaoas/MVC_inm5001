@@ -1,7 +1,3 @@
-<%-- 
-    c'est la page d'ajout de produit
---%>
-
 <%@page import="service.*"%>
 <%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
@@ -11,7 +7,6 @@
     <head>
         <title>Untitled Document</title>
         <script language="javascript" type="text/javascript">
-            //obtenir l'objet ligne
             function getRowObj(obj)
             {
                 var i = 0;
@@ -23,7 +18,6 @@
                 }
                 return obj;
             }
-            //obtenir le numero de ligne selon l'objet de ligne
             function getRowNo(obj)
             {
                 var trObj = getRowObj(obj);
@@ -48,38 +42,25 @@
                         no = trNo;
                     }
                 }
-                //alert(no);
                 var price = document.getElementById("tb").rows[no].cells[2].innerHTML;
-                //alert(price);
-                //var nombre = document.getElementById("tb").rows[no].cells[3].innerHTML;
                 var nombre = obj.value;
-                //alert(nombre);
-                //alert(price * nombre);
                 document.getElementById("tb").rows[no].cells[5].innerHTML = parseFloat((price * nombre).toFixed(2));
                 document.getElementById("tb").rows[no].cells[6].innerHTML = nombre;
             }
 
             function ajouterProduit(noProduit) {
-                //alert(noProduit);
                 var nombre = 0;
-                //var id = 0;
                 var tableId = document.getElementById("tb");
-                //nombre = document.getElementById("tb").rows[1].cells[6].innerHTML;
-                for(var i=0;i<tableId.rows.length;i++){
-                    if(tableId.rows[i].cells[0].innerHTML == noProduit){
+                for (var i = 0; i < tableId.rows.length; i++) {
+                    if (tableId.rows[i].cells[0].innerHTML == noProduit) {
                         nombre = tableId.rows[i].cells[6].innerHTML;
-                        //id = i;
                         break;
                     }
                 }
-                location.href = "/MVC_inm5001/MonPanierTraite?type=ajouter&id="+noProduit+"&quantite=" + nombre;
-                //alert(nombre);
-                //alert(id);
-                
+                location.href = "/MVC_inm5001/MonPanierTraite?type=ajouter&id=" + noProduit + "&quantite=" + nombre;
             }
         </script>
     </head>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">CHOISIR PRODUITS POUR UNE COMMANDE</h2>
         <hr />
@@ -137,12 +118,11 @@
                                 out.print("<td><input type='text' id='nombreProduit' name='nombreProduit' value='0' onkeyup='return Text_OnChange(this)'/></td>");
                                 out.print("<td><input type='text' id='montant' name='montant' readonly /></td>");
                                 out.print("<td style='display:none;'><input type='text' id='nombreTemp' name='nombreTemp' readonly /></td>");
-                                out.print("<td><a href='javascript: ajouterProduit("+produitTemp.getNoProduit()+")' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
+                                out.print("<td><a href='javascript: ajouterProduit(" + produitTemp.getNoProduit() + ")' id=" + produitTemp.getNoProduit() + ">AJOUTER</a> </td></tr>");
                             }
                         }
                     %> 
                 </table>
-
             </div>
         </section>
     </body>

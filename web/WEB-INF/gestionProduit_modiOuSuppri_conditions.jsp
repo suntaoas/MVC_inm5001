@@ -1,15 +1,9 @@
-<%-- 
-    C'est la page de la gestion de produit pour modifier ou supprimer informations du Produit
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Untitled Document</title>
-        
     </head>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DU PRODUIT</h2>
         <hr />

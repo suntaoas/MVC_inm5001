@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour consulter 
---%>
-
 <%@page import="domain.Produits"%>
 <%@page import="domain.Clients"%>
 <%@page import="java.util.ArrayList"%>
@@ -21,7 +17,6 @@
         <link rel="stylesheet" href="css/home_flexslider.css"/>
 
         <script language="javascript" type="text/javascript">
-            //obtenir l'objet ligne
             function getRowObj(obj)
             {
                 var i = 0;
@@ -33,7 +28,6 @@
                 }
                 return obj;
             }
-            //obtenir le numero de ligne selon l'objet de ligne
             function getRowNo(obj)
             {
                 var trObj = getRowObj(obj);
@@ -63,11 +57,9 @@
             }
 
             function modifierNombreProduit(noProduit) {
-                //alert(noProduit);
                 var nombre = 0;
                 var id = 0;
                 var tableId = document.getElementById("tbl");
-                //nombre = document.getElementById("tb").rows[1].cells[6].innerHTML;
                 for (var i = 0; i < tableId.rows.length; i++) {
                     if (tableId.rows[i].cells[0].innerHTML == noProduit) {
                         nombre = tableId.rows[i].cells[4].innerHTML;
@@ -77,16 +69,11 @@
                 }
                 alert("traitement fini");
                 location.href = "/MVC_inm5001/MonPanierTraiterPourClient?type=modifier&id=" + noProduit + "&quantite=" + nombre;
-                //alert(nombre);
-                //alert(id);
-
             }
         </script>
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -111,7 +98,7 @@
                         <li class="log-in"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Continue">Continue</a></li>
                     </ul>
                     <%
-                    }
+                        }
                     %>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <h4 align="center">MON PANIER</h4>
@@ -119,7 +106,6 @@
 
                 </header>
             </div>
-            <!--Content Block-->
             <section >
                 <div align="center" >
                     <form name="form" method="post" action="/MVC_inm5001/CommandeCreerPourClient">
@@ -150,15 +136,15 @@
                                 }
                             %>
                             <tr><td colspan="2">MontantTotal ：  </td>
-                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float)(Math.round(montantTotal*100))/100%>"/></td></tr>
-                            <%
-                            if(al.size() != 0){
-                            %>
+                                <td colspan="4"><input type="text" id="montant" name="montant" value="<%=(float) (Math.round(montantTotal * 100)) / 100%>"/></td></tr>
+                                    <%
+                                        if (al.size() != 0) {
+                                    %>
                             <tr>
                                 <td colspan="3"><input type="submit" value="CREER UNE COMMANDE"></td>
                             </tr>
                             <%
-                            }else{
+                            } else {
                             %>
                             <tr>
                                 <td colspan="3"><input type="submit" value="CREER UNE COMMANDE" disabled></td>

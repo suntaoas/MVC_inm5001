@@ -1,9 +1,3 @@
-<%-- 
-    Document   : contactez_nous
-    Created on : Apr 1, 2015, 9:08:05 AM
-    Author     : suntao
---%>
-
 <%@page import="domain.Clients"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <title>Megashop</title>
-
         <!--js-->
         <script src="js/jquery-1.8.2.min.js"></script>
         <script src="js/common.js"></script>
@@ -27,12 +20,9 @@
                 $(".inline").colorbox({inline: true, width: "50%"});
             });</script>
         <!--end js-->
-
         <!-- Mobile Specific Metas ================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <!-- CSS ================================================== -->
-
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/colors.css">
         <link rel="stylesheet" href="css/skeleton.css">
@@ -40,16 +30,12 @@
         <link rel="stylesheet" href="css/ddsmoothmenu.css"/>
         <link rel="stylesheet" href="css/elastislide.css"/>
         <link rel="stylesheet" href="css/home_flexslider.css"/>
-
         <link rel="stylesheet" href="css/light_box.css"/>
         <script src="js/html5.js"></script>
-
         <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
         <!--[if lt IE 9]>
-                                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-                        <![endif]-->
-
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
         <script language="javascript" type="text/javascript">
             var id = 0;
             function js_method() {
@@ -59,7 +45,6 @@
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -93,14 +78,11 @@
                                 %>
                         </ul>
                         <section class="header-bottom">
-
                         </section>
                     </div>
                     <h1 class="logo"><a href="index-2.html" title="Logo">
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
-
                         </a></h1>
-
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
                         <ul id="nav">
                             <li class="active"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Home">Acceuil</a></li>
@@ -115,7 +97,6 @@
                             <li class=""><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion" title="Retourner">Retourner</a></li>
                         </ul>
                     </nav>
-
                     <div class="mobMenu">
                         <h1>
                             <span>Menu</span>
@@ -123,24 +104,17 @@
                             <span class="clearfix"></span>
                         </h1>
                     </div>
-
                 </header>
             </div>
-            <!--Banner Block-->
-
-            <!--Content Block-->
             <section class="content-wrapper">
                 <div class="content-container container">
                     <div class="heading-block">
-
                     </div>
                     <div class="feature-block">
                         <h4>Temporairement cette fonctionnalité n'est pas développée</h4>
-
                     </div>
                 </div>
             </section>
         </div> 
-
     </body>
 </html>

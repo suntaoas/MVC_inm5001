@@ -1,23 +1,15 @@
-<%-- 
-    C'est la page de la gestion de client pour consulter 
---%>
-
 <%@page import="domain.Clients"%>
 <%@page import="service.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <html lang="en">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -31,7 +23,6 @@
 
                 </header>
             </div>
-            <!--Content Block-->
             <section >
                 <div >
                     <div >
@@ -47,7 +38,7 @@
                                             <th>Montant</th>
                                         </tr>
                                         <%  ArrayList al = (ArrayList) request.getAttribute("detailCommande");
-                                        System.out.println("gestionCommande_consulter_detailcommande.jsp=======al.size()="+al.size());
+                                            System.out.println("gestionCommande_consulter_detailcommande.jsp=======al.size()=" + al.size());
                                             for (int i = 0; i < al.size(); i++) {
                                                 DetailCommande detailCommande = (DetailCommande) al.get(i);
                                                 out.print("<tr><td>" + detailCommande.getNoCommande() + "</td>");
@@ -70,7 +61,6 @@
                                         %>
                                         <div align="center"><a  href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale" title="Retourner">Retourner</a></div>
                                         <%}%>
-                                        <!--<td height="52"><div align="center"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerMenuGestion">RETOURNER</a></div></td>-->
                                         </tr>
                                     </table>
                                 </div>

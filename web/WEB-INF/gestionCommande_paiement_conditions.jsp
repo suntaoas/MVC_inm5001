@@ -1,31 +1,9 @@
-<%-- 
-    C'est la page de la gestion de produit pour consulter informations de commande
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Untitled Document</title>
-        <%--
-        <script>
-            function isValid() {
-                if (document.form.nom.value == "") {
-                    window.alert("Nom S.V.P!");
-                    document.form.nom.focus();
-                    return false;
-                }
-                if (document.form.pass.value == "")
-                {
-                    window.alert("MotDePasse S.V.P!");
-                    document.form.pass.focus();
-                    return false;
-                }
-            }
-        </script>
-        --%>
     </head>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">RECHERCHE DE COMMANDES POUR PAIEMENT</h2>
         <hr />

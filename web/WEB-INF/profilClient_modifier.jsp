@@ -1,8 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour modifier des informations de Client
-    Pas fini !!!
---%>
-
 <%@page import="domain.Clients"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,10 +23,8 @@
     <%
         Clients clientModifier = (Clients) session.getAttribute("clientModifier");
     %>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">MODIFIER MON PROFIL</h2>
-
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ProfilModifierTraite" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
@@ -87,16 +80,6 @@
                         </select>
                     </td>
                 </tr>
-                <%--
-                <tr> 
-                    <td width="39%" height="43"> 
-                        <div align="right"><font color="#000000">STATUT :</font></div>
-                    </td>
-                    <td width="46%" height="43"> 
-                        <input name="statut" type="text" id="statut" value="<%=clientModifier.getStatut()%>">
-                    </td>
-                </tr>
-                --%>
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="#000000">ADRESSE :</font></div>
@@ -121,20 +104,6 @@
                         <input name="courriel" type="text" id="courriel" value="<%=clientModifier.getCourriel()%>">
                     </td>
                 </tr>
-                <%--
-                <tr> 
-                    <td width="46%" height="43">
-                        <div align="right"><font color="#000000">ADMIN/USAGE :</font></div>
-                    </td>
-                    <td width="46%" height="43"> 
-                        <select name="usager" >
-                            <option value="<%=clientModifier.getUsager()%>" selected="selected"><%=clientModifier.getUsager()%></option>
-                            <option value="0">USAGE</option>
-                            <option value="1">ADMIN</option>              			   
-                        </select>
-                    </td>
-                </tr>
---%>
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">RETOURNER</a></div></td>
                     <td width="46%" height="52">

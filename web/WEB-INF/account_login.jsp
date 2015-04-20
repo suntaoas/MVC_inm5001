@@ -1,6 +1,3 @@
-<%--
-    C'est la page de login 
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!doctype html>
@@ -10,14 +7,12 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <%
     System.out.println("entrer account_login.jsp !");
-    //session.invalidate();
 %>
 <html lang="en">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
         <!--js-->
         <script src="js/jquery-1.8.2.min.js"></script>
         <script src="js/common.js"></script>
@@ -32,12 +27,9 @@
                 $(".inline").colorbox({inline: true, width: "50%"});
             });</script>
         <!--end js-->
-
         <!-- Mobile Specific Metas ================================================== -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <!-- CSS ================================================== -->
-
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/colors.css">
         <link rel="stylesheet" href="css/skeleton.css">
@@ -45,21 +37,16 @@
         <link rel="stylesheet" href="css/ddsmoothmenu.css"/>
         <link rel="stylesheet" href="css/elastislide.css"/>
         <link rel="stylesheet" href="css/home_flexslider.css"/>
-
         <link rel="stylesheet" href="css/light_box.css"/>
         <script src="js/html5.js"></script>
-
         <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
         <!--[if lt IE 9]>
-                                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-                        <![endif]-->
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -69,7 +56,6 @@
                         </a></h1>
                 </header>
             </div>
-            <!--Content Block-->
             <section class="content-wrapper">
                 <div class="content-container container">
                     <div class="main">

@@ -1,7 +1,3 @@
-/*
- *   c'est la classe Produits pour le tableau Produits dans BD
- */
-
 package domain;
 
 public class Produits {
@@ -14,8 +10,8 @@ public class Produits {
     private String categorie;
     private String photo;
     private String statut;
-    
-    private int shoppingNum = 1;//les quantites dans le cart
+
+    private int shoppingNum = 1;
 
     public int getNoProduit() {
         return noProduit;
@@ -32,11 +28,11 @@ public class Produits {
     public int getQuantite() {
         return quantite;
     }
-    
+
     public String getUniteMesure() {
         return uniteMesure;
     }
-    
+
     public String getCategorie() {
         return categorie;
     }
@@ -76,7 +72,7 @@ public class Produits {
     public void setCategorie(String categorieProduit) {
         this.categorie = categorieProduit;
     }
-    
+
     public void setUniteMesure(String unitemesure) {
         this.uniteMesure = unitemesure;
     }

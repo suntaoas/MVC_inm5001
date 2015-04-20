@@ -1,7 +1,3 @@
-/*
- *   C'est la classe d'outil pour connection et deconnection de BD
- */
-
 package utils;
 
 import java.io.InputStream;
@@ -12,26 +8,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.*;
 import java.util.Properties;
- 
 
 public class DBUtil {
 
-    private static Connection ct = null;//connection
-    private static ResultSet rs = null;//resultat
+    private static Connection ct = null;
+    private static ResultSet rs = null;
     private static PreparedStatement ps = null;
-    //parametres de BD
     private static String url = "";
     private static String drivername = "";
     private static String username = "";
     private static String password = "";
-	
-    //charger le driver de BD MySQL
+
     static {
         try {
             Properties properties = new Properties();
             InputStream is = DBUtil.class.getClassLoader().getResourceAsStream("utils/dbinfo.properties");
             properties.load(is);
-            //obtenir informations de BD
             drivername = properties.getProperty("driver");
             username = properties.getProperty("username");
             password = properties.getProperty("password");
@@ -42,7 +34,6 @@ public class DBUtil {
         }
     }
 
-//obtenir la connection de BD
     public static Connection getCon() {
         try {
             Class.forName(drivername);
@@ -60,7 +51,6 @@ public class DBUtil {
         System.out.println(password);
         System.out.println(url);
     }
-//Deconnection de BD
 
     public static void close(ResultSet rs, Statement ps, Connection ct) {
         if (rs != null) {

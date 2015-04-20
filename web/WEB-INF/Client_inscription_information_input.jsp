@@ -1,7 +1,3 @@
-<%-- 
-    C'est la page de la gestion de client pour ajouter informations de Client
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,7 +17,6 @@
                     return false;
                 }
             }
-
             function estValidePourCourriel(value) {
                 var patrn = /[a-z0-9-]{1,30}@[a-z0-9-]{1,65}.[a-z]{3}/;
                 if (!patrn.exec(value)) {
@@ -29,9 +24,7 @@
                     document.form.courriel.focus();
                     return false;
                 }
-
             }
-
             function estValidePourNom(id) {
                 var patrn = /^[a-zA-Z]+$/;
                 if (!patrn.exec(id)) {
@@ -125,8 +118,6 @@
                         <input name="pass2" type="password" id="pass2" onblur=estConfirmerPasse(this.value);>
                     </td>
                 </tr>
-
-
                 <tr> 
                     <td width="39%" height="43"> 
                         <div align="right"><font color="black"><b>Information pour profile :</b></font></div>
@@ -183,8 +174,6 @@
                         <input name="telephone" type="text" id="telephone" onblur=estValidePourTelephone(this.value);>
                     </td>
                 </tr>
-
-
                 <tr>
                     <td height="52"><div align="right"><a href="/MVC_inm5001/TournerUnePageWeb?type=tournerPagePrincipale">RETOURNER</a></div></td>
                     <td width="46%" height="52">

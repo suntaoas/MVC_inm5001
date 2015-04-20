@@ -1,7 +1,3 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des clients
- *   "menu_gestion.jsp->gestion clients->consulter" ----->  "ClientConsulter.java"  -----> "gestionClient_consulter.jsp"
- */
 package controlleur;
 
 import domain.Clients;

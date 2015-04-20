@@ -1,6 +1,3 @@
-/*
- *   
- */
 package controlleur;
 
 import domain.Produits;
@@ -22,24 +19,23 @@ public class ProduitModifierTraite extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-       
+
         Produits produitModifierTemp = new Produits();
         produitModifierTemp.setNoProduit(Integer.parseInt(request.getParameter("noProduit").trim()));
         produitModifierTemp.setDescription(request.getParameter("descripProduit").trim());
         produitModifierTemp.setPrix(Float.parseFloat(request.getParameter("prixProduit")));
         produitModifierTemp.setQuantite(Integer.parseInt(request.getParameter("quantite")));
-        produitModifierTemp.setUniteMesure(request.getParameter("unitemesure").trim()); 
+        produitModifierTemp.setUniteMesure(request.getParameter("unitemesure").trim());
         produitModifierTemp.setCategorie(request.getParameter("categorie").trim());
         produitModifierTemp.setPhoto(request.getParameter("photo").trim());
-        
+
         ProduitsService produitsservice = new ProduitsService();
-        //ArrayList unClient = clientsservice.getClientById(null);
         boolean res = produitsservice.modifierProduit(produitModifierTemp);
         if (res) {
             ArrayList tousProduits = produitsservice.getTousProduits();
             request.setAttribute("produits", tousProduits);
             request.getRequestDispatcher("/WEB-INF/gestionProduit_consulter.jsp").forward(request, response);
-        }else{
+        } else {
             System.out.println("c'est echec !");
         }
         return;

@@ -1,23 +1,15 @@
-<%-- 
-    C'est la page de la gestion de commande pour consulter 
---%>
-
 <%@page import="domain.Commandes"%>
 <%@page import="domain.Produits"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <html lang="en">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>Magasin de Fruits & Légumes</title>
-
     </head>
     <body>
         <div class="mainContainer sixteen container">
-            <!--Header Block-->
-
             <div class="header-wrapper">
                 <header class="container">
                     <div class="head-right">
@@ -26,12 +18,9 @@
                             <img title="Logo" alt="Logo" src="images/logo_2.jpe" />
                         </a></h1>
                     <nav id="smoothmenu1" class="ddsmoothmenu mainMenu">
-                        
                     </nav>
-
                 </header>
             </div>
-            <!--Content Block-->
             <section >
                 <div >
                     <div >
@@ -58,7 +47,6 @@
                                                 out.print("<td>" + commandeTemp.getPaiement() + "</td>");
                                                 out.print("<td>" + commandeTemp.getStatut() + "</td>");
                                                 out.print("<td> <a href='/MVC_inm5001/CommandeConsulterDetailCommande?noCommande=" + commandeTemp.getNoCommande() + "'>DETAIL</a> </td></tr>");
-
                                             }
                                         %> 
                                     </table>

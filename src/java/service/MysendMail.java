@@ -2,41 +2,28 @@ package service;
 
 import java.util.*;
 import javax.mail.*;
-
 import javax.mail.internet.*;
-
 import javax.activation.*;
 
 public class MysendMail {
 
     private MimeMessage mimeMsg;
-
     private Session session;
     private Properties props;
     private boolean needAuth = false;
-
     private String username = "";
     private String password = "";
-
     private Multipart mp;
 
     public MysendMail() {
-
-        //setSmtpHost(getConfig.mailHost);
         createMimeMessage();
-
     }
 
     public MysendMail(String smtp) {
-
         setSmtpHost(smtp);
         createMimeMessage();
-
     }
 
-    /**
-     * @param hostName String
-     */
     public void setSmtpHost(String hostName) {
 
         System.out.println("mail.smtp.host = " + hostName);
@@ -48,9 +35,6 @@ public class MysendMail {
 
     }
 
-    /**
-     * @return boolean
-     */
     public boolean createMimeMessage() {
         try {
             System.out.println("obtenir l'objet pour Mime Message ! ");
@@ -76,9 +60,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param need boolean
-     */
     public void setNeedAuth(boolean need) {
 
         System.out.println("smtp : mail.smtp.auth = " + need);
@@ -95,19 +76,11 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public void setNamePass(String name, String pass) {
         username = name;
         password = pass;
     }
 
-    /**
-     * @param mailSubject String
-     * @return boolean
-     */
     public boolean setSubject(String mailSubject) {
         System.out.println("set mail title");
         try {
@@ -119,9 +92,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param mailBody String
-     */
     public boolean setBody(String mailBody) {
         try {
             BodyPart bp = new MimeBodyPart();
@@ -135,10 +105,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public boolean addFileAffix(String filename) {
 
         System.out.println("ajouter l'accessoire" + filename);
@@ -158,10 +124,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public boolean setFrom(String from) {
         System.out.println("sender");
         try {
@@ -172,10 +134,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public boolean setTo(String to) {
         if (to == null) {
             return false;
@@ -190,10 +148,6 @@ public class MysendMail {
 
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public boolean setCopyTo(String copyto) {
         if (copyto == null) {
             return false;
@@ -206,10 +160,6 @@ public class MysendMail {
         }
     }
 
-    /**
-     * @param name String
-     * @param pass String
-     */
     public boolean sendout() {
         try {
             mimeMsg.setContent(mp);

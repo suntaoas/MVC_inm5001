@@ -3,10 +3,8 @@
 <html>
     <head>
         <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/MVC_inm5001/GoPagePrincipale">
-        
         <title>BIENVNUE</title>
     </head>
     <body>
-        
     </body>
 </html>

@@ -1,10 +1,5 @@
-/*
- *   C'est la classe de controlleur du servlet pour consulter des commandes
- *   "menu_gestion.jsp->gestion commande->consulter" ----->  "CommandeConsulterPourCertains.java"  -----> "gestionCommande_consulter.jsp"
- */
 package controlleur;
 
-import domain.Clients;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,10 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.ClientsService;
 import service.CommandesService;
-import service.MonPanier;
-import service.ProduitsService;
 
 public class CommandeConsulterPourSupprimer extends HttpServlet {
 
@@ -31,9 +23,6 @@ public class CommandeConsulterPourSupprimer extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String type = request.getParameter("type");
-        //ClientsService clientsservice = new ClientsService();
-        //ArrayList tousCommandes = clientsservice.getTousClients();
-        // ArrayList<String> nomChampsTemp = new ArrayList<String>();
         Map<String, String> nomChampsTemp = new HashMap<String, String>();
         nomChampsTemp.put("noCommande", request.getParameter("noCommande").trim());
         nomChampsTemp.put("noClient", request.getParameter("noClient").trim());

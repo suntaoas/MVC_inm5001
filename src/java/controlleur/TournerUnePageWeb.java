@@ -1,12 +1,8 @@
-/*
- *   C'est la classe de controlleur du servlet pour tourner une page web 
- */
 package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,9 +18,7 @@ public class TournerUnePageWeb extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-
         String type = request.getParameter("type");
-
         switch (type) {
             case "tournerConnection":
                 request.getRequestDispatcher("/WEB-INF/account_login.jsp").forward(request, response);
@@ -94,9 +88,7 @@ public class TournerUnePageWeb extends HttpServlet {
                 }
                 request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
                 break;
-
         }
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

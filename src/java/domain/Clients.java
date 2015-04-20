@@ -1,7 +1,3 @@
-/*
- *  c'est la classe Clients pour le tableau Clients dans BD
- */
-
 package domain;
 
 public class Clients {

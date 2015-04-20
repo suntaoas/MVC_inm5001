@@ -1,7 +1,3 @@
-/*
- *   C'est la classe de controlleur du servlet pour ajouter des clients
- *   "menu_gestion.jsp->gestion clients->ajouter" ----->  "ClientAjouter.java"  -----> "gestionClient_ajouter.jsp"
- */
 package controlleur;
 
 import domain.Clients;
@@ -37,13 +33,13 @@ public class ClientAjouter extends HttpServlet {
         clientNouveau.setUsager(request.getParameter("flagUsage").trim());
 
         ClientsService clientsservice = new ClientsService();
-        //ArrayList unClient = clientsservice.getClientById(null);
+
         boolean res = clientsservice.ajouterClient(clientNouveau);
         if (res) {
             ArrayList tousClients = clientsservice.getTousClients();
             request.setAttribute("clients", tousClients);
             request.getRequestDispatcher("/WEB-INF/gestionClient_consulter.jsp").forward(request, response);
-        }else{
+        } else {
             System.out.println("c'est echec !");
         }
         return;

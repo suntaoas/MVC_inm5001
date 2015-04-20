@@ -2,15 +2,11 @@ package controlleur;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import service.CommandesService;
-
-import service.ProduitsService;
-import service.MonPanier;
 
 public class CommandeSupprimer extends HttpServlet {
 
@@ -23,11 +19,10 @@ public class CommandeSupprimer extends HttpServlet {
 
         String noCommande = request.getParameter("noCommande");
         CommandesService commandesservice = new CommandesService();
-        //ArrayList unClient = clientsservice.getClientById(null);
         boolean res = commandesservice.supprimerCommande(noCommande);
         if (res) {
             request.getRequestDispatcher("/WEB-INF/gestionCommande_supprimer_conditions.jsp").forward(request, response);
-        }else{
+        } else {
             System.out.println("c'est echec !");
         }
         return;

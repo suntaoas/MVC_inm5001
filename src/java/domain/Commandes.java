@@ -1,7 +1,5 @@
 package domain;
 
-import java.util.Date;
-
 public class Commandes {
 
     private int noCommande;

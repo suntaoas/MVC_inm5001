@@ -1,23 +1,15 @@
-<%-- 
-    C'est la page de la gestion de produit pour modifier des informations du Produit
-    Pas fini !!!
---%>
-
 <%@page import="domain.Produits"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Untitled Document</title>
-        
     </head>
     <%
         Produits produitModifier = (Produits) session.getAttribute("produitModifier");
     %>
-
     <body BGCOLOR="#F0F8FF">
         <h2 align="center">MODIFIER LE PRODUIT</h2>
-
         <hr />
         <form name="form" method="post" action="/MVC_inm5001/ProduitModifierTraite" onSubmit="return isValid();">
             <table width="75%" border="0" align="left">
